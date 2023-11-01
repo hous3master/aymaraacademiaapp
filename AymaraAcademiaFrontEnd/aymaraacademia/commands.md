@@ -1,0 +1,16 @@
+ng g s services/modulo --skip-tests
+ng g s services/unidad --skip-tests
+ng g s services/user --skip-tests
+ng g s services/curso --skip-tests
+ng g c components/modulo --skip-tests
+ng g c components/unidad --skip-tests
+ng g c components/user --skip-tests
+ng g c components/curso --skip-tests
+ng g c components/modulo/creaedita-modulo --skip-tests
+ng g c components/unidad/creaedita-unidad --skip-tests
+ng g c components/user/creaedita-user --skip-tests
+ng g c components/curso/creaedita-curso --skip-tests
+ng g c components/modulo/listar-modulo --skip-tests
+ng g c components/unidad/listar-unidad --skip-tests
+ng g c components/user/listar-user --skip-tests
+ng g c components/curso/listar-curso --skip-tests

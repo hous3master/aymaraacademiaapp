@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+</head>
+
+<body>
+<div class="container" style="text-align: center">
+<h2>Registro de unidad</h2>
+<form [formGroup]="form" (submit)="aceptar()" class="example-form">
+<!-- idEntityName -->
+<mat-form-field class="example-full-width" *ngIf="edicion">
+<mat-label>idUnidad</mat-label>
+<input matInput placeholder="Id" formControlName="idUnidad"/>
+</mat-form-field>
+<br />
+<!-- Form fields for each attribute -->
+<!-- NOTE : Only if is not of type LocalDate -->
+<mat-form-field class="example-full-width">
+<mat-label>nombre</mat-label>
+<input matInput placeholder="nombre" formControlName="nombre"/>
+<mat-error *ngIf="obtenerControlCampo('nombre')?.errors?.['required']">
+nombre es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- NOTE : Only if is not of type LocalDate -->
+<mat-form-field class="example-full-width">
+<mat-label>descripcion</mat-label>
+<input matInput placeholder="descripcion" formControlName="descripcion"/>
+<mat-error *ngIf="obtenerControlCampo('descripcion')?.errors?.['required']">
+descripcion es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- Buttons for actions -->
+<button mat-raised-button color="primary">Aceptar</button>
+<button mat-raised-button color="warn" routerLink="/unidad">
+Cancelar
+</button>
+<p>{{ mensaje }}</p>
+</form>
+</div>
+</body>
+
+</html>

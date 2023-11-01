@@ -24,11 +24,35 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 // Forms required
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { ModuloComponent } from './components/modulo/modulo.component';
+import { ListarModuloComponent } from './components/modulo/listar-modulo/listar-modulo.component';
+import { CreaeditaModuloComponent } from './components/modulo/creaedita-modulo/creaedita-modulo.component';
+import { UnidadComponent } from './components/unidad/unidad.component';
+import { ListarUnidadComponent } from './components/unidad/listar-unidad/listar-unidad.component';
+import { CreaeditaUnidadComponent } from './components/unidad/creaedita-unidad/creaedita-unidad.component';
+import { UserComponent } from './components/user/user.component';
+import { ListarUserComponent } from './components/user/listar-user/listar-user.component';
+import { CreaeditaUserComponent } from './components/user/creaedita-user/creaedita-user.component';
+import { CursoComponent } from './components/curso/curso.component';
+import { ListarCursoComponent } from './components/curso/listar-curso/listar-curso.component';
+import { CreaeditaCursoComponent } from './components/curso/creaedita-curso/creaedita-curso.component';
+
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
+declarations: [
+    AppComponent,
+    ModuloComponent,
+    ListarModuloComponent,
+    CreaeditaModuloComponent,
+    UnidadComponent,
+    ListarUnidadComponent,
+    CreaeditaUnidadComponent,
+    UserComponent,
+    ListarUserComponent,
+    CreaeditaUserComponent,
+    CursoComponent,
+    ListarCursoComponent,
+    CreaeditaCursoComponent],
+imports: [
     // Default
     BrowserModule,
     AppRoutingModule,
@@ -56,8 +80,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     // Forms required
     FormsModule,
     ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+],
+providers: [],
+bootstrap: [AppComponent]
 })
 export class AppModule { }
