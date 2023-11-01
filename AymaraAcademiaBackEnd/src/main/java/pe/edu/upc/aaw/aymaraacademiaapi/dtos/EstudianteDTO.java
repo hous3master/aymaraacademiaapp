@@ -4,12 +4,21 @@ import pe.edu.upc.aaw.aymaraacademiaapi.entities.*;
 import java.time.LocalDate;
 
 public class EstudianteDTO {
+    private int idEstudiante;
     private String nombre;
     private String apellido;
     private int edad;
     private int resena;
     private String email;
     private User user;
+
+    public int getIdEstudiante() {
+        return idEstudiante;
+    }
+
+    public void setIdEstudiante(int idEstudiante) {
+        this.idEstudiante = idEstudiante;
+    }
 
     public String getNombre() {
         return nombre;

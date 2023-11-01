@@ -4,9 +4,18 @@ import pe.edu.upc.aaw.aymaraacademiaapi.entities.*;
 import java.time.LocalDate;
 
 public class AlternativaDTO {
+    private int idAlternativa;
     private String respuesta;
     private boolean correcta;
     private Preguntaalternativa preguntaalternativa;
+
+    public int getIdAlternativa() {
+        return idAlternativa;
+    }
+
+    public void setIdAlternativa(int idAlternativa) {
+        this.idAlternativa = idAlternativa;
+    }
 
     public String getRespuesta() {
         return respuesta;

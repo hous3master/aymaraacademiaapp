@@ -26,13 +26,13 @@ public class UserController {
     }
 
     // Delete an item by ID on table
-    @DeleteMapping("/userid")
+    @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id")Integer id){
         myService.delete(id);
     }
 
     // Retrieve an items by ID from table
-    @GetMapping("/userid")
+    @GetMapping("/{id}")
     public UserDTO listarId(@PathVariable("id")Integer id){
         ModelMapper m = new ModelMapper();
         UserDTO myItem = m.map(myService.listId(id), UserDTO.class);

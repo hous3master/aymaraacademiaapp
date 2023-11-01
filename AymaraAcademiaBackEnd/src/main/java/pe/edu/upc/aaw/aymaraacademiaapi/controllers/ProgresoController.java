@@ -26,13 +26,13 @@ public class ProgresoController {
     }
 
     // Delete an item by ID on table
-    @DeleteMapping("/progresoid")
+    @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id")Integer id){
         myService.delete(id);
     }
 
     // Retrieve an items by ID from table
-    @GetMapping("/progresoid")
+    @GetMapping("/{id}")
     public ProgresoDTO listarId(@PathVariable("id")Integer id){
         ModelMapper m = new ModelMapper();
         ProgresoDTO myItem = m.map(myService.listId(id), ProgresoDTO.class);

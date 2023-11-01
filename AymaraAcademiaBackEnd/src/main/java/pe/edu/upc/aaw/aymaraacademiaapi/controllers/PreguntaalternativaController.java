@@ -26,13 +26,13 @@ public class PreguntaalternativaController {
     }
 
     // Delete an item by ID on table
-    @DeleteMapping("/preguntaalternativaid")
+    @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id")Integer id){
         myService.delete(id);
     }
 
     // Retrieve an items by ID from table
-    @GetMapping("/preguntaalternativaid")
+    @GetMapping("/{id}")
     public PreguntaalternativaDTO listarId(@PathVariable("id")Integer id){
         ModelMapper m = new ModelMapper();
         PreguntaalternativaDTO myItem = m.map(myService.listId(id), PreguntaalternativaDTO.class);

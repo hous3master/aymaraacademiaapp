@@ -26,13 +26,13 @@ public class VideoController {
     }
 
     // Delete an item by ID on table
-    @DeleteMapping("/videoid")
+    @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id")Integer id){
         myService.delete(id);
     }
 
     // Retrieve an items by ID from table
-    @GetMapping("/videoid")
+    @GetMapping("/{id}")
     public VideoDTO listarId(@PathVariable("id")Integer id){
         ModelMapper m = new ModelMapper();
         VideoDTO myItem = m.map(myService.listId(id), VideoDTO.class);

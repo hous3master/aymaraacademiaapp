@@ -26,13 +26,13 @@ public class ModuloController {
     }
 
     // Delete an item by ID on table
-    @DeleteMapping("/moduloid")
+    @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id")Integer id){
         myService.delete(id);
     }
 
     // Retrieve an items by ID from table
-    @GetMapping("/moduloid")
+    @GetMapping("/{id}")
     public ModuloDTO listarId(@PathVariable("id")Integer id){
         ModelMapper m = new ModelMapper();
         ModuloDTO myItem = m.map(myService.listId(id), ModuloDTO.class);

@@ -4,12 +4,21 @@ import pe.edu.upc.aaw.aymaraacademiaapi.entities.*;
 import java.time.LocalDate;
 
 public class ProyectoDTO {
+    private int idProyecto;
     private String titulo;
     private String descripcion;
     private Unidad unidad;
     private double calificacion;
     private int contador;
     private Estudiante estudiante;
+
+    public int getIdProyecto() {
+        return idProyecto;
+    }
+
+    public void setIdProyecto(int idProyecto) {
+        this.idProyecto = idProyecto;
+    }
 
     public String getTitulo() {
         return titulo;

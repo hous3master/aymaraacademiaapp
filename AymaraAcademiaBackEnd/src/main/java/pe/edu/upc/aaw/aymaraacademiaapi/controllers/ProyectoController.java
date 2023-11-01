@@ -26,13 +26,13 @@ public class ProyectoController {
     }
 
     // Delete an item by ID on table
-    @DeleteMapping("/proyectoid")
+    @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id")Integer id){
         myService.delete(id);
     }
 
     // Retrieve an items by ID from table
-    @GetMapping("/proyectoid")
+    @GetMapping("/{id}")
     public ProyectoDTO listarId(@PathVariable("id")Integer id){
         ModelMapper m = new ModelMapper();
         ProyectoDTO myItem = m.map(myService.listId(id), ProyectoDTO.class);
