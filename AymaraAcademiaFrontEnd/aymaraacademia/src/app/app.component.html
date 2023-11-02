@@ -1,28 +1,99 @@
-<mat-toolbar color="primary">
-<button mat-button [matMenuTriggerFor]="menuModulo">Modulo</button>
-<button mat-button [matMenuTriggerFor]="menuUnidad">Unidad</button>
-<button mat-button [matMenuTriggerFor]="menuUsers">Users</button>
-<button mat-button [matMenuTriggerFor]="menuCurso">Curso</button>
-<button mat-button [matMenuTriggerFor]="menuAlternativa">Alternativa</button>
-</mat-toolbar>
+
+
+<div class="container-fluid  h-100">
+  <div class="row h-100">
+    <div class="col-md-2 mat-elevation-z4">
+      <mat-sidenav-container>
+        <mat-sidenav-content>
+          <button mat-button [matMenuTriggerFor]="menuAlternativa">Alternativa</button><br>
+          <button mat-button [matMenuTriggerFor]="menuEstudiante">Estudiante</button><br>
+          <button mat-button [matMenuTriggerFor]="menuLectura">Lectura</button><br>
+          <button mat-button [matMenuTriggerFor]="menuModulo">Modulo</button><br>
+          <button mat-button [matMenuTriggerFor]="menuPregunta">Pregunta</button><br>
+          <button mat-button [matMenuTriggerFor]="menuPreguntaalternativa">Preguntaalternativa</button><br>
+          <button mat-button [matMenuTriggerFor]="menuProgreso">Progreso</button><br>
+          <button mat-button [matMenuTriggerFor]="menuProyecto">Proyecto</button><br>
+          <button mat-button [matMenuTriggerFor]="menuQuizz">Quizz</button><br>
+          <button mat-button [matMenuTriggerFor]="menuRole">Role</button><br>
+          <button mat-button [matMenuTriggerFor]="menuUnidad">Unidad</button><br>
+          <button mat-button [matMenuTriggerFor]="menuUnidadmodulo">Unidadmodulo</button><br>
+          <button mat-button [matMenuTriggerFor]="menuUsers">Users</button><br>
+          <button mat-button [matMenuTriggerFor]="menuVideo">Video</button><br>
+          <button mat-button [matMenuTriggerFor]="menuCursounidad">Cursounidad</button><br>
+          <button mat-button [matMenuTriggerFor]="menuCurso">Curso</button><br>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+    </div>
+    <div class="col-md-10">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<mat-menu #menuAlternativa="matMenu">
+  <button mat-menu-item routerLink="/alternativa/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/alternativa">Listar</button>
+</mat-menu>
+<mat-menu #menuEstudiante="matMenu">
+  <button mat-menu-item routerLink="/estudiante/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/estudiante">Listar</button>
+</mat-menu>
+<mat-menu #menuLectura="matMenu">
+  <button mat-menu-item routerLink="/lectura/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/lectura">Listar</button>
+</mat-menu>
 <mat-menu #menuModulo="matMenu">
-<button mat-menu-item routerLink="/modulo/nuevo">Registrar</button>
-<button mat-menu-item routerLink="/modulo">Listar</button>
+  <button mat-menu-item routerLink="/modulo/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/modulo">Listar</button>
+</mat-menu>
+<mat-menu #menuPregunta="matMenu">
+  <button mat-menu-item routerLink="/pregunta/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/pregunta">Listar</button>
+</mat-menu>
+<mat-menu #menuPreguntaalternativa="matMenu">
+  <button mat-menu-item routerLink="/preguntaalternativa/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/preguntaalternativa">Listar</button>
+</mat-menu>
+<mat-menu #menuProgreso="matMenu">
+  <button mat-menu-item routerLink="/progreso/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/progreso">Listar</button>
+</mat-menu>
+<mat-menu #menuProyecto="matMenu">
+  <button mat-menu-item routerLink="/proyecto/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/proyecto">Listar</button>
+</mat-menu>
+<mat-menu #menuQuizz="matMenu">
+  <button mat-menu-item routerLink="/quizz/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/quizz">Listar</button>
+</mat-menu>
+<mat-menu #menuRole="matMenu">
+  <button mat-menu-item routerLink="/role/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/role">Listar</button>
 </mat-menu>
 <mat-menu #menuUnidad="matMenu">
-<button mat-menu-item routerLink="/unidad/nuevo">Registrar</button>
-<button mat-menu-item routerLink="/unidad">Listar</button>
+  <button mat-menu-item routerLink="/unidad/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/unidad">Listar</button>
+</mat-menu>
+<mat-menu #menuUnidadmodulo="matMenu">
+  <button mat-menu-item routerLink="/unidadmodulo/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/unidadmodulo">Listar</button>
 </mat-menu>
 <mat-menu #menuUsers="matMenu">
-<button mat-menu-item routerLink="/users/nuevo">Registrar</button>
-<button mat-menu-item routerLink="/users">Listar</button>
+  <button mat-menu-item routerLink="/users/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/users">Listar</button>
+</mat-menu>
+<mat-menu #menuVideo="matMenu">
+  <button mat-menu-item routerLink="/video/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/video">Listar</button>
+</mat-menu>
+<mat-menu #menuCursounidad="matMenu">
+  <button mat-menu-item routerLink="/cursounidad/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/cursounidad">Listar</button>
 </mat-menu>
 <mat-menu #menuCurso="matMenu">
-<button mat-menu-item routerLink="/curso/nuevo">Registrar</button>
-<button mat-menu-item routerLink="/curso">Listar</button>
+  <button mat-menu-item routerLink="/curso/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/curso">Listar</button>
 </mat-menu>
-<mat-menu #menuAlternativa="matMenu">
-<button mat-menu-item routerLink="/alternativa/nuevo">Registrar</button>
-<button mat-menu-item routerLink="/alternativa">Listar</button>
-</mat-menu>
-<router-outlet></router-outlet>
+
+
+

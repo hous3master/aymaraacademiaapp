@@ -10,6 +10,7 @@ AbstractControl,
 } from '@angular/forms';
 import { Modulo } from 'src/app/models/modulo';
 import { ModuloService } from 'src/app/services/modulo.service';
+
 @Component({
 selector: 'app-creaedita-modulo',
 templateUrl: './creaedita-modulo.component.html',
@@ -26,8 +27,7 @@ constructor(
 private moduloService: ModuloService,
 private router: Router,
 private formBuilder: FormBuilder,
-private route: ActivatedRoute
-) {}
+private route: ActivatedRoute) {}
 
 ngOnInit(): void {
 
@@ -36,6 +36,8 @@ this.id = data['id'];
 this.edicion = data['id'] != null;
 this.init();
 });
+
+
 this.form = this.formBuilder.group({
 idEntityName: [''],
 nombre: ['', Validators.required],

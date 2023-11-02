@@ -10,6 +10,7 @@ AbstractControl,
 } from '@angular/forms';
 import { Alternativa } from 'src/app/models/alternativa';
 import { AlternativaService } from 'src/app/services/alternativa.service';
+
 @Component({
 selector: 'app-creaedita-alternativa',
 templateUrl: './creaedita-alternativa.component.html',
@@ -26,8 +27,7 @@ constructor(
 private alternativaService: AlternativaService,
 private router: Router,
 private formBuilder: FormBuilder,
-private route: ActivatedRoute
-) {}
+private route: ActivatedRoute) {}
 
 ngOnInit(): void {
 
@@ -36,6 +36,8 @@ this.id = data['id'];
 this.edicion = data['id'] != null;
 this.init();
 });
+
+
 this.form = this.formBuilder.group({
 idEntityName: [''],
 respuesta: ['', Validators.required],

@@ -10,6 +10,7 @@ AbstractControl,
 } from '@angular/forms';
 import { Curso } from 'src/app/models/curso';
 import { CursoService } from 'src/app/services/curso.service';
+
 @Component({
 selector: 'app-creaedita-curso',
 templateUrl: './creaedita-curso.component.html',
@@ -26,8 +27,7 @@ constructor(
 private cursoService: CursoService,
 private router: Router,
 private formBuilder: FormBuilder,
-private route: ActivatedRoute
-) {}
+private route: ActivatedRoute) {}
 
 ngOnInit(): void {
 
@@ -36,6 +36,8 @@ this.id = data['id'];
 this.edicion = data['id'] != null;
 this.init();
 });
+
+
 this.form = this.formBuilder.group({
 idEntityName: [''],
 nombre: ['', Validators.required],

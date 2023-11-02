@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+</head>
+
+<body>
+<div class="container" style="text-align: center">
+<h2>Registro de video</h2>
+<form [formGroup]="form" (submit)="aceptar()" class="example-form">
+<!-- idEntityName -->
+<mat-form-field class="example-full-width" *ngIf="edicion">
+<mat-label>idVideo</mat-label>
+<input matInput placeholder="Id" formControlName="idVideo"/>
+</mat-form-field>
+<br />
+<!-- Form fields for each attribute -->
+<!-- NOTE : Only if is not of type LocalDate -->
+<mat-form-field class="example-full-width">
+<mat-label>url</mat-label>
+<input matInput placeholder="url" formControlName="url"/>
+<mat-error *ngIf="obtenerControlCampo('url')?.errors?.['required']">
+url es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- NOTE : Only if is not of type LocalDate -->
+<mat-form-field class="example-full-width">
+<mat-label>titulo</mat-label>
+<input matInput placeholder="titulo" formControlName="titulo"/>
+<mat-error *ngIf="obtenerControlCampo('titulo')?.errors?.['required']">
+titulo es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- NOTE : Only if is not of type LocalDate -->
+<mat-form-field class="example-full-width">
+<mat-label>descripcion</mat-label>
+<input matInput placeholder="descripcion" formControlName="descripcion"/>
+<mat-error *ngIf="obtenerControlCampo('descripcion')?.errors?.['required']">
+descripcion es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- NOTE : Only if is not of type LocalDate -->
+<mat-form-field class="example-full-width">
+<mat-label>duracion</mat-label>
+<input matInput placeholder="duracion" formControlName="duracion"/>
+<mat-error *ngIf="obtenerControlCampo('duracion')?.errors?.['required']">
+duracion es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- NOTE : Only if is not of type LocalDate -->
+<mat-form-field class="example-full-width">
+<mat-label>presentador</mat-label>
+<input matInput placeholder="presentador" formControlName="presentador"/>
+<mat-error *ngIf="obtenerControlCampo('presentador')?.errors?.['required']">
+presentador es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- NOTE : Only if is not of type LocalDate -->
+<mat-form-field class="example-full-width">
+<mat-label>transcripcion</mat-label>
+<input matInput placeholder="transcripcion" formControlName="transcripcion"/>
+<mat-error *ngIf="obtenerControlCampo('transcripcion')?.errors?.['required']">
+transcripcion es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- NOTE: Only components with foreign key-->
+<mat-form-field class="example-full-width">
+<mat-label>modulo</mat-label>
+<mat-select formControlName="modulo">
+<mat-option *ngFor="let tipo of listaModulo" [value]="tipo.idModulo">
+{{tipo.idModulo}}
+</mat-option>
+</mat-select>
+<mat-error *ngIf="obtenerControlCampo('modulo')?.errors?.['required']">
+modulo es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- Buttons for actions -->
+<button mat-raised-button color="primary">Aceptar</button>
+<button mat-raised-button color="warn" routerLink="/video">
+Cancelar
+</button>
+<p>{{ mensaje }}</p>
+</form>
+</div>
+</body>
+
+</html>

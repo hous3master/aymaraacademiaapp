@@ -10,6 +10,7 @@ AbstractControl,
 } from '@angular/forms';
 import { Unidad } from 'src/app/models/unidad';
 import { UnidadService } from 'src/app/services/unidad.service';
+
 @Component({
 selector: 'app-creaedita-unidad',
 templateUrl: './creaedita-unidad.component.html',
@@ -26,8 +27,7 @@ constructor(
 private unidadService: UnidadService,
 private router: Router,
 private formBuilder: FormBuilder,
-private route: ActivatedRoute
-) {}
+private route: ActivatedRoute) {}
 
 ngOnInit(): void {
 
@@ -36,6 +36,8 @@ this.id = data['id'];
 this.edicion = data['id'] != null;
 this.init();
 });
+
+
 this.form = this.formBuilder.group({
 idEntityName: [''],
 nombre: ['', Validators.required],

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+</head>
+
+<body>
+<div class="container">
+<br />
+<h2 style="text-align: center">Lista de Proyecto</h2>
+<div style="text-align: right;">
+<button mat-raised-button color="primary" routerLink="/proyecto/nuevo">Nuevo</button>
+</div>
+<mat-form-field>
+<input matInput (keyup)=filter($event) placeholder="buscar" />
+</mat-form-field>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z4">
+<!--Id Column -->
+<ng-container matColumnDef="idProyecto">
+<th mat-header-cell *matHeaderCellDef>C�digo</th>
+<td mat-cell *matCellDef="let element">{{ element.idProyecto }}</td>
+</ng-container>
+
+<!-- titulo Column -->
+<ng-container matColumnDef="titulo">
+<th mat-header-cell *matHeaderCellDef>titulo</th>
+<td mat-cell *matCellDef="let element">{{ element.titulo }}</td>
+</ng-container>
+
+<!-- descripcion Column -->
+<ng-container matColumnDef="descripcion">
+<th mat-header-cell *matHeaderCellDef>descripcion</th>
+<td mat-cell *matCellDef="let element">{{ element.descripcion }}</td>
+</ng-container>
+
+<!-- unidad Column -->
+<ng-container matColumnDef="unidad">
+<th mat-header-cell *matHeaderCellDef>unidad</th>
+<td mat-cell *matCellDef="let element">{{ element.unidad.idUnidad }}</td>
+</ng-container>
+
+<!-- calificacion Column -->
+<ng-container matColumnDef="calificacion">
+<th mat-header-cell *matHeaderCellDef>calificacion</th>
+<td mat-cell *matCellDef="let element">{{ element.calificacion }}</td>
+</ng-container>
+
+<!-- contador Column -->
+<ng-container matColumnDef="contador">
+<th mat-header-cell *matHeaderCellDef>contador</th>
+<td mat-cell *matCellDef="let element">{{ element.contador }}</td>
+</ng-container>
+
+<!-- estudiante Column -->
+<ng-container matColumnDef="estudiante">
+<th mat-header-cell *matHeaderCellDef>estudiante</th>
+<td mat-cell *matCellDef="let element">{{ element.estudiante.idEstudiante }}</td>
+</ng-container>
+
+<!-- Acciones 01 and 02 columns -->
+<ng-container matColumnDef="accion01">
+<th mat-header-cell *matHeaderCellDef>Acciones</th>
+<td mat-cell *matCellDef="let element">
+<button mat-raised-button color="warn" [routerLink]="['ediciones', element.idProyecto]">
+Actualizar
+</button>
+</td>
+</ng-container>
+<ng-container matColumnDef="accion02">
+<th mat-header-cell *matHeaderCellDef>Acciones</th>
+<td mat-cell *matCellDef="let element">
+<button mat-raised-button color="accent" (click)="eliminar(element.idProyecto)">
+Eliminar
+</button>
+</td>
+</ng-container>
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+<tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+</div>
+</body>
+
+</html>

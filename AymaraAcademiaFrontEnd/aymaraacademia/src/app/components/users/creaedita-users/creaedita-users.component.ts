@@ -10,6 +10,7 @@ AbstractControl,
 } from '@angular/forms';
 import { Users } from 'src/app/models/users';
 import { UsersService } from 'src/app/services/users.service';
+
 @Component({
 selector: 'app-creaedita-users',
 templateUrl: './creaedita-users.component.html',
@@ -26,8 +27,7 @@ constructor(
 private usersService: UsersService,
 private router: Router,
 private formBuilder: FormBuilder,
-private route: ActivatedRoute
-) {}
+private route: ActivatedRoute) {}
 
 ngOnInit(): void {
 
@@ -36,6 +36,8 @@ this.id = data['id'];
 this.edicion = data['id'] != null;
 this.init();
 });
+
+
 this.form = this.formBuilder.group({
 idEntityName: [''],
 username: ['', Validators.required],
