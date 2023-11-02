@@ -10,6 +10,8 @@ import { UserComponent } from './components/user/user.component';
 import { CreaeditaUserComponent } from './components/user/creaedita-user/creaedita-user.component';
 import { CursoComponent } from './components/curso/curso.component';
 import { CreaeditaCursoComponent } from './components/curso/creaedita-curso/creaedita-curso.component';
+import { AlternativaComponent } from './components/alternativa/alternativa.component';
+import { CreaeditaAlternativaComponent } from './components/alternativa/creaedita-alternativa/creaedita-alternativa.component';
 
 const routes: Routes = [
 // For each entity, you must create a path that will be used to navigate to the related components
@@ -35,6 +37,12 @@ path: 'user', component: UserComponent, children: [
 path: 'curso', component: CursoComponent, children: [
 {path: 'nuevo', component: CreaeditaCursoComponent},
 {path: 'ediciones/:id',component:CreaeditaCursoComponent}
+]
+},
+{
+path: 'alternativa', component: AlternativaComponent, children: [
+{path: 'nuevo', component: CreaeditaAlternativaComponent},
+{path: 'ediciones/:id',component:CreaeditaAlternativaComponent}
 ]
 },
 ];

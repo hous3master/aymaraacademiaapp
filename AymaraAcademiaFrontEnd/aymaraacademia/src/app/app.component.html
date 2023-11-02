@@ -3,6 +3,7 @@
 <button mat-button [matMenuTriggerFor]="menuUnidad">Unidad</button>
 <button mat-button [matMenuTriggerFor]="menuUser">User</button>
 <button mat-button [matMenuTriggerFor]="menuCurso">Curso</button>
+<button mat-button [matMenuTriggerFor]="menuAlternativa">Alternativa</button>
 </mat-toolbar>
 <mat-menu #menuModulo="matMenu">
 <button mat-menu-item routerLink="/modulo/nuevo">Registrar</button>
@@ -19,5 +20,9 @@
 <mat-menu #menuCurso="matMenu">
 <button mat-menu-item routerLink="/curso/nuevo">Registrar</button>
 <button mat-menu-item routerLink="/curso">Listar</button>
+</mat-menu>
+<mat-menu #menuAlternativa="matMenu">
+<button mat-menu-item routerLink="/alternativa/nuevo">Registrar</button>
+<button mat-menu-item routerLink="/alternativa">Listar</button>
 </mat-menu>
 <router-outlet></router-outlet>

@@ -7,7 +7,6 @@ public class AlternativaDTO {
     private int idAlternativa;
     private String respuesta;
     private boolean correcta;
-    private Preguntaalternativa preguntaalternativa;
 
     public int getIdAlternativa() {
         return idAlternativa;
@@ -31,14 +30,6 @@ public class AlternativaDTO {
 
     public void setCorrecta(boolean correcta) {
         this.correcta = correcta;
-    }
-
-    public Preguntaalternativa getPreguntaalternativa() {
-        return preguntaalternativa;
-    }
-
-    public void setPreguntaalternativa(Preguntaalternativa preguntaalternativa) {
-        this.preguntaalternativa = preguntaalternativa;
     }
 
 }

@@ -36,6 +36,9 @@ import { CreaeditaUserComponent } from './components/user/creaedita-user/creaedi
 import { CursoComponent } from './components/curso/curso.component';
 import { ListarCursoComponent } from './components/curso/listar-curso/listar-curso.component';
 import { CreaeditaCursoComponent } from './components/curso/creaedita-curso/creaedita-curso.component';
+import { AlternativaComponent } from './components/alternativa/alternativa.component';
+import { ListarAlternativaComponent } from './components/alternativa/listar-alternativa/listar-alternativa.component';
+import { CreaeditaAlternativaComponent } from './components/alternativa/creaedita-alternativa/creaedita-alternativa.component';
 
 @NgModule({
 declarations: [
@@ -51,7 +54,10 @@ declarations: [
     CreaeditaUserComponent,
     CursoComponent,
     ListarCursoComponent,
-    CreaeditaCursoComponent],
+    CreaeditaCursoComponent,
+    AlternativaComponent,
+    ListarAlternativaComponent,
+    CreaeditaAlternativaComponent],
 imports: [
     // Default
     BrowserModule,
