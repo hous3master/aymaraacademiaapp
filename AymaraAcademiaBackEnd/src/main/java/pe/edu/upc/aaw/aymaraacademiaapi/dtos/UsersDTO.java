@@ -3,17 +3,17 @@ package pe.edu.upc.aaw.aymaraacademiaapi.dtos;
 import pe.edu.upc.aaw.aymaraacademiaapi.entities.*;
 import java.time.LocalDate;
 
-public class UserDTO {
-    private int idUser;
+public class UsersDTO {
+    private int idUsers;
     private String username;
     private String password;
 
-    public int getIdUser() {
-        return idUser;
+    public int getIdUsers() {
+        return idUsers;
     }
 
-    public void setIdUser(int idUser) {
-        this.idUser = idUser;
+    public void setIdUsers(int idUsers) {
+        this.idUsers = idUsers;
     }
 
     public String getUsername() {

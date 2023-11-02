@@ -9,12 +9,12 @@
 
 <body>
 <div class="container" style="text-align: center">
-<h2>Registro de user</h2>
+<h2>Registro de users</h2>
 <form [formGroup]="form" (submit)="aceptar()" class="example-form">
 <!-- idEntityName -->
 <mat-form-field class="example-full-width" *ngIf="edicion">
-<mat-label>idUser</mat-label>
-<input matInput placeholder="Id" formControlName="idUser"/>
+<mat-label>idUsers</mat-label>
+<input matInput placeholder="Id" formControlName="idUsers"/>
 </mat-form-field>
 <br />
 <!-- Form fields for each attribute -->
@@ -38,7 +38,7 @@ password es obligatorio.
 <br />
 <!-- Buttons for actions -->
 <button mat-raised-button color="primary">Aceptar</button>
-<button mat-raised-button color="warn" routerLink="/user">
+<button mat-raised-button color="warn" routerLink="/users">
 Cancelar
 </button>
 <p>{{ mensaje }}</p>

@@ -6,7 +6,7 @@ import java.time.LocalDate;
 public class RoleDTO {
     private int idRole;
     private String rol;
-    private User user;
+    private Users user;
 
     public int getIdRole() {
         return idRole;
@@ -24,11 +24,11 @@ public class RoleDTO {
         this.rol = rol;
     }
 
-    public User getUser() {
+    public Users getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(Users user) {
         this.user = user;
     }
 

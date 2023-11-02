@@ -30,9 +30,9 @@ import { CreaeditaModuloComponent } from './components/modulo/creaedita-modulo/c
 import { UnidadComponent } from './components/unidad/unidad.component';
 import { ListarUnidadComponent } from './components/unidad/listar-unidad/listar-unidad.component';
 import { CreaeditaUnidadComponent } from './components/unidad/creaedita-unidad/creaedita-unidad.component';
-import { UserComponent } from './components/user/user.component';
-import { ListarUserComponent } from './components/user/listar-user/listar-user.component';
-import { CreaeditaUserComponent } from './components/user/creaedita-user/creaedita-user.component';
+import { UsersComponent } from './components/users/users.component';
+import { ListarUsersComponent } from './components/users/listar-users/listar-users.component';
+import { CreaeditaUsersComponent } from './components/users/creaedita-users/creaedita-users.component';
 import { CursoComponent } from './components/curso/curso.component';
 import { ListarCursoComponent } from './components/curso/listar-curso/listar-curso.component';
 import { CreaeditaCursoComponent } from './components/curso/creaedita-curso/creaedita-curso.component';
@@ -49,9 +49,9 @@ declarations: [
     UnidadComponent,
     ListarUnidadComponent,
     CreaeditaUnidadComponent,
-    UserComponent,
-    ListarUserComponent,
-    CreaeditaUserComponent,
+    UsersComponent,
+    ListarUsersComponent,
+    CreaeditaUsersComponent,
     CursoComponent,
     ListarCursoComponent,
     CreaeditaCursoComponent,

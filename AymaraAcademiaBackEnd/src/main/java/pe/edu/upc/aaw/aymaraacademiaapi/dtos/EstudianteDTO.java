@@ -10,7 +10,7 @@ public class EstudianteDTO {
     private int edad;
     private int resena;
     private String email;
-    private User user;
+    private Users user;
 
     public int getIdEstudiante() {
         return idEstudiante;
@@ -60,11 +60,11 @@ public class EstudianteDTO {
         this.email = email;
     }
 
-    public User getUser() {
+    public Users getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(Users user) {
         this.user = user;
     }
 

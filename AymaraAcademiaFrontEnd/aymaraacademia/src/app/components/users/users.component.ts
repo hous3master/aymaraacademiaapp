@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-selector: 'app-user',
-templateUrl: './user.component.html',
-styleUrls: ['./user.component.css'],
+selector: 'app-users',
+templateUrl: './users.component.html',
+styleUrls: ['./users.component.css'],
 })
-export class UserComponent {
+export class UsersComponent {
 constructor(public route: ActivatedRoute) {}
 
 ngOnInit(): void {}

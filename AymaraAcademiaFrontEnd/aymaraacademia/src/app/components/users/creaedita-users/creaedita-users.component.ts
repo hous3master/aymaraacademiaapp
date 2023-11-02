@@ -8,22 +8,22 @@ Validators,
 FormBuilder,
 AbstractControl,
 } from '@angular/forms';
-import { User } from 'src/app/models/user';
-import { UserService } from 'src/app/services/user.service';
+import { Users } from 'src/app/models/users';
+import { UsersService } from 'src/app/services/users.service';
 @Component({
-selector: 'app-creaedita-user',
-templateUrl: './creaedita-user.component.html',
-styleUrls: ['./creaedita-user.component.css'],
+selector: 'app-creaedita-users',
+templateUrl: './creaedita-users.component.html',
+styleUrls: ['./creaedita-users.component.css'],
 })
-export class CreaeditaUserComponent implements OnInit {
+export class CreaeditaUsersComponent implements OnInit {
 form: FormGroup = new FormGroup({});
-user: User = new User();
+users: Users = new Users();
 mensaje: string = '';
 id: number = 0;
 edicion: boolean = false;
 
 constructor(
-private userService: UserService,
+private usersService: UsersService,
 private router: Router,
 private formBuilder: FormBuilder,
 private route: ActivatedRoute
@@ -44,25 +44,25 @@ password: ['', Validators.required],
 }
 aceptar(): void {
 if (this.form.valid) {
-// Assign values to the user
-this.user.idUser = this.form.value.idUser;
+// Assign values to the users
+this.users.idUsers = this.form.value.idUsers;
 // Assign values to each attribute
-this.user.username = this.form.value.username;
-this.user.password = this.form.value.password;
+this.users.username = this.form.value.username;
+this.users.password = this.form.value.password;
 if (this.edicion) {
-this.userService.update(this.user).subscribe(() => {
-this.userService.list().subscribe((data) => {
-this.userService.setList(data);
+this.usersService.update(this.users).subscribe(() => {
+this.usersService.list().subscribe((data) => {
+this.usersService.setList(data);
 });
 });
 } else {
-this.userService.insert(this.user).subscribe((data) => {
-this.userService.list().subscribe((data) => {
-this.userService.setList(data);
+this.usersService.insert(this.users).subscribe((data) => {
+this.usersService.list().subscribe((data) => {
+this.usersService.setList(data);
 });
 });
 }
-this.router.navigate(['user']);
+this.router.navigate(['users']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }
@@ -78,10 +78,10 @@ return control;
 }
 init() {
 if (this.edicion) {
-this.userService.listId(this.id).subscribe((data) => {
+this.usersService.listId(this.id).subscribe((data) => {
 this.form = new FormGroup({
 // Attributes of the formGroup
-idUser: new FormControl(data.idUser),
+idUsers: new FormControl(data.idUsers),
 username: new FormControl(data.username),
 password: new FormControl(data.password),
 });

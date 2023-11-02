@@ -17,11 +17,11 @@ private String rol;
 
 @ManyToOne
 @JoinColumn(name = "idUser")
-private User user;
+private Users user;
 
 public Role() { }
 
-public Role(int idRole,String rol, User user) {
+public Role(int idRole,String rol, Users user) {
     this.idRole = idRole;
     this.rol = rol;
     this.user = user;
@@ -43,11 +43,11 @@ public void setRol(String rol) {
     this.rol = rol;
 }
 
-public User getUser() {
+public Users getUser() {
     return user;
 }
 
-public void setUser(User user) {
+public void setUser(Users user) {
     this.user = user;
 }
 

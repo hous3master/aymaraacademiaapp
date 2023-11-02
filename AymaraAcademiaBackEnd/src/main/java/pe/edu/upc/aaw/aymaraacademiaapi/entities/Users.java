@@ -5,12 +5,12 @@ import pe.edu.upc.aaw.aymaraacademiaapi.entities.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "User")
-public class User {
+@Table(name = "Users")
+public class Users {
 
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-private int idUser;
+private int idUsers;
 
 @Column(name = "username", nullable = false)
 private String username;
@@ -18,20 +18,20 @@ private String username;
 @Column(name = "password", nullable = false)
 private String password;
 
-public User() { }
+public Users() { }
 
-public User(int idUser,String username, String password) {
-    this.idUser = idUser;
+public Users(int idUsers,String username, String password) {
+    this.idUsers = idUsers;
     this.username = username;
     this.password = password;
 }
 
-public int getIdUser() {
-    return idUser;
+public int getIdUsers() {
+    return idUsers;
 }
 
-public void setIdUser(int idUser) {
-    this.idUser = idUser;
+public void setIdUsers(int idUsers) {
+    this.idUsers = idUsers;
 }
 
 public String getUsername() {

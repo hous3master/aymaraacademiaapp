@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
 <button mat-button [matMenuTriggerFor]="menuModulo">Modulo</button>
 <button mat-button [matMenuTriggerFor]="menuUnidad">Unidad</button>
-<button mat-button [matMenuTriggerFor]="menuUser">User</button>
+<button mat-button [matMenuTriggerFor]="menuUsers">Users</button>
 <button mat-button [matMenuTriggerFor]="menuCurso">Curso</button>
 <button mat-button [matMenuTriggerFor]="menuAlternativa">Alternativa</button>
 </mat-toolbar>
@@ -13,9 +13,9 @@
 <button mat-menu-item routerLink="/unidad/nuevo">Registrar</button>
 <button mat-menu-item routerLink="/unidad">Listar</button>
 </mat-menu>
-<mat-menu #menuUser="matMenu">
-<button mat-menu-item routerLink="/user/nuevo">Registrar</button>
-<button mat-menu-item routerLink="/user">Listar</button>
+<mat-menu #menuUsers="matMenu">
+<button mat-menu-item routerLink="/users/nuevo">Registrar</button>
+<button mat-menu-item routerLink="/users">Listar</button>
 </mat-menu>
 <mat-menu #menuCurso="matMenu">
 <button mat-menu-item routerLink="/curso/nuevo">Registrar</button>
