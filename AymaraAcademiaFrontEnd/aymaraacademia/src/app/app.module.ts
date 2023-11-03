@@ -10,7 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 // Material
-import { MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
@@ -24,6 +24,7 @@ import { FormBuilder } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { NgIf } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 
 // Forms required
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -78,7 +79,7 @@ import { ListarCursoComponent } from './components/curso/listar-curso/listar-cur
 import { CreaeditaCursoComponent } from './components/curso/creaedita-curso/creaedita-curso.component';
 
 @NgModule({
-declarations: [
+  declarations: [
     AppComponent,
     AlternativaComponent,
     ListarAlternativaComponent,
@@ -127,8 +128,9 @@ declarations: [
     CreaeditaCursounidadComponent,
     CursoComponent,
     ListarCursoComponent,
-    CreaeditaCursoComponent],
-imports: [
+    CreaeditaCursoComponent,
+  ],
+  imports: [
     // Default
     BrowserModule,
     AppRoutingModule,
@@ -154,13 +156,13 @@ imports: [
     MatButtonModule,
     MatCheckboxModule,
     MatSidenavModule,
-
+    MatIconModule,
 
     // Forms required
     FormsModule,
-    ReactiveFormsModule
-],
-providers: [],
-bootstrap: [AppComponent]
+    ReactiveFormsModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

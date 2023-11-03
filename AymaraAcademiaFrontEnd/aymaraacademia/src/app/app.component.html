@@ -1,26 +1,28 @@
-
+<mat-toolbar color="primary">
+  <span><p>Nuestras Entidades</p></span>
+</mat-toolbar>
 
 <div class="container-fluid  h-100">
   <div class="row h-100">
     <div class="col-md-2 mat-elevation-z4">
       <mat-sidenav-container>
-        <mat-sidenav-content>
-          <button mat-button [matMenuTriggerFor]="menuAlternativa">Alternativa</button><br>
-          <button mat-button [matMenuTriggerFor]="menuEstudiante">Estudiante</button><br>
-          <button mat-button [matMenuTriggerFor]="menuLectura">Lectura</button><br>
-          <button mat-button [matMenuTriggerFor]="menuModulo">Modulo</button><br>
-          <button mat-button [matMenuTriggerFor]="menuPregunta">Pregunta</button><br>
-          <button mat-button [matMenuTriggerFor]="menuPreguntaalternativa">Preguntaalternativa</button><br>
-          <button mat-button [matMenuTriggerFor]="menuProgreso">Progreso</button><br>
-          <button mat-button [matMenuTriggerFor]="menuProyecto">Proyecto</button><br>
-          <button mat-button [matMenuTriggerFor]="menuQuizz">Quizz</button><br>
-          <button mat-button [matMenuTriggerFor]="menuRole">Role</button><br>
-          <button mat-button [matMenuTriggerFor]="menuUnidad">Unidad</button><br>
-          <button mat-button [matMenuTriggerFor]="menuUnidadmodulo">Unidadmodulo</button><br>
-          <button mat-button [matMenuTriggerFor]="menuUsers">Users</button><br>
-          <button mat-button [matMenuTriggerFor]="menuVideo">Video</button><br>
-          <button mat-button [matMenuTriggerFor]="menuCursounidad">Cursounidad</button><br>
-          <button mat-button [matMenuTriggerFor]="menuCurso">Curso</button><br>
+        <mat-sidenav-content class="w-100">
+          <button mat-button [matMenuTriggerFor]="menuAlternativa" class="w-100">Alternativa</button><br>
+          <button mat-button [matMenuTriggerFor]="menuEstudiante" class="w-100">Estudiante</button><br>
+          <button mat-button [matMenuTriggerFor]="menuLectura" class="w-100">Lectura</button><br>
+          <button mat-button [matMenuTriggerFor]="menuModulo" class="w-100">Modulo</button><br>
+          <button mat-button [matMenuTriggerFor]="menuPregunta" class="w-100">Pregunta</button><br>
+          <button mat-button [matMenuTriggerFor]="menuPreguntaalternativa" class="w-100">Preguntaalternativa</button><br>
+          <button mat-button [matMenuTriggerFor]="menuProgreso" class="w-100">Progreso</button><br>
+          <button mat-button [matMenuTriggerFor]="menuProyecto" class="w-100">Proyecto</button><br>
+          <button mat-button [matMenuTriggerFor]="menuQuizz" class="w-100">Quizz</button><br>
+          <button mat-button [matMenuTriggerFor]="menuRole" class="w-100">Role</button><br>
+          <button mat-button [matMenuTriggerFor]="menuUnidad" class="w-100">Unidad</button><br>
+          <button mat-button [matMenuTriggerFor]="menuUnidadmodulo" class="w-100">Unidadmodulo</button><br>
+          <button mat-button [matMenuTriggerFor]="menuUsers" class="w-100">Users</button><br>
+          <button mat-button [matMenuTriggerFor]="menuVideo" class="w-100">Video</button><br>
+          <button mat-button [matMenuTriggerFor]="menuCursounidad" class="w-100">Cursounidad</button><br>
+          <button mat-button [matMenuTriggerFor]="menuCurso" class="w-100">Curso</button><br>
         </mat-sidenav-content>
       </mat-sidenav-container>
     </div>
@@ -94,6 +96,5 @@
   <button mat-menu-item routerLink="/curso/nuevo">Registrar</button>
   <button mat-menu-item routerLink="/curso">Listar</button>
 </mat-menu>
-
 
 
