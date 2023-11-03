@@ -35,10 +35,15 @@ import { CreaeditaCursounidadComponent } from './components/cursounidad/creaedit
 import { CursoComponent } from './components/curso/curso.component';
 import { CreaeditaCursoComponent } from './components/curso/creaedita-curso/creaedita-curso.component';
 import { EntidadesComponent } from './components/entidades/entidades.component';
+import { LandingComponent } from './components/landing/landing.component';
 
 const routes: Routes = [
   // For each entity, you must create a path that will be used to navigate to the related components
   {
+    path: 'landing',
+    component: LandingComponent,
+  }
+  ,{
     path: 'entidades',
     component: EntidadesComponent,
     children: [
