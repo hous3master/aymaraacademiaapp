@@ -1,13 +1,22 @@
 <header>
+  <mat-toolbar color="primary" class="bg-black" style="height: 25px;">
+    <span class="example-spacer"></span>
+    <button mat-button routerLink="/entidades" style="height: 20px;"><u>CRUD de las 16 entidades (independientes y dependientes)</u></button>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
   <mat-toolbar color="primary">
     <span class="toolbar-items">
-      <button mat-icon-button>
-        <mat-icon svgIcon="logo" src="../assets/logoipsum-226.svg"></mat-icon>
+      <button mat-button class="m-3">
+        <span>
+          <mat-icon svgIcon="logo" src="../assets/logoipsum-226.svg"></mat-icon>
+          <span class="mat-subtitle-2">Aymara Academia</span>
+        </span>
       </button>
+
       <button mat-flat-button routerLink="/landing">Explorar</button>
       <button mat-button routerLink="/landing">¿Quienes somos?</button>
       <button mat-button routerLink="/landing">Recursos</button>
-      <button mat-button routerLink="/landing">Contactanos</button>
+      <button mat-button routerLink="/landing">Contáctanos</button>
     </span>
 
     <span class="toolbar-items">
@@ -18,18 +27,22 @@
 </header>
 
 <section class="index">
-  <div class="row">
-    <div class="col-md-6 p-5 d-flex flex-column align-items-md-stretch justify-content-center">
-      <h1>Aymara Academia</h1>
-      <h2>¡La manera más divertida de fortalecer nuestra identidad cultural!</h2>
-      <div class="row">
-        <button mat-raised-button class="col-5 m-1" color="primary">Inicia Sesión</button><br>
-        <button mat-raised-button class="col-5 m-1">Únete de forma gratuita</button><br>
+  <div class="row justify-content-center">
+    <div class="col-md-4 p-5 d-flex flex-column align-items-md-stretch justify-content-center">
+      <h1 class="mat-headline-3 p-0 m-0">NEW “Aymara Academia Certified” is here!</h1>
+      <h2>¡La manera más divertida de fortalecer nuestra identidad cultural! Obten habilidades prácticas y certifica tus
+        conocimientos en el idioma.</h2>
+
+      <div class="row p-0 m-0">
+        <button mat-raised-button class="col-7 p-0 m-0" color="primary">Únete de forma gratuita</button><br>
+        <span class="col-1 p-0 m-0"></span>
+        <button mat-raised-button class="col-4 p-0 m-0">Inicia Sesión</button><br>
       </div>
+
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 p-5">
       <img src="https://www.rollingstone.com/wp-content/uploads/2021/03/AdobeStock_295570757.jpeg" alt=""
-        class="img-fluid p-5">
+        class="img-fluid rounded">
     </div>
   </div>
 </section>
