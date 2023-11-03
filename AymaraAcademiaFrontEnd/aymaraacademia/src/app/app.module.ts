@@ -25,6 +25,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { NgIf } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 // Forms required
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -79,6 +80,7 @@ import { ListarCursoComponent } from './components/curso/listar-curso/listar-cur
 import { CreaeditaCursoComponent } from './components/curso/creaedita-curso/creaedita-curso.component';
 import { EntidadesComponent } from './components/entidades/entidades.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -161,6 +163,8 @@ import { LandingComponent } from './components/landing/landing.component';
     MatCheckboxModule,
     MatSidenavModule,
     MatIconModule,
+    MatGridListModule,
+    MatDividerModule,
 
     // Forms required
     FormsModule,
