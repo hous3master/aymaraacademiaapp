@@ -71,7 +71,7 @@ this.quizzService.setList(data);
 });
 });
 }
-this.router.navigate(['quizz']);
+this.router.navigate(['entidades/quizz']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }

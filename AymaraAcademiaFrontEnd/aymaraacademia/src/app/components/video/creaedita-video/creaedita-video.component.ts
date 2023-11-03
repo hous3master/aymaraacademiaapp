@@ -81,7 +81,7 @@ this.videoService.setList(data);
 });
 });
 }
-this.router.navigate(['video']);
+this.router.navigate(['entidades/video']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }

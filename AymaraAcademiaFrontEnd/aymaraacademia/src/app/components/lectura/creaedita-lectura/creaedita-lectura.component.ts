@@ -75,7 +75,7 @@ this.lecturaService.setList(data);
 });
 });
 }
-this.router.navigate(['lectura']);
+this.router.navigate(['entidades/lectura']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }

@@ -71,7 +71,7 @@ this.preguntaService.setList(data);
 });
 });
 }
-this.router.navigate(['pregunta']);
+this.router.navigate(['entidades/pregunta']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }

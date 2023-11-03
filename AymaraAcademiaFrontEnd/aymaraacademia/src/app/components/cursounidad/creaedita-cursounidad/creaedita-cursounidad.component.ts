@@ -78,7 +78,7 @@ this.cursounidadService.setList(data);
 });
 });
 }
-this.router.navigate(['cursounidad']);
+this.router.navigate(['entidades/cursounidad']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }

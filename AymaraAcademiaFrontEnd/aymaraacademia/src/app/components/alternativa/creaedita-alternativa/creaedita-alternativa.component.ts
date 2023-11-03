@@ -64,7 +64,7 @@ this.alternativaService.setList(data);
 });
 });
 }
-this.router.navigate(['alternativa']);
+this.router.navigate(['entidades/alternativa']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }

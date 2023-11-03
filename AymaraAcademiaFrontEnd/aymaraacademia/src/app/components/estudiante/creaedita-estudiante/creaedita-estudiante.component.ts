@@ -79,7 +79,7 @@ this.estudianteService.setList(data);
 });
 });
 }
-this.router.navigate(['estudiante']);
+this.router.navigate(['entidades/estudiante']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }

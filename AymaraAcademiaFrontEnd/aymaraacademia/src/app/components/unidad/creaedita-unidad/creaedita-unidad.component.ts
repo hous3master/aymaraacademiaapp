@@ -64,7 +64,7 @@ this.unidadService.setList(data);
 });
 });
 }
-this.router.navigate(['unidad']);
+this.router.navigate(['entidades/unidad']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }

@@ -77,6 +77,7 @@ import { CreaeditaCursounidadComponent } from './components/cursounidad/creaedit
 import { CursoComponent } from './components/curso/curso.component';
 import { ListarCursoComponent } from './components/curso/listar-curso/listar-curso.component';
 import { CreaeditaCursoComponent } from './components/curso/creaedita-curso/creaedita-curso.component';
+import { EntidadesComponent } from './components/entidades/entidades.component';
 
 @NgModule({
   declarations: [
@@ -129,6 +130,7 @@ import { CreaeditaCursoComponent } from './components/curso/creaedita-curso/crea
     CursoComponent,
     ListarCursoComponent,
     CreaeditaCursoComponent,
+    EntidadesComponent,
   ],
   imports: [
     // Default

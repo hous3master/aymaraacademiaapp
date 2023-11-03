@@ -86,7 +86,7 @@ this.proyectoService.setList(data);
 });
 });
 }
-this.router.navigate(['proyecto']);
+this.router.navigate(['entidades/proyecto']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }

@@ -64,7 +64,7 @@ this.cursoService.setList(data);
 });
 });
 }
-this.router.navigate(['curso']);
+this.router.navigate(['entidades/curso']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }

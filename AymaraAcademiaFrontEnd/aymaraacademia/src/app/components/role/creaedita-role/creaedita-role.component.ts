@@ -71,7 +71,7 @@ this.roleService.setList(data);
 });
 });
 }
-this.router.navigate(['role']);
+this.router.navigate(['entidades/role']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }

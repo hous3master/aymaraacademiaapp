@@ -64,7 +64,7 @@ this.moduloService.setList(data);
 });
 });
 }
-this.router.navigate(['modulo']);
+this.router.navigate(['entidades/modulo']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }
