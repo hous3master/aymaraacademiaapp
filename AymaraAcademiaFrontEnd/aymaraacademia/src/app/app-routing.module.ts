@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { ListarVideoPorModuloComponent } from './components/video/listar-video-por-modulo/listar-video-por-modulo.component';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // For each entity, you must import the related components
@@ -40,10 +41,14 @@ import { LandingComponent } from './components/landing/landing.component';
 const routes: Routes = [
   // For each entity, you must create a path that will be used to navigate to the related components
   {
-    path: 'landing',
+    path: '',
     component: LandingComponent,
-  }
-  ,{
+  },
+  {
+    path: 'test/:idModulo',
+    component: ListarVideoPorModuloComponent,
+  },
+  {
     path: 'entidades',
     component: EntidadesComponent,
     children: [

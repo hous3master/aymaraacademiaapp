@@ -1,0 +1,21 @@
+<div class="video-container" *ngFor="let video of videos" class="p-5 col-12 d-flex flex-column">
+  <div class="d-flex flex-row col-12">
+    <div class="d-flex flex-column col-4">
+      <h5 class="mat-headline-6"> {{video.presentador}} </h5>
+      <h4 class="mat-headline-5"> {{video.titulo}} </h4>
+      <p> {{video.descripcion}} </p>
+      <div class="p-4 col-12">
+        <button mat-button class="w-100" color="primary" (click)="showTranscription = !showTranscription">{{ showTranscription ? 'Hide' : 'Show' }} Transcription</button>
+      </div>
+    </div>
+    <div class="col-8">
+      <video controls class="w-100">
+        <source [src]="video.url" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+  <div class="col-12">
+    <p *ngIf="showTranscription"> {{video.transcripcion}} </p>
+  </div>
+</div>

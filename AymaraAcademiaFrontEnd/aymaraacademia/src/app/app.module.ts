@@ -1,3 +1,4 @@
+import { MatCard } from '@angular/material/card';
 // Default imports
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -26,6 +27,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { NgIf } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 
 // Forms required
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -81,6 +83,7 @@ import { CreaeditaCursoComponent } from './components/curso/creaedita-curso/crea
 import { EntidadesComponent } from './components/entidades/entidades.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { ListarVideoPorModuloComponent } from './components/video/listar-video-por-modulo/listar-video-por-modulo.component';
 
 @NgModule({
   declarations: [
@@ -135,6 +138,7 @@ import { MatDividerModule } from '@angular/material/divider';
     CreaeditaCursoComponent,
     EntidadesComponent,
     LandingComponent,
+    ListarVideoPorModuloComponent
   ],
   imports: [
     // Default
@@ -165,6 +169,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatIconModule,
     MatGridListModule,
     MatDividerModule,
+    MatCardModule,
 
     // Forms required
     FormsModule,
