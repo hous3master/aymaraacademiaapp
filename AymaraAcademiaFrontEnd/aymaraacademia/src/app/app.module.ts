@@ -92,6 +92,7 @@ import { InformacionModuloComponent } from './components/modulo/informacion-modu
 import { ListarmoduloporunidadComponent } from './components/modulo/listarmoduloporunidad/listarmoduloporunidad.component';
 import { InformacionunidadComponent } from './components/unidad/informacionunidad/informacionunidad.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ContenidoLecturaComponent } from './components/lectura/contenido-lectura/contenido-lectura.component';
 
 @NgModule({
   declarations: [
@@ -154,7 +155,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     InformacionModuloComponent,
     ListarmoduloporunidadComponent,
     InformacionunidadComponent,
-    NavbarComponent
+    NavbarComponent,
+    ContenidoLecturaComponent
   ],
   imports: [
     // Default

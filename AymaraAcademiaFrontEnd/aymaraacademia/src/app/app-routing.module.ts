@@ -45,6 +45,7 @@ import { ListarpreguntaporquizzComponent } from './components/pregunta/listarpre
 import { InformacionModuloComponent } from './components/modulo/informacion-modulo/informacion-modulo.component';
 import { ListarmoduloporunidadComponent } from './components/modulo/listarmoduloporunidad/listarmoduloporunidad.component';
 import { InformacionunidadComponent } from './components/unidad/informacionunidad/informacionunidad.component';
+import { ContenidoLecturaComponent } from './components/lectura/contenido-lectura/contenido-lectura.component';
 
 const routes: Routes = [
   // For each entity, you must create a path that will be used to navigate to the related components
@@ -88,6 +89,7 @@ const routes: Routes = [
         children: [
           { path: 'nuevo', component: CreaeditaLecturaComponent },
           { path: 'ediciones/:id', component: CreaeditaLecturaComponent },
+          { path: 'contenido/:id', component: ContenidoLecturaComponent}
         ],
       },
       {
