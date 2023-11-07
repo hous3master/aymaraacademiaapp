@@ -30,7 +30,7 @@ username es obligatorio.
 <!-- NOTE : Only if is not of type LocalDate -->
 <mat-form-field class="example-full-width">
 <mat-label>password</mat-label>
-<input matInput placeholder="password" formControlName="password"/>
+<input matInput type="password" placeholder="password" formControlName="password"/>
 <mat-error *ngIf="obtenerControlCampo('password')?.errors?.['required']">
 password es obligatorio.
 </mat-error>
