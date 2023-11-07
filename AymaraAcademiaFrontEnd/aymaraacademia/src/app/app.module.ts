@@ -92,6 +92,7 @@ import { InformacionModuloComponent } from './components/modulo/informacion-modu
 import { ListarmoduloporunidadComponent } from './components/modulo/listarmoduloporunidad/listarmoduloporunidad.component';
 import { InformacionunidadComponent } from './components/unidad/informacionunidad/informacionunidad.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   declarations: [
@@ -154,7 +155,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     InformacionModuloComponent,
     ListarmoduloporunidadComponent,
     InformacionunidadComponent,
-    NavbarComponent
+    NavbarComponent,
+    SafePipe
   ],
   imports: [
     // Default

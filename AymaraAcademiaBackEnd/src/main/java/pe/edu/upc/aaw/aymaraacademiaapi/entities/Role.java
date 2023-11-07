@@ -12,7 +12,7 @@ public class Role {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int idRole;
 
-@Column(name = "rol", nullable = false)
+@Column(name = "rol", nullable = true)
 private String rol;
 
 @ManyToOne
