@@ -37,6 +37,14 @@ import { CursoComponent } from './components/curso/curso.component';
 import { CreaeditaCursoComponent } from './components/curso/creaedita-curso/creaedita-curso.component';
 import { EntidadesComponent } from './components/entidades/entidades.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { ListarLecturaComponent } from './components/lectura/listar-lectura/listar-lectura.component';
+import { ListarlecturapormoduloComponent } from './components/lectura/listarlecturapormodulo/listarlecturapormodulo.component';
+import { ListarquizzpormoduloComponent } from './components/quizz/listarquizzpormodulo/listarquizzpormodulo.component';
+import { ListaralternativaporpreguntaComponent } from './components/alternativa/listaralternativaporpregunta/listaralternativaporpregunta.component';
+import { ListarpreguntaporquizzComponent } from './components/pregunta/listarpreguntaporquizz/listarpreguntaporquizz.component';
+import { InformacionModuloComponent } from './components/modulo/informacion-modulo/informacion-modulo.component';
+import { ListarmoduloporunidadComponent } from './components/modulo/listarmoduloporunidad/listarmoduloporunidad.component';
+import { InformacionunidadComponent } from './components/unidad/informacionunidad/informacionunidad.component';
 
 const routes: Routes = [
   // For each entity, you must create a path that will be used to navigate to the related components
@@ -45,8 +53,14 @@ const routes: Routes = [
     component: LandingComponent,
   },
   {
-    path: 'test/:idModulo',
-    component: ListarVideoPorModuloComponent,
+    path: 'informacionunidad/:idUnidad',
+    component: InformacionunidadComponent,
+    children: [
+      {
+        path: 'modulo/:idModulo',
+        component: InformacionModuloComponent,
+      },
+    ]
   },
   {
     path: 'entidades',

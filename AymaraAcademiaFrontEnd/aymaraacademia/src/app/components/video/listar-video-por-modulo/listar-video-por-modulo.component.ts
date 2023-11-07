@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { VideoService } from 'src/app/services/video.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 
@@ -8,21 +8,14 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
   styleUrls: ['./listar-video-por-modulo.component.css'],
 })
 export class ListarVideoPorModuloComponent implements OnInit {
-  idModulo: number = 0;
+  @Input() idModulo: number = 0;
   videos: any[] = []; // replace with actual type of video object
   showTranscription = false; // Add this line
 
-  constructor(
-    private route: ActivatedRoute,
-    private videoService: VideoService
-  ) {}
+  constructor(private videoService: VideoService) {}
 
   ngOnInit() {
-    console.log('NG INIT');
-    this.route.params.subscribe((data: Params) => {
-      this.idModulo = data['idModulo'];
-      this.init();
-    });
+    this.init();
   }
 
   init() {

@@ -1,0 +1,6 @@
+<div class="col-12 d-flex flex-column" *ngFor="let quizz of quizzs">
+  <div>
+    <h5 class="mat-headline-5"> {{quizz.titulo}} </h5>
+    <app-listarpreguntaporquizz [idQuizz]="quizz.idQuizz"></app-listarpreguntaporquizz>
+  </div>
+</div>

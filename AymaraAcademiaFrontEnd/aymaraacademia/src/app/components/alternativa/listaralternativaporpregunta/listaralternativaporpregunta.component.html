@@ -1,0 +1,9 @@
+<div class="col-12 d-flex flex-column">
+  <ol>
+    <div class="col-12 d-flex flex-column" *ngFor="let preguntaalternativa of preguntaalternativa">
+      <div>
+        <li> {{preguntaalternativa.alternativa.respuesta}} <i> <u> ( {{preguntaalternativa.alternativa.correcta}} )  </u> </i> </li>
+      </div>
+    </div>
+  </ol>
+</div>

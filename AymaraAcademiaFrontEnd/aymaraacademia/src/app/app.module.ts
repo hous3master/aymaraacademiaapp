@@ -84,6 +84,14 @@ import { EntidadesComponent } from './components/entidades/entidades.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { ListarVideoPorModuloComponent } from './components/video/listar-video-por-modulo/listar-video-por-modulo.component';
+import { ListarlecturapormoduloComponent } from './components/lectura/listarlecturapormodulo/listarlecturapormodulo.component';
+import { ListarquizzpormoduloComponent } from './components/quizz/listarquizzpormodulo/listarquizzpormodulo.component';
+import { ListaralternativaporpreguntaComponent } from './components/alternativa/listaralternativaporpregunta/listaralternativaporpregunta.component';
+import { ListarpreguntaporquizzComponent } from './components/pregunta/listarpreguntaporquizz/listarpreguntaporquizz.component';
+import { InformacionModuloComponent } from './components/modulo/informacion-modulo/informacion-modulo.component';
+import { ListarmoduloporunidadComponent } from './components/modulo/listarmoduloporunidad/listarmoduloporunidad.component';
+import { InformacionunidadComponent } from './components/unidad/informacionunidad/informacionunidad.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -138,7 +146,15 @@ import { ListarVideoPorModuloComponent } from './components/video/listar-video-p
     CreaeditaCursoComponent,
     EntidadesComponent,
     LandingComponent,
-    ListarVideoPorModuloComponent
+    ListarVideoPorModuloComponent,
+    ListarlecturapormoduloComponent,
+    ListarquizzpormoduloComponent,
+    ListaralternativaporpreguntaComponent,
+    ListarpreguntaporquizzComponent,
+    InformacionModuloComponent,
+    ListarmoduloporunidadComponent,
+    InformacionunidadComponent,
+    NavbarComponent
   ],
   imports: [
     // Default

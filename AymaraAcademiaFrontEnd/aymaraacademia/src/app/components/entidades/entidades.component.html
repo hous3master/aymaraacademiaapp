@@ -1,5 +1,9 @@
-<mat-toolbar color="primary">
-  <span><p>Nuestras Entidades</p></span>
+<app-navbar></app-navbar>
+
+<mat-toolbar class="bg-black text-light">
+  <span>
+    <p>Nuestras Entidades</p>
+  </span>
 </mat-toolbar>
 
 <div class="container-fluid  h-100">
@@ -12,7 +16,8 @@
           <button mat-button [matMenuTriggerFor]="menuLectura" class="w-100">Lectura</button><br>
           <button mat-button [matMenuTriggerFor]="menuModulo" class="w-100">Modulo</button><br>
           <button mat-button [matMenuTriggerFor]="menuPregunta" class="w-100">Pregunta</button><br>
-          <button mat-button [matMenuTriggerFor]="menuPreguntaalternativa" class="w-100">Preguntaalternativa</button><br>
+          <button mat-button [matMenuTriggerFor]="menuPreguntaalternativa"
+            class="w-100">Preguntaalternativa</button><br>
           <button mat-button [matMenuTriggerFor]="menuProgreso" class="w-100">Progreso</button><br>
           <button mat-button [matMenuTriggerFor]="menuProyecto" class="w-100">Proyecto</button><br>
           <button mat-button [matMenuTriggerFor]="menuQuizz" class="w-100">Quizz</button><br>
@@ -96,5 +101,3 @@
   <button mat-menu-item routerLink="./curso/nuevo">Registrar</button>
   <button mat-menu-item routerLink="./curso">Listar</button>
 </mat-menu>
-
-
