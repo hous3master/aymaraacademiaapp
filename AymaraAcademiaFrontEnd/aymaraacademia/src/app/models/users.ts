@@ -1,5 +1,5 @@
 export class Users {
-idUsers:number=0;
+id:number=0;
 username:string="";
 password:string="";
 }

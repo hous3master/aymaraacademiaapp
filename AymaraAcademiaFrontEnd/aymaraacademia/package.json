@@ -20,8 +20,11 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@auth0/angular-jwt": "^5.2.0",
+    "moment": "^2.29.4",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
+    "safe-pipe": "^2.0.5-0",
+    "tslib": "^2.6.2",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { LoginService } from './services/login.service';
 
 @Component({
   selector: 'app-root',
@@ -8,21 +8,25 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AppComponent {
   title = 'aymaraacademia';
-  constructor(public route: ActivatedRoute) {}
-  ngOnInit(): void {}
+  role:string="";
+
+  constructor(private loginService: LoginService) {
+  }
+
+  cerrar() {
+    sessionStorage.clear();
+  }
+
+  verificar() {
+    this.role=this.loginService.showRole();
+    return this.loginService.verificar();
+  }
+  validarRol(){
+    if(this.role=='ADMIN' || this.role=='USER'){
+      return true;
+    }else{
+      return false;
+    }
+  }
 }
 
-/*import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-
-@Component({
-selector: 'app-modulo',
-templateUrl: './modulo.component.html',
-styleUrls: ['./modulo.component.css'],
-})
-export class ModuloComponent {
-constructor(public route: ActivatedRoute) {}
-
-ngOnInit(): void {}
-}
-*/

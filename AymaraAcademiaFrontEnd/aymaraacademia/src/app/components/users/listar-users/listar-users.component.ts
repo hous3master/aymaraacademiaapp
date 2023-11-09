@@ -11,7 +11,7 @@ styleUrls: ['./listar-users.component.css'],
 export class ListarUsersComponent implements OnInit {
 dataSource: MatTableDataSource<Users> = new MatTableDataSource();
 displayedColumns: string[] =
-['idUsers', 'username', 'password', 'accion01','accion02'];
+['id', 'username', 'password', 'accion01','accion02'];
 @ViewChild(MatPaginator) paginator!: MatPaginator;
 constructor(private usersService: UsersService) {}
 

@@ -1,4 +1,256 @@
+<mat-toolbar color="primary" *ngIf="verificar()">
+  <a href="https://trello.com/b/kKd2ScJB/aymaraacademia-backlog">
+    <button mat-button style="height: 20px;"><u class="text-light">Trello</u></button>
+  </a>
+  <a href="https://github.com/hous3master/aymaraacademiaapp">
+    <button mat-button style="height: 20px;"><u class="text-light">GitHub</u></button>
+  </a>
+  <span class="example-spacer"></span>
+  <button mat-button routerLink="components/entidades" style="height: 20px;"><u>CRUD de las 16 entidades (independientes y
+      dependientes)</u></button>
+  <span class="example-spacer"></span>
+  <button mat-button routerLink="components/informacionunidad/1/modulo/1" style="height: 20px;"><u>DEMO funcional</u></button>
+  <button mat-button [matMenuTriggerFor]="menuSalir" *ngIf="validarRol()">
+    Salir</button
+  ><br />
+</mat-toolbar>
+<!--
+<mat-toolbar color="primary" *ngIf="verificar()">
+  <mat-icon>menu</mat-icon>
+  <button mat-button [matMenuTriggerFor]="menuAlternativa" *ngIf="validarRol()">
+    Alternativa</button
+  ><br />
+  <button mat-button [matMenuTriggerFor]="menuEstudiante" *ngIf="validarRol()">
+    Estudiante</button
+  ><br />
+  <button mat-button [matMenuTriggerFor]="menuLectura" *ngIf="validarRol()">
+    Lectura</button
+  ><br />
+  <button mat-button [matMenuTriggerFor]="menuModulo" *ngIf="validarRol()">
+    Modulo</button
+  ><br />
+  <button mat-button [matMenuTriggerFor]="menuPregunta" *ngIf="validarRol()">
+    Pregunta</button
+  ><br />
+  <button
+    mat-button
+    [matMenuTriggerFor]="menuPreguntaalternativa"
+    *ngIf="validarRol()"
+  >
+    Preguntaalternativa</button
+  ><br />
+  <button mat-button [matMenuTriggerFor]="menuProgreso" *ngIf="validarRol()">
+    Progreso</button
+  ><br />
+  <button mat-button [matMenuTriggerFor]="menuProyecto" *ngIf="validarRol()">
+    Proyecto</button
+  ><br />
+  <button mat-button [matMenuTriggerFor]="menuQuizz" *ngIf="validarRol()">
+    Quizz</button
+  ><br />
+  <button mat-button [matMenuTriggerFor]="menuRole" *ngIf="validarRol()">
+    Role</button
+  ><br />
+  <button mat-button [matMenuTriggerFor]="menuUnidad" *ngIf="validarRol()">
+    Unidad</button
+  ><br />
+  <button
+    mat-button
+    [matMenuTriggerFor]="menuUnidadmodulo"
+    *ngIf="validarRol()"
+  >
+    Unidadmodulo</button
+  ><br />
+  <button mat-button [matMenuTriggerFor]="menuUsers" *ngIf="validarRol()">
+    Users</button
+  ><br />
+  <button mat-button [matMenuTriggerFor]="menuVideo" *ngIf="validarRol()">
+    Video</button
+  ><br />
+  <button mat-button [matMenuTriggerFor]="menuCursounidad" *ngIf="validarRol()">
+    Cursounidad</button
+  ><br />
+  <button mat-button [matMenuTriggerFor]="menuCurso" *ngIf="validarRol()">
+    Curso</button
+  ><br />
+  <button mat-button [matMenuTriggerFor]="menuSalir" *ngIf="validarRol()">
+    Salir</button
+  ><br />
+</mat-toolbar>
+
+<mat-menu #menuAlternativa="matMenu">
+  <button
+    mat-menu-item
+    routerLink="components/alternativa/nuevo"
+    *ngIf="role == 'USER'"
+  >
+    Registrar
+  </button>
+  <button mat-menu-item routerLink="components/alternativa">Listar</button>
+</mat-menu>
+<mat-menu #menuEstudiante="matMenu">
+  <button
+    mat-menu-item
+    routerLink="components/estudiante/nuevo"
+    *ngIf="role == 'USER'"
+  >
+    Registrar
+  </button>
+  <button mat-menu-item routerLink="components/estudiante">Listar</button>
+</mat-menu>
+<mat-menu #menuLectura="matMenu">
+  <button
+    mat-menu-item
+    routerLink="components/lectura/nuevo"
+    *ngIf="role == 'USER'"
+  >
+    Registrar
+  </button>
+  <button mat-menu-item routerLink="components/lectura">Listar</button>
+</mat-menu>
+
+<mat-menu #menuModulo="matMenu">
+  <button
+    mat-menu-item
+    routerLink="components/modulo/nuevo"
+    *ngIf="role == 'USER'"
+  >
+    Registrar
+  </button>
+  <button mat-menu-item routerLink="components/modulo">Listar</button>
+</mat-menu>
+<mat-menu #menuPregunta="matMenu">
+  <button
+    mat-menu-item
+    routerLink="components/pregunta/nuevo"
+    *ngIf="role == 'USER'"
+  >
+    Registrar
+  </button>
+  <button mat-menu-item routerLink="components/pregunta">Listar</button>
+</mat-menu>
+<mat-menu #menuPreguntaalternativa="matMenu">
+  <button
+    mat-menu-item
+    routerLink="components/preguntaalternativa/nuevo"
+    *ngIf="role == 'USER'"
+  >
+    Registrar
+  </button>
+  <button mat-menu-item routerLink="components/preguntaalternativa">
+    Listar
+  </button>
+</mat-menu>
+<mat-menu #menuProgreso="matMenu">
+  <button
+    mat-menu-item
+    routerLink="components/progreso/nuevo"
+    *ngIf="role == 'USER'"
+  >
+    Registrar
+  </button>
+  <button mat-menu-item routerLink="components/progreso">Listar</button>
+</mat-menu>
+<mat-menu #menuProyecto="matMenu">
+  <button
+    mat-menu-item
+    routerLink="components/proyecto/nuevo"
+    *ngIf="role == 'USER'"
+  >
+    Registrar
+  </button>
+  <button mat-menu-item routerLink="components/proyecto">Listar</button>
+</mat-menu>
+<mat-menu #menuQuizz="matMenu">
+  <button
+    mat-menu-item
+    routerLink="components/quizz/nuevo"
+    *ngIf="role == 'USER'"
+  >
+    Registrar
+  </button>
+  <button mat-menu-item routerLink="components/quizz">Listar</button>
+</mat-menu>
+<mat-menu #menuRole="matMenu">
+  <button
+    mat-menu-item
+    routerLink="components/role/nuevo"
+    *ngIf="role == 'USER'"
+  >
+    Registrar
+  </button>
+  <button mat-menu-item routerLink="components/role">Listar</button>
+</mat-menu>
+<mat-menu #menuUnidad="matMenu">
+  <button
+    mat-menu-item
+    routerLink="components/unidad/nuevo"
+    *ngIf="role == 'USER'"
+  >
+    Registrar
+  </button>
+  <button mat-menu-item routerLink="components/unidad">Listar</button>
+</mat-menu>
+<mat-menu #menuUnidadmodulo="matMenu">
+  <button
+    mat-menu-item
+    routerLink="components/unidadmodulo/nuevo"
+    *ngIf="role == 'USER'"
+  >
+    Registrar
+  </button>
+  <button mat-menu-item routerLink="components/unidadmodulo">Listar</button>
+</mat-menu>
+<mat-menu #menuUsers="matMenu">
+  <button
+    mat-menu-item
+    routerLink="components/users/nuevo"
+    *ngIf="role == 'USER'"
+  >
+    Registrar
+  </button>
+  <button mat-menu-item routerLink="components/users">Listar</button>
+</mat-menu>
+<mat-menu #menuVideo="matMenu">
+  <button
+    mat-menu-item
+    routerLink="components/video/nuevo"
+    *ngIf="role == 'USER'"
+  >
+    Registrar
+  </button>
+  <button mat-menu-item routerLink="components/video">Listar</button>
+</mat-menu>
+<mat-menu #menuCursounidad="matMenu">
+  <button
+    mat-menu-item
+    routerLink="components/cursounidad/nuevo"
+    *ngIf="role == 'USER'"
+  >
+    Registrar
+  </button>
+  <button mat-menu-item routerLink="components/cursounidad">Listar</button>
+</mat-menu>
+<mat-menu #menuCurso="matMenu">
+  <button
+    mat-menu-item
+    routerLink="components/curso/nuevo"
+    *ngIf="role == 'USER'"
+  >
+    Registrar
+  </button>
+  <button mat-menu-item routerLink="components/curso">Listar</button>
+</mat-menu>
+-->
+<mat-menu #menuSalir="matMenu">
+  <button mat-menu-item routerLink="" (click)="cerrar()">
+    <mat-icon>logout</mat-icon>
+    <span>Cerrar sesión</span>
+  </button>
+  <button mat-menu-item>
+    Rol:
+    <span>{{ role }}</span>
+  </button>
+</mat-menu>
+
 <router-outlet></router-outlet>
-<div [hidden]="route.children.length !== 0">
-<app-landing></app-landing>
-</div>

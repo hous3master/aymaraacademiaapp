@@ -47,7 +47,7 @@ password: ['', Validators.required],
 aceptar(): void {
 if (this.form.valid) {
 // Assign values to the users
-this.users.idUsers = this.form.value.idUsers;
+this.users.id = this.form.value.id;
 // Assign values to each attribute
 this.users.username = this.form.value.username;
 this.users.password = this.form.value.password;
@@ -83,7 +83,7 @@ if (this.edicion) {
 this.usersService.listId(this.id).subscribe((data) => {
 this.form = new FormGroup({
 // Attributes of the formGroup
-idUsers: new FormControl(data.idUsers),
+id: new FormControl(data.id),
 username: new FormControl(data.username),
 password: new FormControl(data.password),
 });

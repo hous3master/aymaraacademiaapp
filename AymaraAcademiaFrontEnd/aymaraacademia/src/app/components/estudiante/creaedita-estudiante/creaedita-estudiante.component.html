@@ -67,8 +67,8 @@ email es obligatorio.
 <mat-form-field class="example-full-width">
 <mat-label>user</mat-label>
 <mat-select formControlName="user">
-<mat-option *ngFor="let tipo of listaUsers" [value]="tipo.idUsers">
-{{tipo.idUsers}}
+<mat-option *ngFor="let tipo of listaUsers" [value]="tipo.id">
+{{tipo.id}}
 </mat-option>
 </mat-select>
 <mat-error *ngIf="obtenerControlCampo('user')?.errors?.['required']">

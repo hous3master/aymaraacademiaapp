@@ -11,7 +11,7 @@ styleUrls: ['./listar-role.component.css'],
 export class ListarRoleComponent implements OnInit {
 dataSource: MatTableDataSource<Role> = new MatTableDataSource();
 displayedColumns: string[] =
-['idRole', 'rol', 'user', 'accion01','accion02'];
+['id', 'rol', 'user', 'accion01','accion02'];
 @ViewChild(MatPaginator) paginator!: MatPaginator;
 constructor(private roleService: RoleService) {}
 
@@ -24,7 +24,7 @@ this.roleService.getList().subscribe((data) => {
 this.dataSource = new MatTableDataSource(data);
 this.dataSource.paginator = this.paginator;
 
-}); 
+});
 }
 eliminar(id: number) {
 this.roleService.delete(id).subscribe((data) => {

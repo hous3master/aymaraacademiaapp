@@ -1,18 +1,6 @@
 <nav>
-  <mat-toolbar class="bg-black text-light" style="height: 25px;">
-    <a href="https://trello.com/b/kKd2ScJB/aymaraacademia-backlog">
-      <button mat-button style="height: 20px;"><u class="text-light">Trello</u></button>
-    </a>
-    <a href="https://github.com/hous3master/aymaraacademiaapp">
-      <button mat-button style="height: 20px;"><u class="text-light">GitHub</u></button>
-    </a>
-    <span class="example-spacer"></span>
-    <button mat-button routerLink="/entidades" style="height: 20px;"><u>CRUD de las 16 entidades (independientes y
-        dependientes)</u></button>
-    <span class="example-spacer"></span>
-    <button mat-button routerLink="/informacionunidad/1/modulo/1" style="height: 20px;"><u>DEMO funcional</u></button>
-  </mat-toolbar>
-  <mat-toolbar color="primary">
+
+  <mat-toolbar color="primary" *ngIf="noRol()">
     <span class="toolbar-items">
       <button mat-button class="m-3">
         <span>
@@ -30,7 +18,7 @@
     <span class="example-spacer"></span>
 
     <span class="toolbar-items">
-      <button mat-button routerLink="/landing">Inicia Sesión</button>
+      <button mat-button routerLink="/login">Inicia Sesión</button>
       <button mat-flat-button routerLink="/landing">Únete de forma gratuita</button>
     </span>
   </mat-toolbar>

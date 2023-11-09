@@ -65,7 +65,7 @@ this.estudiante.apellido = this.form.value.apellido;
 this.estudiante.edad = this.form.value.edad;
 this.estudiante.resena = this.form.value.resena;
 this.estudiante.email = this.form.value.email;
-this.estudiante.user.idUsers = this.form.value.user; // Change for component with foreign keys
+this.estudiante.user.id = this.form.value.user; // Change for component with foreign keys
 if (this.edicion) {
 this.estudianteService.update(this.estudiante).subscribe(() => {
 this.estudianteService.list().subscribe((data) => {
@@ -104,7 +104,7 @@ apellido: new FormControl(data.apellido),
 edad: new FormControl(data.edad),
 resena: new FormControl(data.resena),
 email: new FormControl(data.email),
-user: new FormControl(data.user.idUsers), // Change for component with foreign keys
+user: new FormControl(data.user.id), // Change for component with foreign keys
 });
 });
 }
