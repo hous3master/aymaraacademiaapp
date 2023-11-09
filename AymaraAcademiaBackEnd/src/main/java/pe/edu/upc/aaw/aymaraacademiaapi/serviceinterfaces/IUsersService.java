@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface IUsersService {
     void insert(Users Users);
-    void delete(long id);
-    Users listId(long id);
+    void delete(Long id);
+    Users listId(Long id);
     List<Users> list();
 }

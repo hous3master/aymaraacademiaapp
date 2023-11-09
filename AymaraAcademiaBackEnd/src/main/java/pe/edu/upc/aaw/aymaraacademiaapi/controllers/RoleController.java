@@ -27,13 +27,13 @@ public class RoleController {
 
     // Delete an item by ID on table
     @DeleteMapping("/{id}")
-    public void eliminar(@PathVariable("id")Integer id){
+    public void eliminar(@PathVariable("id")Long id){
         myService.delete(id);
     }
 
     // Retrieve an items by ID from table
     @GetMapping("/{id}")
-    public RoleDTO listarId(@PathVariable("id")Integer id){
+    public RoleDTO listarId(@PathVariable("id")Long id){
         ModelMapper m = new ModelMapper();
         RoleDTO myItem = m.map(myService.listId(id), RoleDTO.class);
         return myItem;

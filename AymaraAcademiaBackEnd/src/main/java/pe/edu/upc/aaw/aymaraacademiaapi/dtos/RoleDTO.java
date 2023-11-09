@@ -4,15 +4,15 @@ import pe.edu.upc.aaw.aymaraacademiaapi.entities.*;
 import java.time.LocalDate;
 
 public class RoleDTO {
-    private int id;
+    private Long id;
     private String rol;
     private Users user;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -31,5 +31,4 @@ public class RoleDTO {
     public void setUser(Users user) {
         this.user = user;
     }
-
 }

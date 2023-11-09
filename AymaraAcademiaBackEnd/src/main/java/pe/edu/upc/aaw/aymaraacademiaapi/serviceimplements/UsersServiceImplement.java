@@ -21,13 +21,13 @@ public class UsersServiceImplement implements IUsersService {
 
     // Delete an item by ID on table
     @Override
-    public void delete(long idUsers){
+    public void delete(Long idUsers){
         myRepository.deleteById(idUsers);
     }
 
     // Retrieve an items by ID from table
     @Override
-    public Users listId(long idUsers){
+    public Users listId(Long idUsers){
         return myRepository.findById(idUsers).orElse(new Users());
     }
 

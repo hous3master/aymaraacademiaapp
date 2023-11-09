@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface IRoleService {
     void insert(Role Role);
-    void delete(int id);
-    Role listId(int id);
+    void delete(Long id);
+    Role listId(Long id);
     List<Role> list();
 }
