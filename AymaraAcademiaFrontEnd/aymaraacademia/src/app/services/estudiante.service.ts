@@ -13,7 +13,7 @@ export class EstudianteService {
   constructor(private http: HttpClient) {}
   list() {
     let token = sessionStorage.getItem('token');
-
+    console.log(token)
     return this.http.get<Estudiante[]>(this.url, {
       headers: new HttpHeaders()
         .set('Authorization', `Bearer ${token}`)

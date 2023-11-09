@@ -1,5 +1,7 @@
 package pe.edu.upc.aaw.aymaraacademiaapi.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -19,6 +21,7 @@ public class Users implements Serializable {
     private String password;
     private Boolean enabled;
 
+    @JsonManagedReference
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
     private List<Role> roles;
