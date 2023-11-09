@@ -8,11 +8,11 @@ public class UsersDTO {
     private String username;
     private String password;
 
-    public long getIdUsers() {
+    public long getId() {
         return id;
     }
 
-    public void setIdUsers(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 

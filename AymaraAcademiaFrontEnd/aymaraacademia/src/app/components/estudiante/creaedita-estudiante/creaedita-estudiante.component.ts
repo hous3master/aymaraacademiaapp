@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import * as moment from 'moment';
 import {
@@ -31,7 +31,7 @@ export class CreaeditaEstudianteComponent implements OnInit {
     private router: Router,
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
-    private usersService: UsersService
+    private usersService: UsersService,
   ) {}
 
   ngOnInit(): void {
@@ -43,11 +43,9 @@ export class CreaeditaEstudianteComponent implements OnInit {
 
     this.usersService.list().subscribe((data) => {
       this.listaUsers = data;
+      console.log('Dentro del subscribe', this.listaUsers);
     });
-
-    console.log("hola")
-    console.log(this.listaUsers);
-    console.log("chau")
+    console.log('Fuera del subscribe', this.listaUsers);
 
     this.form = this.formBuilder.group({
       idEntityName: [''],
