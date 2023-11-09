@@ -64,7 +64,7 @@ this.usersService.setList(data);
 });
 });
 }
-this.router.navigate(['entidades/users']);
+this.router.navigate(['components/entidades/users']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }

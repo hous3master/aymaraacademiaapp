@@ -78,7 +78,7 @@ this.preguntaalternativaService.setList(data);
 });
 });
 }
-this.router.navigate(['entidades/preguntaalternativa']);
+this.router.navigate(['components/entidades/preguntaalternativa']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }

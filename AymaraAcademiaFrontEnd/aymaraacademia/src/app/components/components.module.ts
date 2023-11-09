@@ -82,6 +82,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { SafePipeModule } from 'safe-pipe';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ContenidoLecturaComponent } from './lectura/contenido-lectura/contenido-lectura.component';
 
 @NgModule({
   declarations: [
@@ -144,6 +145,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ListarmoduloporunidadComponent,
     InformacionunidadComponent,
     NavbarComponent,
+    ContenidoLecturaComponent,
 
   ],
   imports:[

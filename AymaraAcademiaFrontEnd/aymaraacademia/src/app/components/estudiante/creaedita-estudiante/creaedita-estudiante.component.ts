@@ -81,7 +81,7 @@ export class CreaeditaEstudianteComponent implements OnInit {
           });
         });
       }
-      this.router.navigate(['entidades/estudiante']);
+      this.router.navigate(['components/entidades/estudiante']);
     } else {
       this.mensaje = 'Por favor complete todos los campos obligatorios.';
     }

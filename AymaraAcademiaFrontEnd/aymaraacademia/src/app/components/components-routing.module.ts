@@ -47,10 +47,6 @@ import { InformacionunidadComponent } from './unidad/informacionunidad/informaci
 const routes: Routes = [
   // For each entity, you must create a path that will be used to navigate to the related components
   {
-    path: 'landing',
-    component: LandingComponent,
-  },
-  {
     path: 'informacionunidad/:idUnidad',
     component: InformacionunidadComponent,
     children: [
