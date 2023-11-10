@@ -28,7 +28,7 @@ private int resena;
 private String email;
 
 @ManyToOne
-@JoinColumn(name = "idUser")
+@JoinColumn(name = "id")
 private Users user;
 
 public Estudiante() { }

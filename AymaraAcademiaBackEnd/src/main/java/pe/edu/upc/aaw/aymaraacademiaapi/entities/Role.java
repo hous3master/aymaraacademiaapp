@@ -1,54 +1,49 @@
 package pe.edu.upc.aaw.aymaraacademiaapi.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import java.io.Serializable;
 import javax.persistence.*;
-import pe.edu.upc.aaw.aymaraacademiaapi.entities.*;
-import java.time.LocalDate;
+
 
 @Entity
-@Table(name = "Role")
-public class Role {
+@Table(name = "Roles", uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "rol"})})
+public class Role implements Serializable {
 
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-private int idRole;
+    private static final long serialVersionUID = 1L;
 
-@Column(name = "rol", nullable = false)
-private String rol;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-@ManyToOne
-@JoinColumn(name = "idUser")
-private Users user;
+    private String rol;
 
-public Role() { }
+    @JsonBackReference
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private Users user;
 
-public Role(int idRole,String rol, Users user) {
-    this.idRole = idRole;
-    this.rol = rol;
-    this.user = user;
-}
+    public Users getUser() {
+        return user;
+    }
 
-public int getIdRole() {
-    return idRole;
-}
+    public void setUser(Users user) {
+        this.user = user;
+    }
 
-public void setIdRole(int idRole) {
-    this.idRole = idRole;
-}
+    public Long getId() {
+        return id;
+    }
 
-public String getRol() {
-    return rol;
-}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-public void setRol(String rol) {
-    this.rol = rol;
-}
+    public String getRol() {
+        return rol;
+    }
 
-public Users getUser() {
-    return user;
-}
-
-public void setUser(Users user) {
-    this.user = user;
-}
-
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
 }

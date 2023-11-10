@@ -81,7 +81,7 @@ export class CreaeditaVideoComponent implements OnInit {
           });
         });
       }
-      this.router.navigate(['entidades/video']);
+      this.router.navigate(['components/entidades/video']);
     } else {
       this.mensaje = 'Por favor complete todos los campos obligatorios.';
     }

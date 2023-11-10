@@ -78,7 +78,7 @@ this.unidadmoduloService.setList(data);
 });
 });
 }
-this.router.navigate(['entidades/unidadmodulo']);
+this.router.navigate(['components/entidades/unidadmodulo']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }

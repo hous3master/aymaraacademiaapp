@@ -3,7 +3,7 @@ package pe.edu.upc.aaw.aymaraacademiaapi.serviceimplements;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
 import pe.edu.upc.aaw.aymaraacademiaapi.entities.Users;
-import pe.edu.upc.aaw.aymaraacademiaapi.repositories.IUsersRepository;
+import pe.edu.upc.aaw.aymaraacademiaapi.repositories.UserRepository;
 import pe.edu.upc.aaw.aymaraacademiaapi.serviceinterfaces.IUsersService;
 
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class UsersServiceImplement implements IUsersService {
     @Autowired
-    private IUsersRepository myRepository;
+    private UserRepository myRepository;
 
     // Add an item to table
     @Override
@@ -21,13 +21,13 @@ public class UsersServiceImplement implements IUsersService {
 
     // Delete an item by ID on table
     @Override
-    public void delete(int idUsers){
+    public void delete(Long idUsers){
         myRepository.deleteById(idUsers);
     }
 
     // Retrieve an items by ID from table
     @Override
-    public Users listId(int idUsers){
+    public Users listId(Long idUsers){
         return myRepository.findById(idUsers).orElse(new Users());
     }
 

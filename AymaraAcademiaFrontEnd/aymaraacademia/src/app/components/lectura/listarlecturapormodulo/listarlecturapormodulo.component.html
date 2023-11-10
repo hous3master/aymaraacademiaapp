@@ -2,6 +2,6 @@
   <div>
     <h6 class="mat-headline-6"> {{lectura.autor.toUpperCase()}} </h6>
     <h5 class="mat-headline-5"> {{lectura.titulo}} </h5>
-    <p> {{lectura.descripcion}} </p>
+    <app-contenido-lectura [idLectura]="lectura.idLectura"></app-contenido-lectura>
   </div>
 </div>

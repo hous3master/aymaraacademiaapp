@@ -12,22 +12,22 @@ public class Video {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int idVideo;
 
-@Column(name = "url", nullable = false)
+@Column(name = "url", nullable = true)
 private String url;
 
-@Column(name = "titulo", nullable = false)
+@Column(name = "titulo", nullable = true)
 private String titulo;
 
-@Column(name = "descripcion", nullable = false)
+@Column(name = "descripcion", nullable = true, columnDefinition = "TEXT")
 private String descripcion;
 
-@Column(name = "duracion", nullable = false)
+@Column(name = "duracion", nullable = true)
 private double duracion;
 
-@Column(name = "presentador", nullable = false)
+@Column(name = "presentador", nullable = true)
 private String presentador;
 
-@Column(name = "transcripcion", nullable = false)
+@Column(name = "transcripcion", nullable = true, columnDefinition = "TEXT")
 private String transcripcion;
 
 @ManyToOne

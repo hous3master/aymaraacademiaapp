@@ -54,10 +54,10 @@ user: ['', Validators.required],
 aceptar(): void {
 if (this.form.valid) {
 // Assign values to the role
-this.role.idRole = this.form.value.idRole;
+this.role.id = this.form.value.id;
 // Assign values to each attribute
 this.role.rol = this.form.value.rol;
-this.role.user.idUsers = this.form.value.user; // Change for component with foreign keys
+this.role.user.id = this.form.value.user; // Change for component with foreign keys
 if (this.edicion) {
 this.roleService.update(this.role).subscribe(() => {
 this.roleService.list().subscribe((data) => {
@@ -71,7 +71,7 @@ this.roleService.setList(data);
 });
 });
 }
-this.router.navigate(['entidades/role']);
+this.router.navigate(['components/entidades/role']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }
@@ -90,9 +90,9 @@ if (this.edicion) {
 this.roleService.listId(this.id).subscribe((data) => {
 this.form = new FormGroup({
 // Attributes of the formGroup
-idRole: new FormControl(data.idRole),
+id: new FormControl(data.id),
 rol: new FormControl(data.rol),
-user: new FormControl(data.user.idUsers), // Change for component with foreign keys
+user: new FormControl(data.user.id), // Change for component with foreign keys
 });
 });
 }

@@ -12,10 +12,10 @@ public class Alternativa {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int idAlternativa;
 
-@Column(name = "respuesta", nullable = false)
+@Column(name = "respuesta", nullable = true)
 private String respuesta;
 
-@Column(name = "correcta", nullable = false)
+@Column(name = "correcta", nullable = true)
 private boolean correcta;
 
 public Alternativa() { }

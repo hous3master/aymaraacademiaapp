@@ -4,16 +4,16 @@ import pe.edu.upc.aaw.aymaraacademiaapi.entities.*;
 import java.time.LocalDate;
 
 public class UsersDTO {
-    private int idUsers;
+    private Long id;
     private String username;
     private String password;
 
-    public int getIdUsers() {
-        return idUsers;
+    public Long getId() {
+        return id;
     }
 
-    public void setIdUsers(int idUsers) {
-        this.idUsers = idUsers;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getUsername() {

@@ -75,7 +75,7 @@ export class CreaeditaLecturaComponent implements OnInit {
           });
         });
       }
-      this.router.navigate(['entidades/lectura']);
+      this.router.navigate(['components/entidades/lectura']);
     } else {
       this.mensaje = 'Por favor complete todos los campos obligatorios.';
     }

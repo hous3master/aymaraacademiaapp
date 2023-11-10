@@ -13,8 +13,8 @@
 <form [formGroup]="form" (submit)="aceptar()" class="example-form">
 <!-- idEntityName -->
 <mat-form-field class="example-full-width" *ngIf="edicion">
-<mat-label>idUsers</mat-label>
-<input matInput placeholder="Id" formControlName="idUsers"/>
+<mat-label>id</mat-label>
+<input matInput placeholder="Id" formControlName="id"/>
 </mat-form-field>
 <br />
 <!-- Form fields for each attribute -->
@@ -30,7 +30,7 @@ username es obligatorio.
 <!-- NOTE : Only if is not of type LocalDate -->
 <mat-form-field class="example-full-width">
 <mat-label>password</mat-label>
-<input matInput placeholder="password" formControlName="password"/>
+<input matInput type="password" placeholder="password" formControlName="password"/>
 <mat-error *ngIf="obtenerControlCampo('password')?.errors?.['required']">
 password es obligatorio.
 </mat-error>
@@ -38,7 +38,7 @@ password es obligatorio.
 <br />
 <!-- Buttons for actions -->
 <button mat-raised-button color="primary">Aceptar</button>
-<button mat-raised-button color="warn" routerLink="/entidades/users">
+<button mat-raised-button color="warn" routerLink="/components/entidades/users">
 Cancelar
 </button>
 <p>{{ mensaje }}</p>

@@ -14,7 +14,7 @@
 <!-- idEntityName -->
 <mat-form-field class="example-full-width" *ngIf="edicion">
 <mat-label>idRole</mat-label>
-<input matInput placeholder="Id" formControlName="idRole"/>
+<input matInput placeholder="Id" formControlName="id"/>
 </mat-form-field>
 <br />
 <!-- Form fields for each attribute -->
@@ -31,8 +31,8 @@ rol es obligatorio.
 <mat-form-field class="example-full-width">
 <mat-label>user</mat-label>
 <mat-select formControlName="user">
-<mat-option *ngFor="let tipo of listaUsers" [value]="tipo.idUsers">
-{{tipo.idUsers}}
+<mat-option *ngFor="let tipo of listaUsers" [value]="tipo.id">
+{{tipo.id}}
 </mat-option>
 </mat-select>
 <mat-error *ngIf="obtenerControlCampo('user')?.errors?.['required']">
@@ -42,7 +42,7 @@ user es obligatorio.
 <br />
 <!-- Buttons for actions -->
 <button mat-raised-button color="primary">Aceptar</button>
-<button mat-raised-button color="warn" routerLink="/entidades/role">
+<button mat-raised-button color="warn" routerLink="/components/entidades/role">
 Cancelar
 </button>
 <p>{{ mensaje }}</p>

@@ -1,53 +1,69 @@
 package pe.edu.upc.aaw.aymaraacademiaapi.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import java.io.Serializable;
+import java.util.List;
+
 import javax.persistence.*;
-import pe.edu.upc.aaw.aymaraacademiaapi.entities.*;
-import java.time.LocalDate;
 
 @Entity
 @Table(name = "Users")
-public class Users {
+public class Users implements Serializable {
 
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-private int idUsers;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-@Column(name = "username", nullable = false)
-private String username;
+    @Column(length = 30, unique = true)
+    private String username;
+    @Column(length = 200)
+    private String password;
+    private Boolean enabled;
 
-@Column(name = "password", nullable = false)
-private String password;
+    @JsonManagedReference
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
+    private List<Role> roles;
 
-public Users() { }
+    public Long getId() {
+        return id;
+    }
 
-public Users(int idUsers,String username, String password) {
-    this.idUsers = idUsers;
-    this.username = username;
-    this.password = password;
-}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-public int getIdUsers() {
-    return idUsers;
-}
+    public String getUsername() {
+        return username;
+    }
 
-public void setIdUsers(int idUsers) {
-    this.idUsers = idUsers;
-}
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-public String getUsername() {
-    return username;
-}
+    public String getPassword() {
+        return password;
+    }
 
-public void setUsername(String username) {
-    this.username = username;
-}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-public String getPassword() {
-    return password;
-}
+    public Boolean getEnabled() {
+        return enabled;
+    }
 
-public void setPassword(String password) {
-    this.password = password;
-}
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
+    }
 
 }

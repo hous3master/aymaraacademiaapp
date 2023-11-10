@@ -80,7 +80,7 @@ this.progresoService.setList(data);
 });
 });
 }
-this.router.navigate(['entidades/progreso']);
+this.router.navigate(['components/entidades/progreso']);
 } else {
 this.mensaje = 'Por favor complete todos los campos obligatorios.';
 }
