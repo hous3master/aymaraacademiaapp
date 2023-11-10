@@ -1,5 +1,3 @@
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatListModule } from '@angular/material/list';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -46,14 +44,6 @@ import { InformacionModuloComponent } from './modulo/informacion-modulo/informac
 import { ListarmoduloporunidadComponent } from './modulo/listarmoduloporunidad/listarmoduloporunidad.component';
 import { InformacionunidadComponent } from './unidad/informacionunidad/informacionunidad.component';
 import { ComponentsRoutingModule } from './components-routing.module';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatNativeDateModule } from '@angular/material/core';
-import { MatTableModule } from '@angular/material/table';
-import { MatSelectModule } from '@angular/material/select';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ListarEstudianteComponent } from './estudiante/listar-estudiante/listar-estudiante.component';
 import { ListarAlternativaComponent } from './alternativa/listar-alternativa/listar-alternativa.component';
@@ -71,18 +61,37 @@ import { ListarUsersComponent } from './users/listar-users/listar-users.componen
 import { ListarVideoComponent } from './video/listar-video/listar-video.component';
 import { ListarCursounidadComponent } from './cursounidad/listar-cursounidad/listar-cursounidad.component';
 import { ListarCursoComponent } from './curso/listar-curso/listar-curso.component';
-import { MatSidenavContainer } from '@angular/material/sidenav';
+import { SafePipeModule } from 'safe-pipe';
+import { ContenidoLecturaComponent } from './lectura/contenido-lectura/contenido-lectura.component';
+
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
+// Material
+import { MatCard } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
-import { SafePipeModule } from 'safe-pipe';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { ContenidoLecturaComponent } from './lectura/contenido-lectura/contenido-lectura.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSidenavContainer } from '@angular/material/sidenav';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatListModule } from '@angular/material/list';
+
 
 @NgModule({
   declarations: [
@@ -166,7 +175,8 @@ import { ContenidoLecturaComponent } from './lectura/contenido-lectura/contenido
     MatMenuModule,
     MatSidenavModule,
     SafePipeModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatRadioModule,
   ]
 })
 export class ComponentsModule { }

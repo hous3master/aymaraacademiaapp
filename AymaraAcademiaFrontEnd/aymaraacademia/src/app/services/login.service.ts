@@ -27,4 +27,13 @@ export class LoginService {
     const decodedToken = helper.decodeToken(token);
     return decodedToken?.role;
   }
+  getUsername() {
+    let token = sessionStorage.getItem("token");
+    if (!token) {
+      return null;
+    }
+    const helper = new JwtHelperService();
+    const decodedToken = helper.decodeToken(token);
+    return decodedToken?.username; // Replace 'username' with the actual key used in your token payload.
+  }
 }

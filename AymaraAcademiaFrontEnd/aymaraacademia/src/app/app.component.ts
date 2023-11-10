@@ -9,6 +9,7 @@ import { LoginService } from './services/login.service';
 export class AppComponent {
   title = 'aymaraacademia';
   role:string="";
+  username:string="";
 
   constructor(private loginService: LoginService) {
   }
@@ -19,6 +20,7 @@ export class AppComponent {
 
   verificar() {
     this.role=this.loginService.showRole();
+    this.username=this.loginService.getUsername();
     return this.loginService.verificar();
   }
   validarRol(){
