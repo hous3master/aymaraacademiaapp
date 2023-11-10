@@ -15,7 +15,7 @@ export class NavbarComponent {
 
   noRol(){
     this.role=this.loginService.showRole();
-    if(this.role=='ADMIN' || this.role=='USER'){
+    if(this.role=='ADMIN' || this.role=='ESTUDIANTE'){
       return false;
     }else{
       return true;
