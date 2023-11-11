@@ -31,6 +31,7 @@
           <button mat-stroked-button [matMenuTriggerFor]="menuCursounidad"
             class="w-100 p-0 m-0">Cursounidad</button><br>
           <button mat-stroked-button [matMenuTriggerFor]="menuCurso" class="w-100 p-0 m-0">Curso</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuRevision" class="w-100 p-0 m-0">Revision</button><br>
           <button mat-stroked-button [matMenuTriggerFor]="menuEstudiantepregunta"
             class="w-100 p-0 m-0">Estudiantepregunta</button><br>
           <button mat-stroked-button [matMenuTriggerFor]="menuEstudiantequizz"
@@ -107,6 +108,10 @@
 <mat-menu #menuCurso="matMenu">
   <button mat-menu-item routerLink="./curso/nuevo">Registrar</button>
   <button mat-menu-item routerLink="./curso">Listar</button>
+</mat-menu>
+<mat-menu #menuRevision="matMenu">
+  <button mat-menu-item routerLink="./revision/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./revision">Listar</button>
 </mat-menu>
 <mat-menu #menuEstudiantepregunta="matMenu">
   <button mat-menu-item routerLink="./estudiantepregunta/nuevo">Registrar</button>

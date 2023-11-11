@@ -47,6 +47,8 @@ import { EstudiantepreguntaComponent } from './estudiantepregunta/estudiantepreg
 import { CreaeditaEstudiantepreguntaComponent } from './estudiantepregunta/creaedita-estudiantepregunta/creaedita-estudiantepregunta.component';
 import { CreaeditaEstudiantequizzComponent } from './estudiantequizz/creaedita-estudiantequizz/creaedita-estudiantequizz.component';
 import { EstudiantequizzComponent } from './estudiantequizz/estudiantequizz.component';
+import { RevisionComponent } from './revision/revision.component';
+import { CreaeditaRevisionComponent } from './revision/creaedita-revision/creaedita-revision.component';
 
 const routes: Routes = [
   // For each entity, you must create a path that will be used to navigate to the related components
@@ -193,6 +195,14 @@ const routes: Routes = [
         children: [
           { path: 'nuevo', component: CreaeditaCursoComponent },
           { path: 'ediciones/:id', component: CreaeditaCursoComponent },
+        ],
+      },
+      {
+        path: 'revision',
+        component: RevisionComponent,
+        children: [
+          { path: 'nuevo', component: CreaeditaRevisionComponent },
+          { path: 'ediciones/:id', component: CreaeditaRevisionComponent },
         ],
       },
       {
