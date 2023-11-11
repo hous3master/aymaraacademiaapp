@@ -43,6 +43,10 @@ import { ListarpreguntaporquizzComponent } from './pregunta/listarpreguntaporqui
 import { InformacionModuloComponent } from './modulo/informacion-modulo/informacion-modulo.component';
 import { ListarmoduloporunidadComponent } from './modulo/listarmoduloporunidad/listarmoduloporunidad.component';
 import { InformacionunidadComponent } from './unidad/informacionunidad/informacionunidad.component';
+import { EstudiantepreguntaComponent } from './estudiantepregunta/estudiantepregunta.component';
+import { CreaeditaEstudiantepreguntaComponent } from './estudiantepregunta/creaedita-estudiantepregunta/creaedita-estudiantepregunta.component';
+import { CreaeditaEstudiantequizzComponent } from './estudiantequizz/creaedita-estudiantequizz/creaedita-estudiantequizz.component';
+import { EstudiantequizzComponent } from './estudiantequizz/estudiantequizz.component';
 
 const routes: Routes = [
   // For each entity, you must create a path that will be used to navigate to the related components
@@ -189,6 +193,22 @@ const routes: Routes = [
         children: [
           { path: 'nuevo', component: CreaeditaCursoComponent },
           { path: 'ediciones/:id', component: CreaeditaCursoComponent },
+        ],
+      },
+      {
+        path: 'estudiantepregunta',
+        component: EstudiantepreguntaComponent,
+        children: [
+          { path: 'nuevo', component: CreaeditaEstudiantepreguntaComponent },
+          { path: 'ediciones/:id', component: CreaeditaEstudiantepreguntaComponent },
+        ],
+      },
+      {
+        path: 'estudiantequizz',
+        component: EstudiantequizzComponent,
+        children: [
+          { path: 'nuevo', component: CreaeditaEstudiantequizzComponent },
+          { path: 'ediciones/:id', component: CreaeditaEstudiantequizzComponent },
         ],
       },
     ],

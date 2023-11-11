@@ -8,4 +8,6 @@ public interface IEstudianteService {
     void delete(int id);
     Estudiante listId(int id);
     List<Estudiante> list();
+
+    List<String[]> findEstudianteByUserUsername(String name);
 }
