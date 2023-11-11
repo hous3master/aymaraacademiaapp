@@ -2,6 +2,7 @@ package pe.edu.upc.aaw.aymaraacademiaapi.serviceimplements;
 
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
+import org.springframework.transaction.annotation.Transactional;
 import pe.edu.upc.aaw.aymaraacademiaapi.entities.Users;
 import pe.edu.upc.aaw.aymaraacademiaapi.repositories.UserRepository;
 import pe.edu.upc.aaw.aymaraacademiaapi.serviceinterfaces.IUsersService;
@@ -21,7 +22,9 @@ public class UsersServiceImplement implements IUsersService {
 
     // Delete an item by ID on table
     @Override
-    public void delete(Long idUsers){
+    @Transactional
+    public void delete(Long idUsers) {
+        myRepository.deleteRolesByUserId(idUsers);
         myRepository.deleteById(idUsers);
     }
 
@@ -35,5 +38,10 @@ public class UsersServiceImplement implements IUsersService {
     @Override
     public List<Users> list() {
         return myRepository.findAll();
+    }
+
+    @Override
+    public void insertRoleForUser(Long userId, String roleName) {
+        myRepository.insRol(roleName, userId);
     }
 }
