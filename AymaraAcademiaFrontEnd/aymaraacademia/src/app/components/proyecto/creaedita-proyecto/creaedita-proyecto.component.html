@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+</head>
+
+<body>
+<div class="container" style="text-align: center">
+<h2>Registro de proyecto</h2>
+<form [formGroup]="form" (submit)="aceptar()" class="example-form">
+<!-- idEntityName -->
+<mat-form-field class="example-full-width" *ngIf="edicion">
+<mat-label>idProyecto</mat-label>
+<input matInput placeholder="Id" formControlName="idProyecto"/>
+</mat-form-field>
+<br />
+<!-- Form fields for each attribute -->
+<!-- NOTE : Only if is not of type LocalDate -->
+<mat-form-field class="example-full-width">
+<mat-label>titulo</mat-label>
+<input matInput placeholder="titulo" formControlName="titulo"/>
+<mat-error *ngIf="obtenerControlCampo('titulo')?.errors?.['required']">
+titulo es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- NOTE : Only if is not of type LocalDate -->
+<mat-form-field class="example-full-width">
+<mat-label>descripcion</mat-label>
+<input matInput placeholder="descripcion" formControlName="descripcion"/>
+<mat-error *ngIf="obtenerControlCampo('descripcion')?.errors?.['required']">
+descripcion es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- NOTE: Only components with foreign key-->
+<mat-form-field class="example-full-width">
+<mat-label>unidad</mat-label>
+<mat-select formControlName="unidad">
+<mat-option *ngFor="let tipo of listaUnidad" [value]="tipo.idUnidad">
+{{tipo.idUnidad}}
+</mat-option>
+</mat-select>
+<mat-error *ngIf="obtenerControlCampo('unidad')?.errors?.['required']">
+unidad es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- NOTE : Only if is not of type LocalDate -->
+<mat-form-field class="example-full-width">
+<mat-label>calificacion</mat-label>
+<input matInput placeholder="calificacion" formControlName="calificacion"/>
+<mat-error *ngIf="obtenerControlCampo('calificacion')?.errors?.['required']">
+calificacion es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- NOTE : Only if is not of type LocalDate -->
+<mat-form-field class="example-full-width">
+<mat-label>contador</mat-label>
+<input matInput placeholder="contador" formControlName="contador"/>
+<mat-error *ngIf="obtenerControlCampo('contador')?.errors?.['required']">
+contador es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- NOTE: Only components with foreign key-->
+<mat-form-field class="example-full-width">
+<mat-label>estudiante</mat-label>
+<mat-select formControlName="estudiante">
+<mat-option *ngFor="let tipo of listaEstudiante" [value]="tipo.idEstudiante">
+{{tipo.idEstudiante}}
+</mat-option>
+</mat-select>
+<mat-error *ngIf="obtenerControlCampo('estudiante')?.errors?.['required']">
+estudiante es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- Buttons for actions -->
+<button mat-raised-button color="primary">Aceptar</button>
+<button mat-raised-button color="warn" routerLink="/components/entidades/proyecto">
+Cancelar
+</button>
+<p>{{ mensaje }}</p>
+</form>
+</div>
+</body>
+
+</html>

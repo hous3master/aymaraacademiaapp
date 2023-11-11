@@ -4,6 +4,7 @@ import pe.edu.upc.aaw.aymaraacademiaapi.entities.*;
 import java.time.LocalDate;
 
 public class VideoDTO {
+    private int idVideo;
     private String url;
     private String titulo;
     private String descripcion;
@@ -11,6 +12,14 @@ public class VideoDTO {
     private String presentador;
     private String transcripcion;
     private Modulo modulo;
+
+    public int getIdVideo() {
+        return idVideo;
+    }
+
+    public void setIdVideo(int idVideo) {
+        this.idVideo = idVideo;
+    }
 
     public String getUrl() {
         return url;

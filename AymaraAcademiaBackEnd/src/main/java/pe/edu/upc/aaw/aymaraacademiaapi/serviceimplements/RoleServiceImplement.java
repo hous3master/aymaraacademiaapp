@@ -21,13 +21,13 @@ public class RoleServiceImplement implements IRoleService {
 
     // Delete an item by ID on table
     @Override
-    public void delete(int idRole){
+    public void delete(Long idRole){
         myRepository.deleteById(idRole);
     }
 
     // Retrieve an items by ID from table
     @Override
-    public Role listId(int idRole){
+    public Role listId(Long idRole){
         return myRepository.findById(idRole).orElse(new Role());
     }
 

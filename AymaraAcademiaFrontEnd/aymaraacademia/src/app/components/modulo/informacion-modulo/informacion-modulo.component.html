@@ -1,0 +1,27 @@
+<div class="col-12 d-flex flex-column" *ngFor="let modulo of modulos">
+  <div>
+    <section class="w-75 mx-auto m-5">
+      <h3 class="mat-headline-3"> {{modulo.nombre}} </h3>
+      <p> {{modulo.descripcion}} </p>
+    </section>
+    <mat-divider></mat-divider>
+
+    <section class="w-75 mx-auto m-5">
+      <h4 class="mat-headline-4">Lecturas</h4>
+      <app-listarlecturapormodulo [idModulo]="modulo.idModulo"></app-listarlecturapormodulo>
+    </section>
+    <mat-divider></mat-divider>
+
+    <section class="w-75 mx-auto m-5">
+      <h4 class="mat-headline-4">Videos</h4>
+      <app-listar-video-por-modulo [idModulo]="modulo.idModulo"></app-listar-video-por-modulo>
+      <mat-divider></mat-divider>
+    </section>
+    <mat-divider></mat-divider>
+
+    <section class="w-75 mx-auto m-5">
+      <h4 class="mat-headline-4">Quizz</h4>
+      <app-listarquizzpormodulo [idModulo]="modulo.idModulo"></app-listarquizzpormodulo>
+    </section>
+  </div>
+</div>

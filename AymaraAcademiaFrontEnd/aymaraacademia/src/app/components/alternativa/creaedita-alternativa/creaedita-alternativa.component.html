@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+</head>
+
+<body>
+<div class="container" style="text-align: center">
+<h2>Registro de alternativa</h2>
+<form [formGroup]="form" (submit)="aceptar()" class="example-form">
+<!-- idEntityName -->
+<mat-form-field class="example-full-width" *ngIf="edicion">
+<mat-label>idAlternativa</mat-label>
+<input matInput placeholder="Id" formControlName="idAlternativa"/>
+</mat-form-field>
+<br />
+<!-- Form fields for each attribute -->
+<!-- NOTE : Only if is not of type LocalDate -->
+<mat-form-field class="example-full-width">
+<mat-label>respuesta</mat-label>
+<input matInput placeholder="respuesta" formControlName="respuesta"/>
+<mat-error *ngIf="obtenerControlCampo('respuesta')?.errors?.['required']">
+respuesta es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- NOTE : Only if is not of type LocalDate -->
+<mat-form-field class="example-full-width">
+<mat-label>correcta</mat-label>
+<input matInput placeholder="correcta" formControlName="correcta"/>
+<mat-error *ngIf="obtenerControlCampo('correcta')?.errors?.['required']">
+correcta es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- Buttons for actions -->
+<button mat-raised-button color="primary">Aceptar</button>
+<button mat-raised-button color="warn" routerLink="/components/entidades/alternativa">
+Cancelar
+</button>
+<p>{{ mensaje }}</p>
+</form>
+</div>
+</body>
+
+</html>

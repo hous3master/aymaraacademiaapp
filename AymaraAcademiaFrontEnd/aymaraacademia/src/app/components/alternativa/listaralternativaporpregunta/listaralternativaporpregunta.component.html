@@ -1,0 +1,15 @@
+<div class="col-12 d-flex flex-column p-3">
+  <form [formGroup]="form" (submit)="aceptar()" class="example-form">
+    <mat-radio-group formControlName="correctaControl" class="example-full-width">
+      <div class="col-12 d-flex flex-column" *ngFor="let preguntaalternativa of preguntaalternativa">
+        <div>
+          <mat-radio-button [value]="preguntaalternativa.alternativa.correcta"></mat-radio-button>
+          {{preguntaalternativa.alternativa.respuesta}} <u> ( {{preguntaalternativa.alternativa.correcta}} ) </u>
+        </div>
+      </div>
+    </mat-radio-group>
+
+    <button mat-stroked-button color="basic" class="m-2">Guardar</button>
+    <p>{{ mensaje }}</p>
+  </form>
+</div>

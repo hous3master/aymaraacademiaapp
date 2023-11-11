@@ -1,0 +1,7 @@
+<div class="col-12 d-flex flex-column" *ngFor="let lectura of lecturas">
+  <div>
+    <h6 class="mat-headline-6"> {{lectura.autor.toUpperCase()}} </h6>
+    <h5 class="mat-headline-5"> {{lectura.titulo}} </h5>
+    <app-contenido-lectura [idLectura]="lectura.idLectura"></app-contenido-lectura>
+  </div>
+</div>

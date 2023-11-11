@@ -1,0 +1,7 @@
+<div class="col-12 d-flex flex-column" *ngFor="let pregunta of preguntas">
+  <div>
+    <b> {{pregunta.pregunta}} </b>
+    <app-listaralternativaporpregunta [idPregunta]="pregunta.idPregunta"></app-listaralternativaporpregunta>
+  </div>
+</div>
+<button mat-raised-button (click)="aceptar()" color="primary">Enviar quizz</button>

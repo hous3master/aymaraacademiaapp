@@ -4,10 +4,19 @@ import pe.edu.upc.aaw.aymaraacademiaapi.entities.*;
 import java.time.LocalDate;
 
 public class LecturaDTO {
+    private int idLectura;
     private String descripcion;
     private String titulo;
     private String autor;
     private Modulo modulo;
+
+    public int getIdLectura() {
+        return idLectura;
+    }
+
+    public void setIdLectura(int idLectura) {
+        this.idLectura = idLectura;
+    }
 
     public String getDescripcion() {
         return descripcion;

@@ -12,10 +12,10 @@ public class Unidad {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int idUnidad;
 
-@Column(name = "nombre", nullable = false)
+@Column(name = "nombre", nullable = true)
 private String nombre;
 
-@Column(name = "descripcion", nullable = false)
+@Column(name = "descripcion", nullable = true)
 private String descripcion;
 
 public Unidad() { }

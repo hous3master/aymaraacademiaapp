@@ -15,7 +15,7 @@ private int idModulo;
 @Column(name = "nombre", nullable = false)
 private String nombre;
 
-@Column(name = "descripcion", nullable = false)
+@Column(name = "descripcion", nullable = false, length = 4000)
 private String descripcion;
 
 public Modulo() { }

@@ -1,0 +1,25 @@
+<nav>
+
+  <mat-toolbar color="primary" *ngIf="noRol()">
+    <span class="toolbar-items">
+      <button mat-button class="m-3">
+        <span>
+          <mat-icon svgIcon="logo" src="../assets/logoipsum-226.svg"></mat-icon>
+          <span class="mat-subtitle-2">Aymara Academia</span>
+        </span>
+      </button>
+
+      <button mat-flat-button routerLink="/landing">Explorar</button>
+      <button mat-button routerLink="/landing">¿Quienes somos?</button>
+      <button mat-button routerLink="/landing">Recursos</button>
+      <button mat-button routerLink="/landing">Contáctanos</button>
+    </span>
+
+    <span class="example-spacer"></span>
+
+    <span class="toolbar-items">
+      <button mat-button routerLink="/login">Inicia Sesión</button>
+      <button mat-flat-button routerLink="/landing">Únete de forma gratuita</button>
+    </span>
+  </mat-toolbar>
+</nav>

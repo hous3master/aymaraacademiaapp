@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:ital,wght@0,400;0,700;1,300;1,400;1,500&display=swap');
+
+/*INICIO*/
+
+.index h2 {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  margin: 15px 0 25px;
+}
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.toolbar-items {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Footer Styles */
+footer {
+  width: 100%;
+  min-height: 250px;
+  padding: 10px 0 25px 0;
+  color: #FFF;
+  background-color: #1e2ede;
+}
+
+.bottom_border {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: left;
+  margin: 3rem 3rem 2rem 3rem;
+  color: #FFF;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.container1 h5 {
+  margin-bottom: 1.5rem;
+}
+
+.footer_ul_amrc a {
+  list-style-type: none;
+  font-size: 14px;
+}
+
+.footer_ul_amrc li {
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+}
+
+.footer_ul_amrc li a {
+  color: #CCC;
+  text-decoration: none;
+}
+
+.foote_bottom_ul_amrc {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 1rem 0;
+}
+
+.foote_bottom_ul_amrc li {
+  display: inline;
+  margin: 1rem 15px;
+}
+
+.foote_bottom_ul_amrc li a {
+  color: #999;
+}
+
+.social_footer_ul {
+  text-align: center;
+  list-style-type: none;
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+.social_footer_ul li {
+  padding: 15px;
+  display: inline;
+}
+
+.social_footer_ul li a {
+  color: #CCC;
+  border: 1px solid #CCC;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.social_footer_ul li i {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.text-center {
+  align-items: center;
+  text-align: center;
+}
+
+.text-center a {
+  color: white;
+}
+
+footer h4 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 30px;
+}

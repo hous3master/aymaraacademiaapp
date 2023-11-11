@@ -1,0 +1,118 @@
+<app-navbar></app-navbar>
+
+<mat-toolbar class="bg-black text-light">
+  <span>
+    <p>Nuestras Entidades</p>
+  </span>
+</mat-toolbar>
+
+<div class="container-fluid  h-100">
+  <div class="row h-100">
+    <div class="col-md-2 mat-elevation-z4 p-0 m-0">
+      <mat-sidenav-container class="w-100 p-0 m-0">
+        <mat-sidenav-content class="w-100 p-0 m-0">
+          <button mat-stroked-button [matMenuTriggerFor]="menuAlternativa"
+            class="w-100 p-0 m-0">Alternativa</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuEstudiante" class="w-100 p-0 m-0">Estudiante</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuLectura" class="w-100 p-0 m-0">Lectura</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuModulo" class="w-100 p-0 m-0">Modulo</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuPregunta" class="w-100 p-0 m-0">Pregunta</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuPreguntaalternativa"
+            class="w-100 p-0 m-0">Preguntaalternativa</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuProgreso" class="w-100 p-0 m-0">Progreso</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuProyecto" class="w-100 p-0 m-0">Proyecto</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuQuizz" class="w-100 p-0 m-0">Quizz</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuRole" class="w-100 p-0 m-0">Role</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuUnidad" class="w-100 p-0 m-0">Unidad</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuUnidadmodulo"
+            class="w-100 p-0 m-0">Unidadmodulo</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuUsers" class="w-100 p-0 m-0">Users</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuVideo" class="w-100 p-0 m-0">Video</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuCursounidad"
+            class="w-100 p-0 m-0">Cursounidad</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuCurso" class="w-100 p-0 m-0">Curso</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuEstudiantepregunta"
+            class="w-100 p-0 m-0">Estudiantepregunta</button><br>
+          <button mat-stroked-button [matMenuTriggerFor]="menuEstudiantequizz"
+            class="w-100 p-0 m-0">Estudiantequizz</button><br>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+    </div>
+    <div class="col-md-10">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<mat-menu #menuAlternativa="matMenu">
+  <button mat-menu-item routerLink="./alternativa/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./alternativa">Listar</button>
+</mat-menu>
+<mat-menu #menuEstudiante="matMenu">
+  <button mat-menu-item routerLink="./estudiante/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./estudiante">Listar</button>
+</mat-menu>
+<mat-menu #menuLectura="matMenu">
+  <button mat-menu-item routerLink="./lectura/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./lectura">Listar</button>
+</mat-menu>
+<mat-menu #menuModulo="matMenu">
+  <button mat-menu-item routerLink="./modulo/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./modulo">Listar</button>
+</mat-menu>
+<mat-menu #menuPregunta="matMenu">
+  <button mat-menu-item routerLink="./pregunta/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./pregunta">Listar</button>
+</mat-menu>
+<mat-menu #menuPreguntaalternativa="matMenu">
+  <button mat-menu-item routerLink="./preguntaalternativa/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./preguntaalternativa">Listar</button>
+</mat-menu>
+<mat-menu #menuProgreso="matMenu">
+  <button mat-menu-item routerLink="./progreso/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./progreso">Listar</button>
+</mat-menu>
+<mat-menu #menuProyecto="matMenu">
+  <button mat-menu-item routerLink="./proyecto/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./proyecto">Listar</button>
+</mat-menu>
+<mat-menu #menuQuizz="matMenu">
+  <button mat-menu-item routerLink="./quizz/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./quizz">Listar</button>
+</mat-menu>
+<mat-menu #menuRole="matMenu">
+  <button mat-menu-item routerLink="./role/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./role">Listar</button>
+</mat-menu>
+<mat-menu #menuUnidad="matMenu">
+  <button mat-menu-item routerLink="./unidad/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./unidad">Listar</button>
+</mat-menu>
+<mat-menu #menuUnidadmodulo="matMenu">
+  <button mat-menu-item routerLink="./unidadmodulo/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./unidadmodulo">Listar</button>
+</mat-menu>
+<mat-menu #menuUsers="matMenu">
+  <button mat-menu-item routerLink="./users/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./users">Listar</button>
+</mat-menu>
+<mat-menu #menuVideo="matMenu">
+  <button mat-menu-item routerLink="./video/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./video">Listar</button>
+</mat-menu>
+<mat-menu #menuCursounidad="matMenu">
+  <button mat-menu-item routerLink="./cursounidad/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./cursounidad">Listar</button>
+</mat-menu>
+<mat-menu #menuCurso="matMenu">
+  <button mat-menu-item routerLink="./curso/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./curso">Listar</button>
+</mat-menu>
+<mat-menu #menuEstudiantepregunta="matMenu">
+  <button mat-menu-item routerLink="./estudiantepregunta/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./estudiantepregunta">Listar</button>
+</mat-menu>
+<mat-menu #menuEstudiantequizz="matMenu">
+  <button mat-menu-item routerLink="./estudiantequizz/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="./estudiantequizz">Listar</button>
+</mat-menu>

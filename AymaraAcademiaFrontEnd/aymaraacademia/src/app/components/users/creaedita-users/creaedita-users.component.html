@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+</head>
+
+<body>
+<div class="container" style="text-align: center">
+<h2>Registro de users</h2>
+<form [formGroup]="form" (submit)="aceptar()" class="example-form">
+<!-- idEntityName -->
+<mat-form-field class="example-full-width" *ngIf="edicion">
+<mat-label>id</mat-label>
+<input matInput placeholder="Id" formControlName="id"/>
+</mat-form-field>
+<br />
+<!-- Form fields for each attribute -->
+<!-- NOTE : Only if is not of type LocalDate -->
+<mat-form-field class="example-full-width">
+<mat-label>username</mat-label>
+<input matInput placeholder="username" formControlName="username"/>
+<mat-error *ngIf="obtenerControlCampo('username')?.errors?.['required']">
+username es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- NOTE : Only if is not of type LocalDate -->
+<mat-form-field class="example-full-width">
+<mat-label>password</mat-label>
+<input matInput type="password" placeholder="password" formControlName="password"/>
+<mat-error *ngIf="obtenerControlCampo('password')?.errors?.['required']">
+password es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- Buttons for actions -->
+<button mat-raised-button color="primary">Aceptar</button>
+<button mat-raised-button color="warn" routerLink="/components/entidades/users">
+Cancelar
+</button>
+<p>{{ mensaje }}</p>
+</form>
+</div>
+</body>
+
+</html>

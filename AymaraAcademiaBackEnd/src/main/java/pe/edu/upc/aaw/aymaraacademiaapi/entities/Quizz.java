@@ -12,7 +12,7 @@ public class Quizz {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int idQuizz;
 
-@Column(name = "titulo", nullable = false)
+@Column(name = "titulo", nullable = true)
 private String titulo;
 
 @ManyToOne

@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+
+<div class="col-12" *ngFor="let unidad of unidades">
+  <mat-toolbar class="bg-black text-light">
+    <span>
+      <p> {{unidad.nombre.toUpperCase()}} </p>
+    </span>
+  </mat-toolbar>
+  <div class="d-flex flex-row">
+    <app-listarmoduloporunidad [idUnidad]="unidad.idUnidad" class="col-2"></app-listarmoduloporunidad>
+    <div class="col-10">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

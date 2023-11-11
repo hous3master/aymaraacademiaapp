@@ -1,0 +1,22 @@
+<div class="video-container" *ngFor="let video of videos" class="col-12 d-flex flex-column">
+  <div class="d-flex flex-row col-12">
+    <div class="d-flex flex-column col-4">
+      <h5 class="mat-headline-6"> {{video.presentador.toUpperCase()}} </h5>
+      <h4 class="mat-headline-5"> {{video.titulo}} </h4>
+      <p> {{video.descripcion}} </p>
+      <div class="p-4 col-12">
+        <button mat-button class="w-100" color="primary" (click)="showTranscription = !showTranscription">{{
+          showTranscription ? 'Hide' : 'Show' }} Transcription</button>
+      </div>
+    </div>
+    <div class="col-8">
+      <iframe width="560" height="315" [src]="video.url | safe: 'resourceUrl'" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="col-12">
+    <p *ngIf="showTranscription"> {{video.transcripcion}} </p>
+  </div>
+</div>

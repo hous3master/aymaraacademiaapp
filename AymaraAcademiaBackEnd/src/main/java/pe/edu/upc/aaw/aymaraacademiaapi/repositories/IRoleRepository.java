@@ -6,4 +6,4 @@ import pe.edu.upc.aaw.aymaraacademiaapi.entities.Role;
 import java.util.List;
 
 @Repository
-public interface IRoleRepository extends JpaRepository<Role, Integer> { }
+public interface IRoleRepository extends JpaRepository<Role, Long> { }

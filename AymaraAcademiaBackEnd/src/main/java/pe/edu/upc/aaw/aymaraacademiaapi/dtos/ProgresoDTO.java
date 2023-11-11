@@ -4,9 +4,18 @@ import pe.edu.upc.aaw.aymaraacademiaapi.entities.*;
 import java.time.LocalDate;
 
 public class ProgresoDTO {
+    private int idProgreso;
     private double progreso;
     private Estudiante estudiante;
     private Modulo modulo;
+
+    public int getIdProgreso() {
+        return idProgreso;
+    }
+
+    public void setIdProgreso(int idProgreso) {
+        this.idProgreso = idProgreso;
+    }
 
     public double getProgreso() {
         return progreso;

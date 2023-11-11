@@ -26,13 +26,13 @@ public class QuizzController {
     }
 
     // Delete an item by ID on table
-    @DeleteMapping("/quizzid")
+    @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id")Integer id){
         myService.delete(id);
     }
 
     // Retrieve an items by ID from table
-    @GetMapping("/quizzid")
+    @GetMapping("/{id}")
     public QuizzDTO listarId(@PathVariable("id")Integer id){
         ModelMapper m = new ModelMapper();
         QuizzDTO myItem = m.map(myService.listId(id), QuizzDTO.class);

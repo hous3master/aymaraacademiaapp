@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <br />
+      <h2 style="text-align: center">Lista de Users</h2>
+      <div style="text-align: right">
+        <button
+          mat-raised-button
+          color="primary"
+          routerLink="/components/entidades/users/nuevo"
+        >
+          Nuevo
+        </button>
+      </div>
+      <mat-form-field>
+        <input matInput (keyup)="filter($event)" placeholder="buscar" />
+      </mat-form-field>
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z4">
+        <!--Id Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>Código</th>
+          <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+        </ng-container>
+
+        <!-- username Column -->
+        <ng-container matColumnDef="username">
+          <th mat-header-cell *matHeaderCellDef>username</th>
+          <td mat-cell *matCellDef="let element">{{ element.username }}</td>
+        </ng-container>
+
+        <!-- password Column -->
+        <ng-container matColumnDef="password">
+          <th mat-header-cell *matHeaderCellDef>password</th>
+          <td mat-cell *matCellDef="let element">{{ element.password }}</td>
+        </ng-container>
+
+        <!-- enabled Column -->
+        <ng-container matColumnDef="enabled">
+          <th mat-header-cell *matHeaderCellDef>enabled</th>
+          <td mat-cell *matCellDef="let element">
+            <span *ngIf="element.enabled">true</span>
+            <span *ngIf="!element.enabled">false</span>
+          </td>
+        </ng-container>
+
+        <!-- Acciones 01 and 02 columns -->
+        <ng-container matColumnDef="accion01">
+          <th mat-header-cell *matHeaderCellDef>Acciones</th>
+          <td mat-cell *matCellDef="let element">
+            <button
+              mat-raised-button
+              color="primary"
+              [routerLink]="['ediciones', element.id]"
+            >
+              Actualizar
+            </button>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="accion02">
+          <th mat-header-cell *matHeaderCellDef>Acciones</th>
+          <td mat-cell *matCellDef="let element">
+            <button
+              mat-raised-button
+              color="warn"
+              (click)="eliminar(element.id)"
+            >
+              Eliminar
+            </button>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 25, 100]"
+        showFirstLastButtons
+      ></mat-paginator>
+    </div>
+  </body>
+</html>

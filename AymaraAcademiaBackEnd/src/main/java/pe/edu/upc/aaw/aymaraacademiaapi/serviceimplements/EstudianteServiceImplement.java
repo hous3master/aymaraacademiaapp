@@ -36,4 +36,9 @@ public class EstudianteServiceImplement implements IEstudianteService {
     public List<Estudiante> list() {
         return myRepository.findAll();
     }
+
+    @Override
+    public List<String[]> findEstudianteByUserUsername(String name) {
+        return myRepository.findEstudianteByUserUsername(name);
+    }
 }

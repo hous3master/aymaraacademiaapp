@@ -6,7 +6,9 @@ import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.aaw.aymaraacademiaapi.dtos.EstudianteDTO;
 import pe.edu.upc.aaw.aymaraacademiaapi.entities.Estudiante;
 import pe.edu.upc.aaw.aymaraacademiaapi.serviceinterfaces.IEstudianteService;
+import pe.edu.upc.aaw.aymaraacademiaapi.serviceinterfaces.IUsersService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,6 +19,9 @@ public class EstudianteController {
     @Autowired
     private IEstudianteService myService;
 
+    @Autowired
+    private IUsersService usersService;
+
     // Add an item to table
     @PostMapping
     public void registrar(@RequestBody EstudianteDTO dto) {
@@ -26,13 +31,13 @@ public class EstudianteController {
     }
 
     // Delete an item by ID on table
-    @DeleteMapping("/estudianteid")
+    @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id")Integer id){
         myService.delete(id);
     }
 
     // Retrieve an items by ID from table
-    @GetMapping("/estudianteid")
+    @GetMapping("/{id}")
     public EstudianteDTO listarId(@PathVariable("id")Integer id){
         ModelMapper m = new ModelMapper();
         EstudianteDTO myItem = m.map(myService.listId(id), EstudianteDTO.class);
@@ -54,5 +59,26 @@ public class EstudianteController {
         ModelMapper m = new ModelMapper();
         Estudiante d = m.map(dto, Estudiante.class);
         myService.insert(d);
+    }
+
+    @GetMapping("/buscar/{username}")
+    public List<EstudianteDTO> findEstudianteByUserUsername(@PathVariable("username")String name) {
+        List<String[]> myList = myService.findEstudianteByUserUsername(name);
+        List<EstudianteDTO> myListDTO = new ArrayList<>();
+        for (String[] data:myList) {
+            EstudianteDTO dto = new EstudianteDTO();
+
+
+            dto.setIdEstudiante(Integer.parseInt(data[0]));
+            dto.setApellido(data[1]);
+            dto.setEdad(Integer.parseInt(data[2]));
+            dto.setEmail(data[3]);
+            dto.setNombre(data[4]);
+            dto.setResena(Integer.parseInt(data[5]));
+            dto.setUser(usersService.listId(Long.parseLong(data[6])));
+
+            myListDTO.add(dto);
+        }
+        return myListDTO;
     }
 }

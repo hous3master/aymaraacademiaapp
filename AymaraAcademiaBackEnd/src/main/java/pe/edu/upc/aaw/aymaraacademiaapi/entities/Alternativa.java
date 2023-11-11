@@ -12,23 +12,18 @@ public class Alternativa {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int idAlternativa;
 
-@Column(name = "respuesta", nullable = false)
+@Column(name = "respuesta", nullable = true)
 private String respuesta;
 
-@Column(name = "correcta", nullable = false)
+@Column(name = "correcta", nullable = true)
 private boolean correcta;
-
-@ManyToOne
-@JoinColumn(name = "idPreguntaalternativa")
-private Preguntaalternativa preguntaalternativa;
 
 public Alternativa() { }
 
-public Alternativa(int idAlternativa,String respuesta, boolean correcta, Preguntaalternativa preguntaalternativa) {
+public Alternativa(int idAlternativa,String respuesta, boolean correcta) {
     this.idAlternativa = idAlternativa;
     this.respuesta = respuesta;
     this.correcta = correcta;
-    this.preguntaalternativa = preguntaalternativa;
 }
 
 public int getIdAlternativa() {
@@ -53,14 +48,6 @@ public boolean getCorrecta() {
 
 public void setCorrecta(boolean correcta) {
     this.correcta = correcta;
-}
-
-public Preguntaalternativa getPreguntaalternativa() {
-    return preguntaalternativa;
-}
-
-public void setPreguntaalternativa(Preguntaalternativa preguntaalternativa) {
-    this.preguntaalternativa = preguntaalternativa;
 }
 
 }

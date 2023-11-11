@@ -4,8 +4,17 @@ import pe.edu.upc.aaw.aymaraacademiaapi.entities.*;
 import java.time.LocalDate;
 
 public class PreguntaDTO {
+    private int idPregunta;
     private String pregunta;
     private Quizz quizz;
+
+    public int getIdPregunta() {
+        return idPregunta;
+    }
+
+    public void setIdPregunta(int idPregunta) {
+        this.idPregunta = idPregunta;
+    }
 
     public String getPregunta() {
         return pregunta;

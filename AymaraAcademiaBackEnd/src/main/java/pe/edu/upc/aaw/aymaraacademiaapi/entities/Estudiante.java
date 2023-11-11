@@ -28,12 +28,12 @@ private int resena;
 private String email;
 
 @ManyToOne
-@JoinColumn(name = "idUser")
-private User user;
+@JoinColumn(name = "id")
+private Users user;
 
 public Estudiante() { }
 
-public Estudiante(int idEstudiante,String nombre, String apellido, int edad, int resena, String email, User user) {
+public Estudiante(int idEstudiante,String nombre, String apellido, int edad, int resena, String email, Users user) {
     this.idEstudiante = idEstudiante;
     this.nombre = nombre;
     this.apellido = apellido;
@@ -91,11 +91,11 @@ public void setEmail(String email) {
     this.email = email;
 }
 
-public User getUser() {
+public Users getUser() {
     return user;
 }
 
-public void setUser(User user) {
+public void setUser(Users user) {
     this.user = user;
 }
 
