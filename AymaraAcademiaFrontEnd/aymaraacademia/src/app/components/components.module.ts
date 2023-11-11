@@ -91,6 +91,12 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSidenavContainer } from '@angular/material/sidenav';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatListModule } from '@angular/material/list';
+import { EstudiantepreguntaComponent } from './estudiantepregunta/estudiantepregunta.component';
+import { EstudiantequizzComponent } from './estudiantequizz/estudiantequizz.component';
+import { CreaeditaEstudiantepreguntaComponent } from './estudiantepregunta/creaedita-estudiantepregunta/creaedita-estudiantepregunta.component';
+import { CreaeditaEstudiantequizzComponent } from './estudiantequizz/creaedita-estudiantequizz/creaedita-estudiantequizz.component';
+import { ListarEstudiantepreguntaComponent } from './estudiantepregunta/listar-estudiantepregunta/listar-estudiantepregunta.component';
+import { ListarEstudiantequizzComponent } from './estudiantequizz/listar-estudiantequizz/listar-estudiantequizz.component';
 
 
 @NgModule({
@@ -155,6 +161,14 @@ import { MatListModule } from '@angular/material/list';
     InformacionunidadComponent,
     NavbarComponent,
     ContenidoLecturaComponent,
+    EstudiantepreguntaComponent,
+    EstudiantequizzComponent,
+    CreaeditaEstudiantepreguntaComponent,
+    CreaeditaEstudiantequizzComponent,
+    ListarEstudiantepreguntaComponent,
+    ListarEstudiantequizzComponent,
+    EstudiantepreguntaComponent,
+    EstudiantequizzComponent,
 
   ],
   imports:[
