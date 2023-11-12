@@ -100,6 +100,7 @@ import { ListarEstudiantequizzComponent } from './estudiantequizz/listar-estudia
 import { RevisionComponent } from './revision/revision.component';
 import { ListarRevisionComponent } from './revision/listar-revision/listar-revision.component';
 import { CreaeditaRevisionComponent } from './revision/creaedita-revision/creaedita-revision.component';
+import { InformacionProyectoComponent } from './proyecto/informacion-proyecto/informacion-proyecto.component';
 
 
 @NgModule({
@@ -175,6 +176,7 @@ import { CreaeditaRevisionComponent } from './revision/creaedita-revision/creaed
     RevisionComponent,
     ListarRevisionComponent,
     CreaeditaRevisionComponent,
+    InformacionProyectoComponent,
 
   ],
   imports:[

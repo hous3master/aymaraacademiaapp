@@ -49,6 +49,7 @@ import { CreaeditaEstudiantequizzComponent } from './estudiantequizz/creaedita-e
 import { EstudiantequizzComponent } from './estudiantequizz/estudiantequizz.component';
 import { RevisionComponent } from './revision/revision.component';
 import { CreaeditaRevisionComponent } from './revision/creaedita-revision/creaedita-revision.component';
+import { InformacionProyectoComponent } from './proyecto/informacion-proyecto/informacion-proyecto.component';
 
 const routes: Routes = [
   // For each entity, you must create a path that will be used to navigate to the related components
@@ -60,6 +61,10 @@ const routes: Routes = [
         path: 'modulo/:idModulo',
         component: InformacionModuloComponent,
       },
+      {
+        path: 'proyecto/:idProyecto',
+        component: InformacionProyectoComponent,
+      }
     ]
   },
   {

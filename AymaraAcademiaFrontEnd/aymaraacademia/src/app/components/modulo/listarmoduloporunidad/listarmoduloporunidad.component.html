@@ -1,15 +1,9 @@
-<div class="container-fluid h-100">
-  <div class="row h-100 w-100">
-    <div class="w-100 mat-elevation-z4 p-0 m-0">
-      <mat-sidenav-container class="w-100 p-0 m-0">
-        <mat-sidenav-content class="w-100 p-0 m-0">
-          <div *ngFor="let unidadmodulo of unidadesmodulos">
-            <button mat-stroked-button color="basic" style="height: auto" class="w-100 p-1 m-0" [routerLink]="['/components/informacionunidad', unidadmodulo.unidad.idUnidad, 'modulo', unidadmodulo.modulo.idModulo]">
-              {{unidadmodulo.modulo.nombre}}
-            </button><br>
-          </div>
-        </mat-sidenav-content>
-      </mat-sidenav-container>
+<mat-sidenav-container class="w-100 p-0 m-0">
+  <mat-sidenav-content class="w-100 p-0 m-0">
+    <div *ngFor="let unidadmodulo of unidadesmodulos">
+      <button mat-stroked-button color="basic" style="height: auto" class="w-100 p-1 m-0" [routerLink]="['/components/informacionunidad', unidadmodulo.unidad.idUnidad, 'modulo', unidadmodulo.modulo.idModulo]">
+        {{unidadmodulo.modulo.nombre}}
+      </button><br>
     </div>
-  </div>
-</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
