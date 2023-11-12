@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "titulo">
+        <h2><mat-icon class="icon"> insert_emoticon</mat-icon>Bienvenido Administrador</h2>
+        <h2>Lista de Cursos registrados</h2> 
+    </div>
+    <div class="container informacioncurso">
+        <mat-card *ngFor="let curso of cursos" class="example-card">
+          <mat-card-header>
+            <mat-card-title><mat-icon class="icon2">folder_open</mat-icon>{{ curso.nombre }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{ curso.descripcion }}</p>
+            <mat-divider></mat-divider>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button [routerLink]="['/components/informacioncursounidad', curso.idCurso]" class="button">UNIDADES</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <br>  
+</body>
+</html>

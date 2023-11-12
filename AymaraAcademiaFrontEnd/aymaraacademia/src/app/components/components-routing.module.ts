@@ -47,6 +47,9 @@ import { EstudiantepreguntaComponent } from './estudiantepregunta/estudiantepreg
 import { CreaeditaEstudiantepreguntaComponent } from './estudiantepregunta/creaedita-estudiantepregunta/creaedita-estudiantepregunta.component';
 import { CreaeditaEstudiantequizzComponent } from './estudiantequizz/creaedita-estudiantequizz/creaedita-estudiantequizz.component';
 import { EstudiantequizzComponent } from './estudiantequizz/estudiantequizz.component';
+import { InformacioncursoComponent } from './curso/informacioncurso/informacioncurso.component';
+import { InformacioncursounidadComponent } from './cursounidad/informacioncursounidad/informacioncursounidad.component';
+import { InformacionunidadmoduloComponent } from './unidadmodulo/informacionunidadmodulo/informacionunidadmodulo.component';
 
 const routes: Routes = [
   // For each entity, you must create a path that will be used to navigate to the related components
@@ -60,6 +63,20 @@ const routes: Routes = [
       },
     ]
   },
+
+  {
+    path: 'informacioncurso',
+    component: InformacioncursoComponent,
+  },
+  {
+    path: 'informacioncursounidad/:idcurso',
+    component: InformacioncursounidadComponent,
+  },
+  {
+    path: 'informacionunidadmodulo/:idunidad',
+    component: InformacionunidadmoduloComponent,
+  },
+   
   {
     path: 'entidades',
     component: EntidadesComponent,

@@ -61,8 +61,10 @@ import { ListarUsersComponent } from './users/listar-users/listar-users.componen
 import { ListarVideoComponent } from './video/listar-video/listar-video.component';
 import { ListarCursounidadComponent } from './cursounidad/listar-cursounidad/listar-cursounidad.component';
 import { ListarCursoComponent } from './curso/listar-curso/listar-curso.component';
+import { InformacioncursoComponent } from './curso/informacioncurso/informacioncurso.component';
 import { SafePipeModule } from 'safe-pipe';
 import { ContenidoLecturaComponent } from './lectura/contenido-lectura/contenido-lectura.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -97,6 +99,9 @@ import { CreaeditaEstudiantepreguntaComponent } from './estudiantepregunta/creae
 import { CreaeditaEstudiantequizzComponent } from './estudiantequizz/creaedita-estudiantequizz/creaedita-estudiantequizz.component';
 import { ListarEstudiantepreguntaComponent } from './estudiantepregunta/listar-estudiantepregunta/listar-estudiantepregunta.component';
 import { ListarEstudiantequizzComponent } from './estudiantequizz/listar-estudiantequizz/listar-estudiantequizz.component';
+import { InformacioncursounidadComponent } from './cursounidad/informacioncursounidad/informacioncursounidad.component';
+import { InformacionunidadmoduloComponent } from './unidadmodulo/informacionunidadmodulo/informacionunidadmodulo.component';
+
 
 
 @NgModule({
@@ -169,6 +174,9 @@ import { ListarEstudiantequizzComponent } from './estudiantequizz/listar-estudia
     ListarEstudiantequizzComponent,
     EstudiantepreguntaComponent,
     EstudiantequizzComponent,
+    InformacioncursoComponent,
+    InformacioncursounidadComponent,
+    InformacionunidadmoduloComponent
 
   ],
   imports:[
@@ -191,6 +199,9 @@ import { ListarEstudiantequizzComponent } from './estudiantequizz/listar-estudia
     SafePipeModule,
     MatSnackBarModule,
     MatRadioModule,
+    MatProgressBarModule,
+    MatCardModule,
+    MatDividerModule
   ]
 })
 export class ComponentsModule { }

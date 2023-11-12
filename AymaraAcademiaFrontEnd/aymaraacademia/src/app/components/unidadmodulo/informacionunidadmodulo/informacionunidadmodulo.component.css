@@ -14,7 +14,7 @@ body {
     margin: 10px;
 }
 
-h2{
+h2, h3{
     font-family: 'Roboto';
     text-align: center;
     font-size: 30px;
