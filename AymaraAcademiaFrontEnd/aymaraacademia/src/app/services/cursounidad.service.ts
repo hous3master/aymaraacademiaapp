@@ -3,6 +3,7 @@ import { environment } from 'environments/environment';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Unidad } from '../models/unidad';
 
 const base_url = environment.base;
 
