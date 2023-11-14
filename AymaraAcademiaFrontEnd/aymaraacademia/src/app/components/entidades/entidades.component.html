@@ -36,8 +36,6 @@
             class="w-100 p-0 m-0">Estudiantepregunta</button><br>
           <button mat-stroked-button [matMenuTriggerFor]="menuEstudiantequizz"
             class="w-100 p-0 m-0">Estudiantequizz</button><br>
-            <button mat-stroked-button [matMenuTriggerFor]="menuEstudianteCurso"
-            class="w-100 p-0 m-0">EstudianteCurso</button><br>
         </mat-sidenav-content>
       </mat-sidenav-container>
     </div>
@@ -122,8 +120,4 @@
 <mat-menu #menuEstudiantequizz="matMenu">
   <button mat-menu-item routerLink="./estudiantequizz/nuevo">Registrar</button>
   <button mat-menu-item routerLink="./estudiantequizz">Listar</button>
-</mat-menu>
-<mat-menu #menuEstudianteCurso="matMenu">
-  <button mat-menu-item routerLink="./estudiantecurso/nuevo">Registrar</button>
-  <button mat-menu-item routerLink="./estudiantecurso">Listar</button>
 </mat-menu>
