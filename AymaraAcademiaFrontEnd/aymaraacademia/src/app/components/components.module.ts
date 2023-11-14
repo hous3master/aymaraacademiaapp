@@ -103,6 +103,10 @@ import { CreaeditaRevisionComponent } from './revision/creaedita-revision/creaed
 import { InformacionProyectoComponent } from './proyecto/informacion-proyecto/informacion-proyecto.component';
 import { SignupUserComponent } from './signup/signup-user/signup-user.component';
 import { SignupEstudianteComponent } from './signup/signup-estudiante/signup-estudiante.component';
+import { EstudiantecursoComponent } from './estudiantecurso/estudiantecurso.component';
+import { ListarEstudiantecursoComponent } from './estudiantecurso/listar-estudiantecurso/listar-estudiantecurso.component';
+import { CreaditaEstudiantecursoComponent } from './estudiantecurso/creadita-estudiantecurso/creadita-estudiantecurso.component';
+import { InformacioncursounidadComponent } from './cursounidad/informacioncursounidad/informacioncursounidad.component';
 
 
 @NgModule({
@@ -147,6 +151,7 @@ import { SignupEstudianteComponent } from './signup/signup-estudiante/signup-est
     ListarUsersComponent,
     CreaeditaUsersComponent,
     VideoComponent,
+    EstudiantecursoComponent,
     ListarVideoComponent,
     CreaeditaVideoComponent,
     CursounidadComponent,
@@ -181,7 +186,11 @@ import { SignupEstudianteComponent } from './signup/signup-estudiante/signup-est
     InformacionProyectoComponent,
     SignupUserComponent,
     SignupEstudianteComponent,
-
+    EstudiantecursoComponent,
+    ListarEstudiantecursoComponent,
+    CreaditaEstudiantecursoComponent,
+    InformacioncursounidadComponent,
+    CreaditaEstudiantecursoComponent
   ],
   imports:[
     CommonModule,
@@ -203,6 +212,7 @@ import { SignupEstudianteComponent } from './signup/signup-estudiante/signup-est
     SafePipeModule,
     MatSnackBarModule,
     MatRadioModule,
+    MatCardModule
   ]
 })
 export class ComponentsModule { }

@@ -1,0 +1,30 @@
+<div class="titulo">
+  <h2>
+    <mat-icon class="icon"> insert_emoticon</mat-icon>Bienvenido Administrador
+  </h2>
+  <h2>Lista de Unidades registradas en el curso {{ nombreCurso }}</h2>
+</div>
+<div class="container informacioncurso">
+  <mat-card *ngFor="let unidad of unidades" class="example-card">
+    <mat-card-header>
+      <mat-card-title
+        ><mat-icon class="icon2">folder_open</mat-icon
+        >{{ unidad.nombre }}</mat-card-title
+      >
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ unidad.descripcion }}</p>
+      <mat-divider></mat-divider>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-button
+        [routerLink]="['/components/unidad', unidad.idUnidad]"
+        class="button"
+      >
+        MODULOS
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<br />

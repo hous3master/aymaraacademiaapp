@@ -50,11 +50,15 @@ import { EstudiantequizzComponent } from './estudiantequizz/estudiantequizz.comp
 import { RevisionComponent } from './revision/revision.component';
 import { CreaeditaRevisionComponent } from './revision/creaedita-revision/creaedita-revision.component';
 import { InformacionProyectoComponent } from './proyecto/informacion-proyecto/informacion-proyecto.component';
+import { EstudiantecursoComponent } from './estudiantecurso/estudiantecurso.component';
+import { ListarEstudiantecursoComponent } from './estudiantecurso/listar-estudiantecurso/listar-estudiantecurso.component';
+import { CreaditaEstudiantecursoComponent } from './estudiantecurso/creadita-estudiantecurso/creadita-estudiantecurso.component';
+import { InformacioncursounidadComponent } from './cursounidad/informacioncursounidad/informacioncursounidad.component';
 
 const routes: Routes = [
   // For each entity, you must create a path that will be used to navigate to the related components
   {
-    path: 'informacionunidad/:idUnidad',
+    path: 'unidad/:idUnidad',
     component: InformacionunidadComponent,
     children: [
       {
@@ -66,6 +70,10 @@ const routes: Routes = [
         component: InformacionProyectoComponent,
       }
     ]
+  },
+  {
+    path: 'informacioncurso/:idcurso',
+    component: InformacioncursounidadComponent,
   },
   {
     path: 'entidades',
@@ -224,6 +232,14 @@ const routes: Routes = [
         children: [
           { path: 'nuevo', component: CreaeditaEstudiantequizzComponent },
           { path: 'ediciones/:id', component: CreaeditaEstudiantequizzComponent },
+        ],
+      },
+      {
+        path: 'estudiantecurso',
+        component: EstudiantecursoComponent,
+        children: [
+          { path: 'nuevo', component: CreaditaEstudiantecursoComponent },
+          { path: 'ediciones/:id', component: CreaditaEstudiantecursoComponent },
         ],
       },
     ],

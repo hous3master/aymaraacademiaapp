@@ -1,7 +1,7 @@
 <mat-sidenav-container class="w-100 p-0 m-0">
   <mat-sidenav-content class="w-100 p-0 m-0">
     <div *ngFor="let unidadmodulo of unidadesmodulos">
-      <button mat-stroked-button color="basic" style="height: auto" class="w-100 p-1 m-0" [routerLink]="['/components/informacionunidad', unidadmodulo.unidad.idUnidad, 'modulo', unidadmodulo.modulo.idModulo]">
+      <button mat-stroked-button color="basic" style="height: auto" class="w-100 p-1 m-0" [routerLink]="['/components/unidad', unidadmodulo.unidad.idUnidad, 'modulo', unidadmodulo.modulo.idModulo]">
         {{unidadmodulo.modulo.nombre}}
       </button><br>
     </div>
