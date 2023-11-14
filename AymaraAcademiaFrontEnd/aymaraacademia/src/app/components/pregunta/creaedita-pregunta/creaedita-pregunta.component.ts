@@ -46,7 +46,7 @@ export class CreaeditaPreguntaComponent implements OnInit {
     });
 
     this.form = this.formBuilder.group({
-      idEntityName: [''],
+      idPregunta: [''],
       pregunta: ['', Validators.required],
       quizz: ['', Validators.required],
     });

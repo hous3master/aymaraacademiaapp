@@ -46,7 +46,7 @@ export class CreaeditaVideoComponent implements OnInit {
     });
 
     this.form = this.formBuilder.group({
-      idEntityName: [''],
+      idVideo: [''],
       url: ['', Validators.required],
       titulo: ['', Validators.required],
       descripcion: ['', Validators.required],

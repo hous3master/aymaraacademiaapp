@@ -48,7 +48,7 @@ export class CreaeditaEstudianteComponent implements OnInit {
     console.log('Fuera del subscribe', this.listaUsers);
 
     this.form = this.formBuilder.group({
-      idEntityName: [''],
+      idEstudiante: [''],
       nombre: ['', Validators.required],
       apellido: ['', Validators.required],
       edad: ['', Validators.required],

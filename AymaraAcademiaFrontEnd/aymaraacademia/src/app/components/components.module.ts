@@ -101,6 +101,8 @@ import { RevisionComponent } from './revision/revision.component';
 import { ListarRevisionComponent } from './revision/listar-revision/listar-revision.component';
 import { CreaeditaRevisionComponent } from './revision/creaedita-revision/creaedita-revision.component';
 import { InformacionProyectoComponent } from './proyecto/informacion-proyecto/informacion-proyecto.component';
+import { SignupUserComponent } from './signup/signup-user/signup-user.component';
+import { SignupEstudianteComponent } from './signup/signup-estudiante/signup-estudiante.component';
 
 
 @NgModule({
@@ -177,6 +179,8 @@ import { InformacionProyectoComponent } from './proyecto/informacion-proyecto/in
     ListarRevisionComponent,
     CreaeditaRevisionComponent,
     InformacionProyectoComponent,
+    SignupUserComponent,
+    SignupEstudianteComponent,
 
   ],
   imports:[

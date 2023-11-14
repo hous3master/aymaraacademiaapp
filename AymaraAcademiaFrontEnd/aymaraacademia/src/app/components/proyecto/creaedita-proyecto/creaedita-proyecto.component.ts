@@ -53,7 +53,7 @@ this.listaEstudiante = data;
 })
 
 this.form = this.formBuilder.group({
-idEntityName: [''],
+idProyecto: [''],
 titulo: ['', Validators.required],
 descripcion: ['', Validators.required],
 unidad: ['', Validators.required],

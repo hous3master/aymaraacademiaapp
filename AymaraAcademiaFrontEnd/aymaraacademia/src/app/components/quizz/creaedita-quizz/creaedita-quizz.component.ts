@@ -46,7 +46,7 @@ this.listaModulo = data;
 })
 
 this.form = this.formBuilder.group({
-idEntityName: [''],
+idQuizz: [''],
 titulo: ['', Validators.required],
 modulo: ['', Validators.required],
 });
