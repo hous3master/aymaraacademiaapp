@@ -50,7 +50,7 @@ export class CreaeditaRoleComponent implements OnInit {
     });
 
     this.form = this.formBuilder.group({
-      idEntityName: [''],
+      id: [''],
       rol: ['', Validators.required],
       user: ['', Validators.required],
     });

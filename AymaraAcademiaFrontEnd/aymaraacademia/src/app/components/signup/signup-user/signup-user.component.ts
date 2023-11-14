@@ -43,7 +43,7 @@ export class SignupUserComponent implements OnInit {
         .signupAndLogin(this.user, 'signup-estudiante')
         .subscribe(() => {
           this.mensaje = 'Usuario registrado con éxito';
-          this.snackBar.open(this.mensaje, 'Aviso', { duration: 2000 });
+          this.snackBar.open(this.mensaje, 'Aviso', { duration: 4000 });
           this.router.navigate(['../signup-estudiante'], {
             relativeTo: this.route,
           });

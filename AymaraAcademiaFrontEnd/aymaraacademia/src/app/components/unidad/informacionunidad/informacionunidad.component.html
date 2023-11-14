@@ -7,7 +7,19 @@
     </span>
   </mat-toolbar>
   <div class="d-flex flex-row">
-    <app-listarmoduloporunidad [idUnidad]="unidad.idUnidad" class="col-2"></app-listarmoduloporunidad>
+    <div class="col-2">
+      <div class="container-fluid h-100">
+        <div class="row h-100 w-100">
+          <div class="w-100 mat-elevation-z4 p-0 m-0">
+            <app-listarmoduloporunidad [idUnidad]="unidad.idUnidad"></app-listarmoduloporunidad>
+            <button mat-raised-button color="primary" style="height: auto" class="w-100 p-1 m-0" [routerLink]="['/components/informacionunidad', unidad.idUnidad, 'proyecto', idProyecto]">
+              Proyecto
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="col-10">
       <router-outlet></router-outlet>
     </div>

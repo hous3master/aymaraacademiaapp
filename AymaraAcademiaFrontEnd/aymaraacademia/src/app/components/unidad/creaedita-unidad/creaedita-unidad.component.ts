@@ -39,7 +39,7 @@ this.init();
 
 
 this.form = this.formBuilder.group({
-idEntityName: [''],
+idUnidad: [''],
 nombre: ['', Validators.required],
 descripcion: ['', Validators.required],
 });

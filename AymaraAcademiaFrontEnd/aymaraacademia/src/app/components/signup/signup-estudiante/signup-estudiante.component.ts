@@ -51,12 +51,12 @@ export class SignupEstudianteComponent implements OnInit {
             this.signupService.signupEstudiante(this.estudiante).subscribe(
               () => {
                 this.mensaje = 'Estudiante registrado con éxito';
-                this.snackBar.open(this.mensaje, 'Aviso', { duration: 2000 });
+                this.snackBar.open(this.mensaje, 'Aviso', { duration: 4000 });
                 this.router.navigate(['components/entidades']);
               },
               (error) => {
                 this.mensaje = 'Hubo un error al registrar al estudiante';
-                this.snackBar.open(this.mensaje, 'Aviso', { duration: 2000 });
+                this.snackBar.open(this.mensaje, 'Aviso', { duration: 4000 });
               }
             );
           } else {
@@ -66,7 +66,7 @@ export class SignupEstudianteComponent implements OnInit {
         },
         (error) => {
           this.mensaje = 'Error al recuperar al usuario';
-          this.snackBar.open(this.mensaje, 'Aviso', { duration: 2000 });
+          this.snackBar.open(this.mensaje, 'Aviso', { duration: 4000 });
         }
       );
     } else {

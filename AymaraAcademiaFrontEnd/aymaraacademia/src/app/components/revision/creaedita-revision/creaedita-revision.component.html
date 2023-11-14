@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+</head>
+
+<body>
+<div class="container" style="text-align: center">
+<h2>Registro de revision</h2>
+<form [formGroup]="form" (submit)="aceptar()" class="example-form">
+<!-- id -->
+<mat-form-field class="example-full-width" *ngIf="edicion">
+<mat-label>idRevision</mat-label>
+<input matInput placeholder="Id" formControlName="idRevision"/>
+</mat-form-field>
+<br />
+<!-- Form fields for each attribute -->
+<!-- NOTE: Only components with foreign key-->
+<mat-form-field class="example-full-width">
+  <mat-label>proyecto</mat-label>
+  <mat-select formControlName="proyecto">
+  <mat-option *ngFor="let tipo of listaProyecto" [value]="tipo.idProyecto">
+  {{tipo.idProyecto}}
+  </mat-option>
+  </mat-select>
+  <mat-error *ngIf="obtenerControlCampo('proyecto')?.errors?.['required']">
+  proyecto es obligatorio.
+  </mat-error>
+</mat-form-field>
+<br />
+
+<mat-form-field class="example-full-width">
+  <mat-label>estudiante</mat-label>
+  <mat-select formControlName="estudiante">
+  <mat-option *ngFor="let tipo of listaEstudiante" [value]="tipo.idEstudiante">
+  {{tipo.idEstudiante}}
+  </mat-option>
+  </mat-select>
+  <mat-error *ngIf="obtenerControlCampo('estudiante')?.errors?.['required']">
+  estudiante es obligatorio.
+  </mat-error>
+</mat-form-field>
+
+<br />
+
+<!-- NOTE : Only if is not of type LocalDate -->
+<mat-form-field class="example-full-width">
+<mat-label>calificacion</mat-label>
+<input matInput placeholder="calificacion" formControlName="calificacion"/>
+<mat-error *ngIf="obtenerControlCampo('calificacion')?.errors?.['required']">
+calificacion es obligatorio.
+</mat-error>
+</mat-form-field>
+<br />
+<!-- Buttons for actions -->
+<button mat-raised-button color="primary">Aceptar</button>
+<button mat-raised-button color="warn" routerLink="/components/entidades/revision">
+Cancelar
+</button>
+<p>{{ mensaje }}</p>
+</form>
+</div>
+</body>
+
+</html>
