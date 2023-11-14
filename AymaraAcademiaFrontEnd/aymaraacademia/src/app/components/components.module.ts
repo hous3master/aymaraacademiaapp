@@ -101,6 +101,10 @@ import { ListarEstudiantepreguntaComponent } from './estudiantepregunta/listar-e
 import { ListarEstudiantequizzComponent } from './estudiantequizz/listar-estudiantequizz/listar-estudiantequizz.component';
 import { InformacioncursounidadComponent } from './cursounidad/informacioncursounidad/informacioncursounidad.component';
 import { InformacionunidadmoduloComponent } from './unidadmodulo/informacionunidadmodulo/informacionunidadmodulo.component';
+import { EstudiantecursoComponent } from './estudiantecurso/estudiantecurso.component';
+import { CreaditaEstudiantecursoComponent } from './estudiantecurso/creadita-estudiantecurso/creadita-estudiantecurso.component';
+import { ListarEstudiantecursoComponent } from './estudiantecurso/listar-estudiantecurso/listar-estudiantecurso.component';
+import { InformacionEstudiantecursoComponent } from './estudiantecurso/informacion-estudiantecurso/informacion-estudiantecurso.component';
 
 
 
@@ -176,7 +180,11 @@ import { InformacionunidadmoduloComponent } from './unidadmodulo/informacionunid
     EstudiantequizzComponent,
     InformacioncursoComponent,
     InformacioncursounidadComponent,
-    InformacionunidadmoduloComponent
+    InformacionunidadmoduloComponent,
+    EstudiantecursoComponent,
+    CreaditaEstudiantecursoComponent,
+    ListarEstudiantecursoComponent,
+    InformacionEstudiantecursoComponent
 
   ],
   imports:[

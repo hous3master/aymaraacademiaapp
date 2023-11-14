@@ -10,8 +10,8 @@ import { CursoService } from './../../../services/curso.service';
 })
 export class InformacioncursoComponent {
 
-  idcurso: number = 0;
-  cursos: Curso[] = [];
+  idcurso: number = 0
+  cursos: Curso[] = []
 
   constructor(
     private CursoService: CursoService,
