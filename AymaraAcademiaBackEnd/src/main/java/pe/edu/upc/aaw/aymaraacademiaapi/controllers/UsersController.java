@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.aaw.aymaraacademiaapi.dtos.UsersDTO;
 import pe.edu.upc.aaw.aymaraacademiaapi.entities.Users;
+import pe.edu.upc.aaw.aymaraacademiaapi.security.WebSecurityConfig;
 import pe.edu.upc.aaw.aymaraacademiaapi.serviceinterfaces.IUsersService;
 
 import java.util.List;
@@ -22,7 +23,10 @@ public class UsersController {
     public void registrar(@RequestBody UsersDTO dto) {
         ModelMapper m = new ModelMapper();
         Users myItem = m.map(dto, Users.class);
+        // Encriptar la contraseña del usuario antes de guardarla
+        myItem.setPassword(WebSecurityConfig.passwordEncoder().encode(myItem.getPassword()));
         myService.insert(myItem);
+        myService.insertRoleForUser(myItem.getId(), "ESTUDIANTE");
     }
 
     // Delete an item by ID on table
@@ -53,6 +57,8 @@ public class UsersController {
     public void modificar(@RequestBody UsersDTO dto) {
         ModelMapper m = new ModelMapper();
         Users d = m.map(dto, Users.class);
+        // Encriptar la contraseña del usuario antes de modificarla
+        d.setPassword(WebSecurityConfig.passwordEncoder().encode(d.getPassword()));
         myService.insert(d);
     }
 }

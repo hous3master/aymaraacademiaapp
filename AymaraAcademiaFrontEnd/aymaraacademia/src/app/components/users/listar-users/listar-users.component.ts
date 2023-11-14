@@ -14,6 +14,7 @@ export class ListarUsersComponent implements OnInit {
     'id',
     'username',
     // 'password',
+    'enabled',
     'accion01',
     'accion02',
   ];

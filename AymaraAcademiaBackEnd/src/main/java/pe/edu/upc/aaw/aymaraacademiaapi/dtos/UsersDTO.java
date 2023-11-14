@@ -7,6 +7,7 @@ public class UsersDTO {
     private Long id;
     private String username;
     private String password;
+    private boolean enabled;
 
     public Long getId() {
         return id;
@@ -32,4 +33,11 @@ public class UsersDTO {
         this.password = password;
     }
 
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
 }

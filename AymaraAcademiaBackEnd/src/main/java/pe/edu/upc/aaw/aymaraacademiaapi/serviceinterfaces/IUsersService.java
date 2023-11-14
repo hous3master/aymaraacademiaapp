@@ -8,4 +8,5 @@ public interface IUsersService {
     void delete(Long id);
     Users listId(Long id);
     List<Users> list();
+    void insertRoleForUser(Long userId, String roleName);
 }
