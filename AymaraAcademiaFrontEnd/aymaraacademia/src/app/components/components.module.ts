@@ -97,6 +97,8 @@ import { CreaeditaEstudiantepreguntaComponent } from './estudiantepregunta/creae
 import { CreaeditaEstudiantequizzComponent } from './estudiantequizz/creaedita-estudiantequizz/creaedita-estudiantequizz.component';
 import { ListarEstudiantepreguntaComponent } from './estudiantepregunta/listar-estudiantepregunta/listar-estudiantepregunta.component';
 import { ListarEstudiantequizzComponent } from './estudiantequizz/listar-estudiantequizz/listar-estudiantequizz.component';
+import { SignupUserComponent } from './signup/signup-user/signup-user.component';
+import { SignupEstudianteComponent } from './signup/signup-estudiante/signup-estudiante.component';
 
 
 @NgModule({
@@ -169,6 +171,8 @@ import { ListarEstudiantequizzComponent } from './estudiantequizz/listar-estudia
     ListarEstudiantequizzComponent,
     EstudiantepreguntaComponent,
     EstudiantequizzComponent,
+    SignupUserComponent,
+    SignupEstudianteComponent
 
   ],
   imports:[
