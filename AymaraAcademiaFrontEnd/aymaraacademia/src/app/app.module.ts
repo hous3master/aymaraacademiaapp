@@ -65,8 +65,7 @@ import { MatRadioModule } from '@angular/material/radio';
     FormsModule,
     ReactiveFormsModule,
     MatSnackBarModule,
-    MatRadioModule,
-    MatCardModule
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent],
