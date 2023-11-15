@@ -167,7 +167,6 @@ import { InformacioncursoComponent } from './curso/informacioncurso/informacionc
     InformacionModuloComponent,
     ListarmoduloporunidadComponent,
     InformacionunidadComponent,
-    NavbarComponent,
     ContenidoLecturaComponent,
     EstudiantepreguntaComponent,
     EstudiantequizzComponent,

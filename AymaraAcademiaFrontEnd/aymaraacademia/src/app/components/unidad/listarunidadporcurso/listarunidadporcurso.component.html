@@ -12,7 +12,7 @@
         {{ cursounidad.unidad.descripcion }}
       </mat-card-content>
       <mat-card-actions align="start">
-        <a mat-stroked-button [routerLink]="['/components/unidad', cursounidad.unidad.idUnidad]">Ir a la unidad</a>
+        <a mat-raised-button [routerLink]="['/components/unidad', cursounidad.unidad.idUnidad]" color="primary">Ir a la unidad</a>
       </mat-card-actions>
       <mat-card-footer class="p-2">
         Esta unidad pertenece al curso {{ cursounidad.curso.nombre }}
