@@ -50,11 +50,13 @@ import { EstudiantequizzComponent } from './estudiantequizz/estudiantequizz.comp
 import { RevisionComponent } from './revision/revision.component';
 import { CreaeditaRevisionComponent } from './revision/creaedita-revision/creaedita-revision.component';
 import { InformacionProyectoComponent } from './proyecto/informacion-proyecto/informacion-proyecto.component';
+import { ListarunidadporcursoComponent } from './unidad/listarunidadporcurso/listarunidadporcurso.component';
+import { InformacioncursoComponent } from './curso/informacioncurso/informacioncurso.component';
 
 const routes: Routes = [
   // For each entity, you must create a path that will be used to navigate to the related components
   {
-    path: 'informacionunidad/:idUnidad',
+    path: 'unidad/:idUnidad',
     component: InformacionunidadComponent,
     children: [
       {
@@ -66,6 +68,10 @@ const routes: Routes = [
         component: InformacionProyectoComponent,
       }
     ]
+  },
+  {
+    path: 'curso/:idCurso',
+    component: InformacioncursoComponent,
   },
   {
     path: 'entidades',
