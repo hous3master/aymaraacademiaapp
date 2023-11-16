@@ -6,7 +6,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url("https://c0.wallpaperflare.com/path/747/1018/505/mountain-ayacucho-peru-tourism-bb77edc76c951d86cb4cc3099435c572.jpg")
+  background: url("../../../../assets/fondo.jpg")
     center/cover fixed no-repeat;
 }
 

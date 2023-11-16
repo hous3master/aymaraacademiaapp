@@ -52,7 +52,7 @@ export class SignupEstudianteComponent implements OnInit {
               () => {
                 this.mensaje = 'Estudiante registrado con éxito';
                 this.snackBar.open(this.mensaje, 'Aviso', { duration: 4000 });
-                this.router.navigate(['components/entidades']);
+                this.router.navigate(['components/curso/1']);
               },
               (error) => {
                 this.mensaje = 'Hubo un error al registrar al estudiante';

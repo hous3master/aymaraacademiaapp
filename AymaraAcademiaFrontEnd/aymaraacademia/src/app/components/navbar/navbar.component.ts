@@ -7,18 +7,27 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  title = 'aymaraacademia';
   role:string="";
+  username:string="";
 
   constructor(private loginService: LoginService) {
   }
 
-  noRol(){
-    this.role=this.loginService.showRole();
-    if(this.role=='ADMIN' || this.role=='ESTUDIANTE'){
-      return false;
-    }else{
+  cerrar() {
+    sessionStorage.clear();
+  }
+
+  verificar() {
+    this.role = this.loginService.showRole();
+    this.username = this.loginService.getUsername();
+
+    return this.loginService.verificar();
+  }
+  validarRol() {
+    if (this.role == 'ADMIN' || this.role == 'ESTUDIANTE') {
       return true;
+    } else {
+      return false;
     }
   }
 }
