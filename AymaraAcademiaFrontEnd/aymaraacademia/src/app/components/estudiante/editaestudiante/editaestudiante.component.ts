@@ -64,6 +64,9 @@ export class EditaestudianteComponent implements OnInit {
       });
 
       this.mensaje = 'Estudiante actualizado correctamente';
+
+      // navigate to [routerLink]="['/components/perfil', username]
+      this.router.navigate(['/components/perfil', this.username]);
     }
   }
 
