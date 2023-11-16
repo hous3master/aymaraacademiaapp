@@ -45,8 +45,9 @@
   <a mat-icon-button href="https://github.com/hous3master/aymaraacademiaapp">
     <i class="fa-brands fa-square-github"></i>
   </a>
-  <button mat-icon-button [matMenuTriggerFor]="menuSalir" *ngIf="validarRol()">
-    <i class="fa-regular fa-user"></i></button>
+  <button mat-button [matMenuTriggerFor]="menuSalir" *ngIf="validarRol()" class="p-0 m-0">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngkit.com%2Fpng%2Fdetail%2F161-1617387_happy-smiling-guy.png" class="img-fluid overflow-hidden rounded-5" style="height: 48px; width: auto;">
+  </button>
 </mat-toolbar>
 
 <mat-menu #menuSalir="matMenu">
