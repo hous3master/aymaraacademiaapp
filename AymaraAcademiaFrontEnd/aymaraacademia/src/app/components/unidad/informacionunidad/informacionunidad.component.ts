@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Modulo } from 'src/app/models/modulo';
+import { Proyecto } from 'src/app/models/proyecto';
 import { Unidad } from 'src/app/models/unidad';
 import { Unidadmodulo } from 'src/app/models/unidadmodulo';
 import { ModuloService } from 'src/app/services/modulo.service';
+import { ProyectoService } from 'src/app/services/proyecto.service';
 import { UnidadService } from 'src/app/services/unidad.service';
 import { UnidadmoduloService } from 'src/app/services/unidadmodulo.service';
 
@@ -14,11 +16,14 @@ import { UnidadmoduloService } from 'src/app/services/unidadmodulo.service';
 })
 export class InformacionunidadComponent {
   idUnidad: number = 0;
-  unidades: Unidad[] = []; // replace with actual type of modulo object
+  unidades: Unidad[] = [];
+  proyectos: Proyecto[] = []
+  idProyecto: number = 1;
 
   constructor(
     private unidadService: UnidadService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private proyectoService: ProyectoService
   ) {}
 
   ngOnInit() {
@@ -38,6 +43,14 @@ export class InformacionunidadComponent {
         });
         console.log(this.unidades);
       });
+
+      this.proyectoService.list().subscribe((data)=>{
+        this.proyectos = data;
+        this.proyectos = this.proyectos.filter((proyecto)=>{
+          return proyecto.unidad.idUnidad == this.idUnidad
+        })
+        this.idProyecto = this.proyectos[0].unidad.idUnidad
+      })
     });
   }
 

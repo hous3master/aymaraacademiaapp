@@ -46,7 +46,7 @@ export class CreaeditaLecturaComponent implements OnInit {
     });
 
     this.form = this.formBuilder.group({
-      idEntityName: [''],
+      idLectura: [''],
       descripcion: ['', Validators.required],
       titulo: ['', Validators.required],
       autor: ['', Validators.required],

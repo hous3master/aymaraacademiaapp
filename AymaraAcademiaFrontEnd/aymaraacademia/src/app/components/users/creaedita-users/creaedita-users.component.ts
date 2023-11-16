@@ -38,7 +38,7 @@ export class CreaeditaUsersComponent implements OnInit {
     });
 
     this.form = this.formBuilder.group({
-      idEntityName: [''],
+      id: [''],
       username: ['', Validators.required],
       password: ['', Validators.required],
       enabled: [true],

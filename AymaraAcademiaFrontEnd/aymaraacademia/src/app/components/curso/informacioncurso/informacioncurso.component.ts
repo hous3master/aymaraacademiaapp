@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Curso } from 'src/app/models/curso';
 import { ActivatedRoute, Params } from '@angular/router';
-import { CursoService } from './../../../services/curso.service';
+import { Curso } from 'src/app/models/curso';
+import { CursoService } from 'src/app/services/curso.service';
 
 @Component({
   selector: 'app-informacioncurso',
@@ -9,13 +9,10 @@ import { CursoService } from './../../../services/curso.service';
   styleUrls: ['./informacioncurso.component.css'],
 })
 export class InformacioncursoComponent {
-
-  idcurso: number = 0
-  cursos: Curso[] = []
-
+  curso: Curso = new Curso();
   constructor(
-    private CursoService: CursoService,
-    private route: ActivatedRoute,
+    public route: ActivatedRoute,
+    private cursoService: CursoService
   ) {}
 
   ngOnInit() {
@@ -24,14 +21,9 @@ export class InformacioncursoComponent {
 
   init() {
     this.route.params.subscribe((data: Params) => {
-      this.idcurso= data['idCurso'];
-  
-      this.CursoService.list().subscribe((data) => {
-        this.cursos = data;
+      this.cursoService.listId(data['idCurso']).subscribe((data: Curso) => {
+        this.curso = data;
       });
     });
   }
-  
-  
 }
-

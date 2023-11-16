@@ -19,6 +19,14 @@ public class UsersServiceImplement implements IUsersService {
     public void insert(Users Users) {
         myRepository.save(Users);
     }
+    @Override
+    @Transactional
+    public void insertAndAssignRole(Users user, String roleName) {
+        // Guardar el usuario y obtener el ID generado
+        Long userId = myRepository.save(user).getId();
+        // Asignar el rol al usuario
+        myRepository.insRol(roleName, userId);
+    }
 
     // Delete an item by ID on table
     @Override
@@ -41,7 +49,7 @@ public class UsersServiceImplement implements IUsersService {
     }
 
     @Override
-    public void insertRoleForUser(Long userId, String roleName) {
-        myRepository.insRol(roleName, userId);
+    public Users findByUsername(String username) {
+        return myRepository.findByUsername(username);
     }
 }

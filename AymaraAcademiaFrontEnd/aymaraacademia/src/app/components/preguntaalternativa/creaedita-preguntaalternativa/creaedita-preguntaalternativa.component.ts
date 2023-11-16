@@ -53,7 +53,7 @@ this.listaAlternativa = data;
 })
 
 this.form = this.formBuilder.group({
-idEntityName: [''],
+idPreguntaalternativa: [''],
 pregunta: ['', Validators.required],
 alternativa: ['', Validators.required],
 });

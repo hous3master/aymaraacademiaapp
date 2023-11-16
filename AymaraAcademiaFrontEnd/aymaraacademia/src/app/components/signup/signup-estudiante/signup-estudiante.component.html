@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container" style="text-align: center">
+      <div>
+        <img src="../assets/logoipsum-226.svg" alt="Logo de la empresa" />
+      </div>
+
+      <h2>Regístrese como Estudiante</h2>
+
+      <form [formGroup]="form" class="comment-form" id="editProfileForm">
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre</mat-label>
+          <input matInput placeholder="Nombre" formControlName="nombre" />
+        </mat-form-field>
+        <br />
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Apellido</mat-label>
+          <input matInput placeholder="Apellido" formControlName="apellido" />
+        </mat-form-field>
+        <br />
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Edad</mat-label>
+          <input matInput placeholder="Edad" formControlName="edad" />
+        </mat-form-field>
+        <br />
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" formControlName="email" />
+        </mat-form-field>
+        <br />
+
+        <button mat-raised-button color="primary" (click)="signup()">
+          Registrarse
+        </button>
+        <br />
+
+        <a routerLink="/login">¿Ya tiene una cuenta? Inicie sesión aquí.</a>
+      </form>
+    </div>
+  </body>
+</html>

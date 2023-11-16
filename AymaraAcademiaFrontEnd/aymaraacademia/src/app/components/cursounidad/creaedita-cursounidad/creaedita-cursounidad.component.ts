@@ -53,7 +53,7 @@ this.listaUnidad = data;
 })
 
 this.form = this.formBuilder.group({
-idEntityName: [''],
+idCursounidad: [''],
 curso: ['', Validators.required],
 unidad: ['', Validators.required],
 });

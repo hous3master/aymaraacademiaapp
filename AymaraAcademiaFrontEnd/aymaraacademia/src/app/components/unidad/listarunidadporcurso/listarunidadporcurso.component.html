@@ -1,0 +1,22 @@
+
+<div  class="col-12 d-flex flex-row flex-wrap">
+  <div *ngFor="let cursounidad of cursounidad" class="col-4 p-3">
+    <mat-card class="mat-elevation-z10 rounded-2">
+      <mat-card-title-group class="p-2">
+        <mat-card-title> {{ cursounidad.unidad.nombre }} </mat-card-title>
+        <mat-card-subtitle> UNIDAD </mat-card-subtitle>
+        <img matCardImage src="https://picsum.photos/48" class="p-2">
+      </mat-card-title-group>
+      <img matCardImage src="https://picsum.photos/500/200">
+      <mat-card-content>
+        {{ cursounidad.unidad.descripcion }}
+      </mat-card-content>
+      <mat-card-actions align="start">
+        <a mat-raised-button [routerLink]="['/components/unidad', cursounidad.unidad.idUnidad]" color="primary">Ir a la unidad</a>
+      </mat-card-actions>
+      <mat-card-footer class="p-2">
+        Esta unidad pertenece al curso {{ cursounidad.curso.nombre }}
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>

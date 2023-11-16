@@ -61,10 +61,8 @@ import { ListarUsersComponent } from './users/listar-users/listar-users.componen
 import { ListarVideoComponent } from './video/listar-video/listar-video.component';
 import { ListarCursounidadComponent } from './cursounidad/listar-cursounidad/listar-cursounidad.component';
 import { ListarCursoComponent } from './curso/listar-curso/listar-curso.component';
-import { InformacioncursoComponent } from './curso/informacioncurso/informacioncurso.component';
 import { SafePipeModule } from 'safe-pipe';
 import { ContenidoLecturaComponent } from './lectura/contenido-lectura/contenido-lectura.component';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -99,13 +97,14 @@ import { CreaeditaEstudiantepreguntaComponent } from './estudiantepregunta/creae
 import { CreaeditaEstudiantequizzComponent } from './estudiantequizz/creaedita-estudiantequizz/creaedita-estudiantequizz.component';
 import { ListarEstudiantepreguntaComponent } from './estudiantepregunta/listar-estudiantepregunta/listar-estudiantepregunta.component';
 import { ListarEstudiantequizzComponent } from './estudiantequizz/listar-estudiantequizz/listar-estudiantequizz.component';
-import { InformacioncursounidadComponent } from './cursounidad/informacioncursounidad/informacioncursounidad.component';
-import { InformacionunidadmoduloComponent } from './unidadmodulo/informacionunidadmodulo/informacionunidadmodulo.component';
-import { EstudiantecursoComponent } from './estudiantecurso/estudiantecurso.component';
-import { CreaditaEstudiantecursoComponent } from './estudiantecurso/creadita-estudiantecurso/creadita-estudiantecurso.component';
-import { ListarEstudiantecursoComponent } from './estudiantecurso/listar-estudiantecurso/listar-estudiantecurso.component';
-import { InformacionEstudiantecursoComponent } from './estudiantecurso/informacion-estudiantecurso/informacion-estudiantecurso.component';
-
+import { RevisionComponent } from './revision/revision.component';
+import { ListarRevisionComponent } from './revision/listar-revision/listar-revision.component';
+import { CreaeditaRevisionComponent } from './revision/creaedita-revision/creaedita-revision.component';
+import { InformacionProyectoComponent } from './proyecto/informacion-proyecto/informacion-proyecto.component';
+import { SignupUserComponent } from './signup/signup-user/signup-user.component';
+import { SignupEstudianteComponent } from './signup/signup-estudiante/signup-estudiante.component';
+import { ListarunidadporcursoComponent } from './unidad/listarunidadporcurso/listarunidadporcurso.component';
+import { InformacioncursoComponent } from './curso/informacioncurso/informacioncurso.component';
 
 
 @NgModule({
@@ -168,7 +167,6 @@ import { InformacionEstudiantecursoComponent } from './estudiantecurso/informaci
     InformacionModuloComponent,
     ListarmoduloporunidadComponent,
     InformacionunidadComponent,
-    NavbarComponent,
     ContenidoLecturaComponent,
     EstudiantepreguntaComponent,
     EstudiantequizzComponent,
@@ -178,13 +176,14 @@ import { InformacionEstudiantecursoComponent } from './estudiantecurso/informaci
     ListarEstudiantequizzComponent,
     EstudiantepreguntaComponent,
     EstudiantequizzComponent,
+    RevisionComponent,
+    ListarRevisionComponent,
+    CreaeditaRevisionComponent,
+    InformacionProyectoComponent,
+    SignupUserComponent,
+    SignupEstudianteComponent,
+    ListarunidadporcursoComponent,
     InformacioncursoComponent,
-    InformacioncursounidadComponent,
-    InformacionunidadmoduloComponent,
-    EstudiantecursoComponent,
-    CreaditaEstudiantecursoComponent,
-    ListarEstudiantecursoComponent,
-    InformacionEstudiantecursoComponent
 
   ],
   imports:[
@@ -207,9 +206,7 @@ import { InformacionEstudiantecursoComponent } from './estudiantecurso/informaci
     SafePipeModule,
     MatSnackBarModule,
     MatRadioModule,
-    MatProgressBarModule,
-    MatCardModule,
-    MatDividerModule
+    MatCardModule
   ]
 })
 export class ComponentsModule { }

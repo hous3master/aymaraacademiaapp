@@ -53,7 +53,7 @@ this.listaModulo = data;
 })
 
 this.form = this.formBuilder.group({
-idEntityName: [''],
+idProgreso: [''],
 progreso: ['', Validators.required],
 estudiante: ['', Validators.required],
 modulo: ['', Validators.required],

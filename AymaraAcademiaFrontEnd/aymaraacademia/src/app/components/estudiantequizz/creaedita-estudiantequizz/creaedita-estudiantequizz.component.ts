@@ -53,7 +53,7 @@ this.listaQuizz = data;
 })
 
 this.form = this.formBuilder.group({
-idEntityName: [''],
+idEstudiantequizz: [''],
 estudiante: ['', Validators.required],
 quizz: ['', Validators.required],
 calificacion: ['', Validators.required],

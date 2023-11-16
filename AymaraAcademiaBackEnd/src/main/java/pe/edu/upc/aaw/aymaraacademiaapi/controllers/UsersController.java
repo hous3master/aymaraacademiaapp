@@ -25,8 +25,7 @@ public class UsersController {
         Users myItem = m.map(dto, Users.class);
         // Encriptar la contraseña del usuario antes de guardarla
         myItem.setPassword(WebSecurityConfig.passwordEncoder().encode(myItem.getPassword()));
-        myService.insert(myItem);
-        myService.insertRoleForUser(myItem.getId(), "ESTUDIANTE");
+        myService.insertAndAssignRole(myItem, "ESTUDIANTE");
     }
 
     // Delete an item by ID on table
@@ -60,5 +59,16 @@ public class UsersController {
         // Encriptar la contraseña del usuario antes de modificarla
         d.setPassword(WebSecurityConfig.passwordEncoder().encode(d.getPassword()));
         myService.insert(d);
+    }
+    @GetMapping("/buscar/{username}")
+    public UsersDTO buscarPorUsername(@PathVariable("username") String username) {
+        Users user = myService.findByUsername(username);
+        if (user != null) {
+            ModelMapper m = new ModelMapper();
+            return m.map(user, UsersDTO.class);
+        } else {
+            // Manejar el caso en el que el usuario no existe
+            return null;
+        }
     }
 }
