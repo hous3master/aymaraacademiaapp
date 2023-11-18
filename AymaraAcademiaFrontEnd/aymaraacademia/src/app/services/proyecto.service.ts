@@ -1,7 +1,7 @@
 import { Proyecto } from './../models/proyecto';
 import { environment } from 'environments/environment';
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { Subject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 const base_url = environment.base;

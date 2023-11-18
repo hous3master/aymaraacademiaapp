@@ -8,7 +8,6 @@ public class RevisionDTO {
     private Proyecto proyecto;
     private Estudiante estudiante;
     private double calificacion;
-    private boolean revisado;
 
     public int getIdRevision() {
         return idRevision;
@@ -40,13 +39,5 @@ public class RevisionDTO {
 
     public void setCalificacion(double calificacion) {
         this.calificacion = calificacion;
-    }
-
-    public boolean isRevisado() {
-        return revisado;
-    }
-
-    public void setRevisado(boolean revisado) {
-        this.revisado = revisado;
     }
 }

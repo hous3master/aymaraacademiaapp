@@ -54,6 +54,7 @@ import { ListarunidadporcursoComponent } from './unidad/listarunidadporcurso/lis
 import { InformacioncursoComponent } from './curso/informacioncurso/informacioncurso.component';
 import { PerfilComponent } from './estudiante/perfil/perfil.component';
 import { EditaestudianteComponent } from './estudiante/editaestudiante/editaestudiante.component';
+import { PeerreviewRevisionComponent } from './revision/peerreview-revision/peerreview-revision.component';
 
 const routes: Routes = [
   // For each entity, you must create a path that will be used to navigate to the related components
@@ -66,10 +67,14 @@ const routes: Routes = [
         component: InformacionModuloComponent,
       },
       {
-        path: 'proyecto/:idProyecto',
+        path: 'proyecto/:idUnidad',
         component: InformacionProyectoComponent,
       }
     ]
+  },
+  {
+    path: 'peerreview/:idUnidad',
+    component: PeerreviewRevisionComponent
   },
   {
     path: 'perfil/:username',

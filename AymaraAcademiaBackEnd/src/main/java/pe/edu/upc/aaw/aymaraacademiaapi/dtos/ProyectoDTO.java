@@ -8,9 +8,11 @@ public class ProyectoDTO {
     private String titulo;
     private String descripcion;
     private Unidad unidad;
+    private String contenido;
     private double calificacion;
     private int contador;
     private Estudiante estudiante;
+    private boolean enviado;
 
     public int getIdProyecto() {
         return idProyecto;
@@ -44,6 +46,13 @@ public class ProyectoDTO {
         this.unidad = unidad;
     }
 
+    public String getContenido() {
+        return contenido;
+    }
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
+    }
+
     public double getCalificacion() {
         return calificacion;
     }
@@ -66,6 +75,13 @@ public class ProyectoDTO {
 
     public void setEstudiante(Estudiante estudiante) {
         this.estudiante = estudiante;
+    }
+
+    public boolean getEnviado() {
+        return enviado;
+    }
+    public void setEnviado(boolean enviado) {
+        this.enviado = enviado;
     }
 
 }

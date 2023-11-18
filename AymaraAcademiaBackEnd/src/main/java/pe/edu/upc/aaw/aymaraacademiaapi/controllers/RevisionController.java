@@ -65,7 +65,7 @@ public class RevisionController {
 
     @GetMapping("/upsert/{idProyecto}/{idEstudiante}/{calificacion}/{revisado}")
     public List<RevisionDTO> insertOrUpdateRevision(@PathVariable("idProyecto") int idProyecto,@PathVariable("idEstudiante") int idEstudiante,@PathVariable("calificacion") double calificacion, @PathVariable("revisado") boolean revisado) {
-        List<String[]> myList = myService.insertOrUpdateRevision(idProyecto, idEstudiante, calificacion, revisado);
+        List<String[]> myList = myService.insertOrUpdateRevision(idProyecto, idEstudiante, calificacion);
         List<RevisionDTO> myListDTO = new ArrayList<>();
         for (String[] data:myList) {
             RevisionDTO dto = new RevisionDTO();
@@ -73,7 +73,6 @@ public class RevisionController {
             dto.setProyecto(proyectoService.listId(Integer.parseInt(data[1])));
             dto.setEstudiante(estudianteService.listId(Integer.parseInt(data[2])));
             dto.setCalificacion(Double.parseDouble(data[3]));
-            dto.setRevisado(Boolean.parseBoolean(data[4]));
 
             myListDTO.add(dto);
         }

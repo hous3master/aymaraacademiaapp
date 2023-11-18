@@ -107,6 +107,7 @@ import { ListarunidadporcursoComponent } from './unidad/listarunidadporcurso/lis
 import { InformacioncursoComponent } from './curso/informacioncurso/informacioncurso.component';
 import { PerfilComponent } from './estudiante/perfil/perfil.component';
 import { EditaestudianteComponent } from './estudiante/editaestudiante/editaestudiante.component';
+import { PeerreviewRevisionComponent } from './revision/peerreview-revision/peerreview-revision.component';
 
 
 @NgModule({
@@ -188,6 +189,7 @@ import { EditaestudianteComponent } from './estudiante/editaestudiante/editaestu
     InformacioncursoComponent,
     PerfilComponent,
     EditaestudianteComponent,
+    PeerreviewRevisionComponent,
 
   ],
   imports:[
