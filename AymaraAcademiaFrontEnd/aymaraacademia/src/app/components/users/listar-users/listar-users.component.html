@@ -22,7 +22,10 @@
       <mat-form-field>
         <input matInput (keyup)="filter($event)" placeholder="buscar" />
       </mat-form-field>
-
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 25, 100]"
+        showFirstLastButtons
+      ></mat-paginator>
       <table mat-table [dataSource]="dataSource" class="mat-elevation-z4">
         <!--Id Column -->
         <ng-container matColumnDef="id">
@@ -79,10 +82,7 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
       </table>
-      <mat-paginator
-        [pageSizeOptions]="[5, 10, 25, 100]"
-        showFirstLastButtons
-      ></mat-paginator>
+
     </div>
   </body>
 </html>

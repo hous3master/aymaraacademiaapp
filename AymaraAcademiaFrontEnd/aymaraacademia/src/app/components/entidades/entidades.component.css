@@ -1,6 +1,7 @@
-mat-sidenav-content {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,500;1,300&display=swap');
+
+.mat-sidenav-content {
   overflow: visible;
-  padding: 20px;
 }
 
 span p {
@@ -9,16 +10,49 @@ span p {
     padding: 28px 8px;
     font-size: 20px;
 }
-
-mat-sidenav-content button {
-  font-family: var(--mdc-list-list-item-label-text-font);
+.mat-sidenav-content button {
+  font-family:'Times New Roman', Times, serif;
   line-height: var(--mdc-list-list-item-label-text-line-height);
   font-size: var(--mdc-list-list-item-label-text-size);
   font-weight: var(--mdc-list-list-item-label-text-weight);
   letter-spacing: var(--mdc-list-list-item-label-text-tracking);
 }
-
-mat-toolbar {
-  height: 80px;
+button{
+  border-style: none;
+  margin: 15px;
+  text-align: left;
+  font-size: 1rem;
+}
+.custom-nav-list{
+  overflow: hidden;
 }
 
+.containeradmin, .containeradmin2{
+  height: 100%;
+  background-color: white;
+  font-family: 'Roboto', "Helvetica Neue", sans-serif;
+}
+
+.containeradmin2{
+  margin: 0 1rem 0 1rem;
+  background-color: white;
+
+}
+.containeradmin4{
+  padding: 0 2rem 0 2rem;
+  height: 100%;
+  background-color: white;
+}
+
+.buttonadmin{
+  overflow: hidden;
+  width: 100%;
+}
+
+p{
+  font-family: 'Roboto', sans-serif;
+}
+
+.containeradmin a{
+  font-family: 'Roboto', sans-serif;
+}

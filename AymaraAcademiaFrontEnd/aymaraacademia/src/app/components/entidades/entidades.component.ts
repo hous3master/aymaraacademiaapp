@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-entidades',
@@ -23,4 +24,6 @@ export class EntidadesComponent implements OnInit{
 
     return this.loginService.verificar();
   }
+
+  @ViewChild('sidenav') sidenav!: MatSidenav;
 }
