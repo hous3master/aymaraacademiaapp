@@ -20,7 +20,7 @@
         <mat-sidenav #sidenav mode="side" opened="true" class="custom-sidenav">
           <mat-nav-list class="custom-nav-list">
             <button mat-stroked-button [matMenuTriggerFor]="menuLectura">
-              <mat-icon>book</mat-icon><a>Lectura</a></button><br>
+              <mat-icon>book</mat-icon><div class="font">Lectura</div></button><br>
             <button mat-stroked-button [matMenuTriggerFor]="menuModulo"><mat-icon>folder</mat-icon>Modulo</button><br>
             <button mat-stroked-button [matMenuTriggerFor]="menuPregunta">
               <mat-icon>question_answer</mat-icon>Pregunta</button><br>
@@ -47,10 +47,9 @@
               [matMenuTriggerFor]="menuCursounidad"><mat-icon>folder_shared</mat-icon>Cursounidad</button><br>
             <button mat-stroked-button [matMenuTriggerFor]="menuCurso"><mat-icon>folder</mat-icon>Curso</button><br>
             <button mat-stroked-button [matMenuTriggerFor]="menuRevision"><mat-icon>people</mat-icon>Revision</button><br>
-            <button mat-stroked-button
-              [matMenuTriggerFor]="menuEstudiantepregunta"><mat-icon>school</mat-icon>Estudiantepregunta</button><br>
-            <button mat-stroked-button
-              [matMenuTriggerFor]="menuEstudiantequizz"><mat-icon>school</mat-icon>Estudiantequizz</button><br>
+            <button mat-stroked-button [matMenuTriggerFor]="menuEstudiantepregunta"><mat-icon>school</mat-icon>Estudiantepregunta</button><br>
+            <button mat-stroked-button [matMenuTriggerFor]="menuEstudiantequizz"><mat-icon>school</mat-icon>Estudiantequizz</button><br>
+            <button mat-stroked-button [matMenuTriggerFor]="menuEstudiantecurso"><mat-icon>note_add</mat-icon>Estudiantecurso</button><br>
           </mat-nav-list>
         </mat-sidenav>
         <div class="containeradmin4">
@@ -134,6 +133,10 @@
       <mat-menu #menuEstudiantequizz="matMenu">
         <button mat-menu-item routerLink="./estudiantequizz/nuevo">Registrar</button>
         <button mat-menu-item routerLink="./estudiantequizz">Listar</button>
+      </mat-menu>
+      <mat-menu #menuEstudiantecurso="matMenu">
+        <button mat-menu-item routerLink="./estudiantecurso/nuevo">Registrar</button>
+        <button mat-menu-item routerLink="./estudiantecurso">Listar</button>
       </mat-menu>
     </div>
   </ng-container>

@@ -108,6 +108,9 @@ import { InformacioncursoComponent } from './curso/informacioncurso/informacionc
 import { PerfilComponent } from './estudiante/perfil/perfil.component';
 import { EditaestudianteComponent } from './estudiante/editaestudiante/editaestudiante.component';
 import { PeerreviewRevisionComponent } from './revision/peerreview-revision/peerreview-revision.component';
+import { EstudiantecursoComponent } from './estudiantecurso/estudiantecurso.component';
+import { CreaditaEstudiantecursoComponent } from './estudiantecurso/creadita-estudiantecurso/creadita-estudiantecurso.component';
+import { ListarEstudiantecursoComponent } from './estudiantecurso/listar-estudiantecurso/listar-estudiantecurso.component';
 
 
 @NgModule({
@@ -190,6 +193,9 @@ import { PeerreviewRevisionComponent } from './revision/peerreview-revision/peer
     PerfilComponent,
     EditaestudianteComponent,
     PeerreviewRevisionComponent,
+    EstudiantecursoComponent,
+    CreaditaEstudiantecursoComponent,
+    ListarEstudiantecursoComponent,
 
   ],
   imports:[
@@ -212,7 +218,7 @@ import { PeerreviewRevisionComponent } from './revision/peerreview-revision/peer
     SafePipeModule,
     MatSnackBarModule,
     MatRadioModule,
-    MatCardModule
+    MatCardModule,
   ]
 })
 export class ComponentsModule { }
