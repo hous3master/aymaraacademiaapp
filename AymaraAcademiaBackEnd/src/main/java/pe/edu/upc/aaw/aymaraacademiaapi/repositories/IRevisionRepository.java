@@ -17,7 +17,6 @@ public interface IRevisionRepository extends JpaRepository<Revision, Integer> {
             " id_estudiante = :idEstudiante," +
             " id_proyecto = :idProyecto" +
             " calificacion = :calificacion," +
-            " revisado = :revisado," +
             " RETURNING *", nativeQuery = true)
-    public List<String[]> insertOrUpdateRevision(@Param("idEstudiante") int idEstudiante, @Param("idProyecto") int idProyecto, @Param("calificacion") double calificacion, @Param("revisado") boolean revisado);
+    public List<String[]> insertOrUpdateRevision(@Param("idEstudiante") int idEstudiante, @Param("idProyecto") int idProyecto, @Param("calificacion") double calificacion);
 }

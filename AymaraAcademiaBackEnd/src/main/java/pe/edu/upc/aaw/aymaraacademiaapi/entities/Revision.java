@@ -20,17 +20,13 @@ public class Revision {
     @Column(name = "calificacion", nullable = false)
     private double calificacion;
 
-    @Column(name = "revisado", nullable = true)
-    private boolean revisado;
-
     public Revision(){}
 
-    public Revision(int idRevision, Proyecto proyecto, Estudiante estudiante, double calificacion, boolean revisado) {
+    public Revision(int idRevision, Proyecto proyecto, Estudiante estudiante, double calificacion) {
         this.idRevision = idRevision;
         this.proyecto = proyecto;
         this.estudiante = estudiante;
         this.calificacion = calificacion;
-        this.revisado = revisado;
     }
 
     public int getIdRevision() {
@@ -63,13 +59,5 @@ public class Revision {
 
     public void setCalificacion(double calificacion) {
         this.calificacion = calificacion;
-    }
-
-    public boolean isRevisado() {
-        return revisado;
-    }
-
-    public void setRevisado(boolean revisado) {
-        this.revisado = revisado;
     }
 }

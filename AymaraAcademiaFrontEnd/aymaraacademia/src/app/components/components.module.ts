@@ -105,6 +105,9 @@ import { SignupUserComponent } from './signup/signup-user/signup-user.component'
 import { SignupEstudianteComponent } from './signup/signup-estudiante/signup-estudiante.component';
 import { ListarunidadporcursoComponent } from './unidad/listarunidadporcurso/listarunidadporcurso.component';
 import { InformacioncursoComponent } from './curso/informacioncurso/informacioncurso.component';
+import { PerfilComponent } from './estudiante/perfil/perfil.component';
+import { EditaestudianteComponent } from './estudiante/editaestudiante/editaestudiante.component';
+import { PeerreviewRevisionComponent } from './revision/peerreview-revision/peerreview-revision.component';
 
 
 @NgModule({
@@ -184,6 +187,9 @@ import { InformacioncursoComponent } from './curso/informacioncurso/informacionc
     SignupEstudianteComponent,
     ListarunidadporcursoComponent,
     InformacioncursoComponent,
+    PerfilComponent,
+    EditaestudianteComponent,
+    PeerreviewRevisionComponent,
 
   ],
   imports:[

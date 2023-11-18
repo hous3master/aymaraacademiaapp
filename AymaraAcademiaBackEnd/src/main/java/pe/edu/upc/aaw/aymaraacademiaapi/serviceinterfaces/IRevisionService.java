@@ -11,5 +11,5 @@ public interface IRevisionService {
     Revision listId(int id);
     List<Revision> list();
 
-    List<String[]> insertOrUpdateRevision(int idEstudiante, int idProyecto, double calificacion, boolean revisado);
+    List<String[]> insertOrUpdateRevision(int idEstudiante, int idProyecto, double calificacion);
 }

@@ -22,6 +22,9 @@ private String descripcion;
 @JoinColumn(name = "idUnidad")
 private Unidad unidad;
 
+@Column(name = "contenido", nullable = true, columnDefinition = "TEXT")
+private String contenido;
+
 @Column(name = "calificacion", nullable = false)
 private double calificacion;
 
@@ -32,16 +35,21 @@ private int contador;
 @JoinColumn(name = "idEstudiante")
 private Estudiante estudiante;
 
+@Column(name = "enviado", nullable = false)
+private boolean enviado;
+
 public Proyecto() { }
 
-public Proyecto(int idProyecto,String titulo, String descripcion, Unidad unidad, double calificacion, int contador, Estudiante estudiante) {
+public Proyecto(int idProyecto,String titulo, String descripcion, Unidad unidad, String contenido, double calificacion, int contador, Estudiante estudiante, boolean enviado) {
     this.idProyecto = idProyecto;
     this.titulo = titulo;
     this.descripcion = descripcion;
     this.unidad = unidad;
+    this.contenido = contenido;
     this.calificacion = calificacion;
     this.contador = contador;
     this.estudiante = estudiante;
+    this.enviado = enviado;
 }
 
 public int getIdProyecto() {
@@ -76,6 +84,13 @@ public void setUnidad(Unidad unidad) {
     this.unidad = unidad;
 }
 
+public String getContenido() {
+    return contenido;
+}
+public void setContenido(String contenido) {
+    this.contenido = contenido;
+}
+
 public double getCalificacion() {
     return calificacion;
 }
@@ -98,6 +113,13 @@ public Estudiante getEstudiante() {
 
 public void setEstudiante(Estudiante estudiante) {
     this.estudiante = estudiante;
+}
+
+public boolean getEnviado() {
+    return enviado;
+}
+public void setEnviado(boolean enviado) {
+    this.enviado = enviado;
 }
 
 }

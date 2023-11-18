@@ -1,0 +1,23 @@
+h2{
+  text-align: center;
+  margin: 1rem;
+}
+div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 50%;
+}
+form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
