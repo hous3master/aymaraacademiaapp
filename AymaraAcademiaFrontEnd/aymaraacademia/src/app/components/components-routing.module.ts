@@ -1,3 +1,4 @@
+import { CreaditaEstudiantecursoComponent } from './estudiantecurso/creadita-estudiantecurso/creadita-estudiantecurso.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -55,6 +56,8 @@ import { InformacioncursoComponent } from './curso/informacioncurso/informacionc
 import { PerfilComponent } from './estudiante/perfil/perfil.component';
 import { EditaestudianteComponent } from './estudiante/editaestudiante/editaestudiante.component';
 import { PeerreviewRevisionComponent } from './revision/peerreview-revision/peerreview-revision.component';
+import { Estudiantecurso } from '../models/estudiantecurso';
+import { EstudiantecursoComponent } from './estudiantecurso/estudiantecurso.component';
 
 const routes: Routes = [
   // For each entity, you must create a path that will be used to navigate to the related components
@@ -245,6 +248,14 @@ const routes: Routes = [
         children: [
           { path: 'nuevo', component: CreaeditaEstudiantequizzComponent },
           { path: 'ediciones/:id', component: CreaeditaEstudiantequizzComponent },
+        ],
+      },
+      {
+        path: 'estudiantecurso',
+        component: EstudiantecursoComponent,
+        children: [
+          { path: 'nuevo', component: CreaditaEstudiantecursoComponent },
+          { path: 'ediciones/:id', component: CreaditaEstudiantecursoComponent },
         ],
       },
     ],
