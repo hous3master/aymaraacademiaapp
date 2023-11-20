@@ -48,6 +48,7 @@ export class CreaeditaUsersComponent implements OnInit {
     if (this.form.valid) {
       // Assign values to the users
       this.users.id = this.form.value.id;
+      // Assign values to each attribute
       this.users.username = this.form.value.username;
       this.users.password = this.form.value.password;
       this.users.enabled = this.form.value.enabled;

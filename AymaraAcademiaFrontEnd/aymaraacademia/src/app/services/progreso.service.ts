@@ -3,6 +3,7 @@ import { environment } from 'environments/environment';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { avanceestudianteDTO } from '../models/avanceestudiante';
 
 const base_url = environment.base;
 
@@ -57,4 +58,13 @@ export class ProgresoService {
       headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json'),
     });
   }
+  getAvanceEstudiantes(): Observable<avanceestudianteDTO[]> {
+    let token = sessionStorage.getItem('token');
+    return this.http.get<avanceestudianteDTO[]>(`${this.url}/avanceEstudiantes`, {
+      headers: new HttpHeaders()
+        .set('Authorization', `Bearer ${token}`)
+        .set('Content-Type', 'application/json'),
+    });
+  }
+
 }

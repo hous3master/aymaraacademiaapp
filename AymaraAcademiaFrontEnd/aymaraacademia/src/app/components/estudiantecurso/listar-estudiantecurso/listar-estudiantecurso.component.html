@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <br />
+        <h2 style="text-align: center">Lista de Estudiantecurso</h2>
+        <div style="text-align: right;">
+            <button mat-raised-button color="primary"
+                routerLink="/components/entidades/estudiantecurso/nuevo">Nuevo</button>
+        </div>
+        <mat-form-field>
+            <input matInput (keyup)=filter($event) placeholder="buscar" />
+        </mat-form-field>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z4">
+            <!--Id Column -->
+            <ng-container matColumnDef="idEstudiantecurso">
+                <th mat-header-cell *matHeaderCellDef>Código</th>
+                <td mat-cell *matCellDef="let element">{{ element.idEstudiantecurso }}</td>
+            </ng-container>
+
+            <!-- respuesta Column -->
+            <ng-container matColumnDef="estudiante">
+                <th mat-header-cell *matHeaderCellDef>estudiante</th>
+                <td mat-cell *matCellDef="let element">{{ element.estudiante.idEstudiante }}</td>
+            </ng-container>
+
+            <!-- correcta Column -->
+            <ng-container matColumnDef="curso">
+                <th mat-header-cell *matHeaderCellDef>curso</th>
+                <td mat-cell *matCellDef="let element">{{ element.curso.idCurso }}</td>
+            </ng-container>
+
+            <!-- Acciones 01 and 02 columns -->
+            <ng-container matColumnDef="accion01">
+                <th mat-header-cell *matHeaderCellDef>Acciones</th>
+                <td mat-cell *matCellDef="let element">
+                    <button mat-raised-button color="primary" [routerLink]="['ediciones', element.idEstudiantecurso]">
+                        <div fxFlexAlign="center"><mat-icon>create</mat-icon></div>
+                    </button>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="accion02">
+                <th mat-header-cell *matHeaderCellDef>Acciones</th>
+                <td mat-cell *matCellDef="let element">
+                    <button mat-raised-button color="warn" (click)="eliminar(element.idEstudiantecurso)">
+                        <div fxFlexAlign="center"><mat-icon>delete_forever</mat-icon></div>
+                    </button>
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+    </div>
+</body>
+
+</html>

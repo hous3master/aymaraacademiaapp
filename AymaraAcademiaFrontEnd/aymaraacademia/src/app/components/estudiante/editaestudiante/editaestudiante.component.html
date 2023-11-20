@@ -1,0 +1,60 @@
+<div *ngIf="validEditor()">
+  <div style="height: 50px;"></div>
+  <div class="container" style="text-align: center">
+    <h4 class="mat-headline-4">Edición de perfil</h4>
+    <form [formGroup]="form" (submit)="aceptar()" class="example-form">
+      <!-- Form fields for each attribute -->
+      <!-- NOTE : Only if is not of type LocalDate -->
+      <mat-form-field class="col-4">
+        <mat-label>nombre</mat-label>
+        <input matInput placeholder="nombre" formControlName="nombre" />
+        <mat-error *ngIf="obtenerControlCampo('nombre')?.errors?.['required']">
+          nombre es obligatorio.
+        </mat-error>
+      </mat-form-field>
+      <br />
+      <!-- NOTE : Only if is not of type LocalDate -->
+      <mat-form-field class="col-4">
+        <mat-label>apellido</mat-label>
+        <input matInput placeholder="apellido" formControlName="apellido" />
+        <mat-error *ngIf="obtenerControlCampo('apellido')?.errors?.['required']">
+          apellido es obligatorio.
+        </mat-error>
+      </mat-form-field>
+      <br />
+      <!-- NOTE : Only if is not of type LocalDate -->
+      <mat-form-field class="col-4">
+        <mat-label>edad</mat-label>
+        <input matInput placeholder="edad" formControlName="edad" />
+        <mat-error *ngIf="obtenerControlCampo('edad')?.errors?.['required']">
+          edad es obligatorio.
+        </mat-error>
+      </mat-form-field>
+      <br />
+      <!-- NOTE : Only if is not of type LocalDate -->
+      <mat-form-field class="col-4">
+        <mat-label>resena</mat-label>
+        <input matInput placeholder="resena" formControlName="resena" />
+        <mat-error *ngIf="obtenerControlCampo('resena')?.errors?.['required']">
+          resena es obligatorio.
+        </mat-error>
+      </mat-form-field>
+      <br />
+      <!-- NOTE : Only if is not of type LocalDate -->
+      <mat-form-field class="col-4">
+        <mat-label>email</mat-label>
+        <input matInput placeholder="email" formControlName="email" />
+        <mat-error *ngIf="obtenerControlCampo('email')?.errors?.['required']">
+          email es obligatorio.
+        </mat-error>
+      </mat-form-field>
+      <br />
+      <!-- Buttons for actions -->
+      <button mat-raised-button color="primary">Aceptar</button>
+      <button mat-raised-button color="warn" [routerLink]="['/components/perfil', username]">
+        Cancelar
+      </button>
+      <p>{{ mensaje }}</p>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<button mat-fab color="primary" aria-label="Example icon button with a delete icon" style="margin: 2rem;" [routerLink]="['../../unidad', idUnidad, 'proyecto', idUnidad]">
+  <mat-icon>navigate_before</mat-icon>
+</button>
+<h2><b>Revision del proyecto de {{"@"}}{{ proyecto.estudiante.user.username }}</b></h2>
+<div>
+  <section>
+    <h3 class="mat-headline-3">{{ proyecto.titulo }}</h3>
+  </section>
+  <section>
+    <h4 class="mat-headline-4">Califica del 1 al 5 dependiendo si el proyecto cumple con:</h4>
+    <p><i>{{ proyecto.descripcion }}</i></p>
+  </section>
+  <section>
+    <h4 class="mat-headline-4">Contenido del proyecto:</h4>
+    <p><i>{{ proyecto.contenido }}</i></p>
+  </section>
+  <form [formGroup]="form" class="example-form" (submit)="enviarRevision()">
+    <mat-form-field class="example-full-width">
+      <input
+        matInput
+        type="number"
+        placeholder="Nota"
+        formControlName="grade"
+        min="0"
+        max="20"
+        [(ngModel)]="grade"
+      />
+    </mat-form-field>
+    <button mat-flat-button color="primary">Calificar [1-20]</button>
+    <p>{{ mensaje }}</p>
+  </form>
+</div>

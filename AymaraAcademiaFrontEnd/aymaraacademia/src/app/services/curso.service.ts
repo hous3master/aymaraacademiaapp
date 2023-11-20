@@ -3,6 +3,7 @@ import { environment } from 'environments/environment';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { EdadcursoDTO } from '../models/edadcurso';
 
 const base_url = environment.base;
 
@@ -55,6 +56,15 @@ export class CursoService {
     let token = sessionStorage.getItem('token');
     return this.http.delete(`${this.url}/${id}`, {
       headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json'),
+    });
+  }
+
+  getAgeAv():Observable<EdadcursoDTO[]>{
+    let token = sessionStorage.getItem('token');
+    return this.http.get<EdadcursoDTO[]>(`${this.url}/promedioedades`, {
+      headers: new HttpHeaders()
+        .set('Authorization', `Bearer ${token}`)
+        .set('Content-Type', 'application/json'),
     });
   }
 }

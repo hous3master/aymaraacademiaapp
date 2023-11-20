@@ -1,3 +1,4 @@
+import { CreaditaEstudiantecursoComponent } from './estudiantecurso/creadita-estudiantecurso/creadita-estudiantecurso.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -52,6 +53,12 @@ import { CreaeditaRevisionComponent } from './revision/creaedita-revision/creaed
 import { InformacionProyectoComponent } from './proyecto/informacion-proyecto/informacion-proyecto.component';
 import { ListarunidadporcursoComponent } from './unidad/listarunidadporcurso/listarunidadporcurso.component';
 import { InformacioncursoComponent } from './curso/informacioncurso/informacioncurso.component';
+import { PerfilComponent } from './estudiante/perfil/perfil.component';
+import { EditaestudianteComponent } from './estudiante/editaestudiante/editaestudiante.component';
+import { PeerreviewRevisionComponent } from './revision/peerreview-revision/peerreview-revision.component';
+import { Estudiantecurso } from '../models/estudiantecurso';
+import { EstudiantecursoComponent } from './estudiantecurso/estudiantecurso.component';
+import { ReporteComponent } from './reporte/reporte.component';
 
 const routes: Routes = [
   // For each entity, you must create a path that will be used to navigate to the related components
@@ -64,14 +71,30 @@ const routes: Routes = [
         component: InformacionModuloComponent,
       },
       {
-        path: 'proyecto/:idProyecto',
+        path: 'proyecto/:idUnidad',
         component: InformacionProyectoComponent,
       }
     ]
   },
   {
+    path: 'peerreview/:idUnidad',
+    component: PeerreviewRevisionComponent
+  },
+  {
+    path: 'perfil/:username',
+    component: PerfilComponent,
+  },
+  {
+    path: 'editarperfil/:username',
+    component: EditaestudianteComponent,
+  },
+  {
     path: 'curso/:idCurso',
     component: InformacioncursoComponent,
+  },
+  {
+    path: 'reportes',
+    component: ReporteComponent,
   },
   {
     path: 'entidades',
@@ -230,6 +253,14 @@ const routes: Routes = [
         children: [
           { path: 'nuevo', component: CreaeditaEstudiantequizzComponent },
           { path: 'ediciones/:id', component: CreaeditaEstudiantequizzComponent },
+        ],
+      },
+      {
+        path: 'estudiantecurso',
+        component: EstudiantecursoComponent,
+        children: [
+          { path: 'nuevo', component: CreaditaEstudiantecursoComponent },
+          { path: 'ediciones/:id', component: CreaditaEstudiantecursoComponent },
         ],
       },
     ],

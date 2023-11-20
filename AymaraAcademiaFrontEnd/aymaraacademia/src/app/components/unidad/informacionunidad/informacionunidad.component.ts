@@ -17,8 +17,6 @@ import { UnidadmoduloService } from 'src/app/services/unidadmodulo.service';
 export class InformacionunidadComponent {
   idUnidad: number = 0;
   unidades: Unidad[] = [];
-  proyectos: Proyecto[] = []
-  idProyecto: number = 1;
 
   constructor(
     private unidadService: UnidadService,
@@ -43,14 +41,6 @@ export class InformacionunidadComponent {
         });
         console.log(this.unidades);
       });
-
-      this.proyectoService.list().subscribe((data)=>{
-        this.proyectos = data;
-        this.proyectos = this.proyectos.filter((proyecto)=>{
-          return proyecto.unidad.idUnidad == this.idUnidad
-        })
-        this.idProyecto = this.proyectos[0].unidad.idUnidad
-      })
     });
   }
 

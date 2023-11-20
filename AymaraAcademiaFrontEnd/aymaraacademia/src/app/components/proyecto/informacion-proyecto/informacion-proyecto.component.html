@@ -1,1 +1,36 @@
-<p>informacion-proyecto works!</p>
+<div style="padding: 1rem; margin: 0px;">
+  <h3 class="mat-headline-3">PROYECTO DE LA UNIDAD {{ proyecto.unidad.idUnidad }}</h3>
+  <p>
+    {{proyecto.descripcion}}
+  </p>
+  <div *ngIf="proyecto.enviado == false">
+    <p>Escribe tu proyecto: </p>
+  <form [formGroup]="form" (submit)="enviarProyecto()" class="example-form example-full-width">
+    <mat-form-field class="example-full-width col-12">
+      <textarea matInput [(ngModel)]="contenido" formControlName="proyectoContenido" class="form-control col-12" style="height: 50vh;"></textarea>
+    </mat-form-field>
+
+    <br>
+    <button mat-flat-button color="primary">Enviar proyecto</button>
+    <p>{{ mensaje }}</p>
+  </form>
+  </div>
+
+  <div *ngIf="proyecto.enviado">
+    <h4 class="mat-headline-4"><b>Revisiones de tu proyecto</b></h4>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z4">
+      <ng-container matColumnDef="nombreEstudiante">
+      <th mat-header-cell *matHeaderCellDef>Nombre del estudiante</th>
+      <td mat-cell *matCellDef="let element">{{ element.estudiante.nombre }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="calificacion">
+      <th mat-header-cell *matHeaderCellDef>Calificación</th>
+      <td mat-cell *matCellDef="let element">{{ element.calificacion }}</td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <button mat-flat-button color="primary" style="margin: 2rem;" (click)="peerReview()">Revisar un proyecto</button>
+  </div>
+</div>

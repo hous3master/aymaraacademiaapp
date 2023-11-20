@@ -1,0 +1,17 @@
+<div style="height: 50px;"></div>
+<div class="d-flex flex-column align-items-center">
+  <img
+    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngkit.com%2Fpng%2Fdetail%2F161-1617387_happy-smiling-guy.png"
+    class="img-fluid overflow-hidden col-2">
+
+  <h4 class="mat-headline-4 text-center p-0 m-0"> {{"@"}}<span>{{username}}</span> </h4>
+  <div class="mat-headline-6 text-center"> {{estudiante.nombre}} {{estudiante.apellido}}, {{estudiante.edad}} años
+  </div>
+  <div class="text-center"> {{estudiante.email}} </div>
+
+  <div class="d-flex flex-column align-items-center m-2 col-12">
+    <button mat-stroked-button class="m-1 col-4" [routerLink]="['/components/editarperfil', username]"> Editar mi
+      perfil </button>
+    <button mat-raised-button color="primary" class="m-1 col-4"> Ver mis certificados </button>
+  </div>
+</div>

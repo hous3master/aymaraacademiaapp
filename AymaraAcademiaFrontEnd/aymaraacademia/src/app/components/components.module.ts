@@ -105,6 +105,17 @@ import { SignupUserComponent } from './signup/signup-user/signup-user.component'
 import { SignupEstudianteComponent } from './signup/signup-estudiante/signup-estudiante.component';
 import { ListarunidadporcursoComponent } from './unidad/listarunidadporcurso/listarunidadporcurso.component';
 import { InformacioncursoComponent } from './curso/informacioncurso/informacioncurso.component';
+import { PerfilComponent } from './estudiante/perfil/perfil.component';
+import { EditaestudianteComponent } from './estudiante/editaestudiante/editaestudiante.component';
+import { PeerreviewRevisionComponent } from './revision/peerreview-revision/peerreview-revision.component';
+import { EstudiantecursoComponent } from './estudiantecurso/estudiantecurso.component';
+import { CreaditaEstudiantecursoComponent } from './estudiantecurso/creadita-estudiantecurso/creadita-estudiantecurso.component';
+import { ListarEstudiantecursoComponent } from './estudiantecurso/listar-estudiantecurso/listar-estudiantecurso.component';
+import { ReporteComponent } from './reporte/reporte.component';
+import { Reporte01Component } from './reporte/reporte01/reporte01.component';
+import { NgChartsModule } from 'ng2-charts';
+import { Reporte03Component } from './reporte/reporte03/reporte03.component';
+import { Reporte02Component } from './reporte/reporte02/reporte02.component';
 
 
 @NgModule({
@@ -184,6 +195,16 @@ import { InformacioncursoComponent } from './curso/informacioncurso/informacionc
     SignupEstudianteComponent,
     ListarunidadporcursoComponent,
     InformacioncursoComponent,
+    PerfilComponent,
+    EditaestudianteComponent,
+    PeerreviewRevisionComponent,
+    EstudiantecursoComponent,
+    CreaditaEstudiantecursoComponent,
+    ListarEstudiantecursoComponent,
+    ReporteComponent,
+    Reporte01Component,
+    Reporte02Component,
+    Reporte03Component,
 
   ],
   imports:[
@@ -206,7 +227,8 @@ import { InformacioncursoComponent } from './curso/informacioncurso/informacionc
     SafePipeModule,
     MatSnackBarModule,
     MatRadioModule,
-    MatCardModule
+    MatCardModule,
+    NgChartsModule
   ]
 })
 export class ComponentsModule { }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" style="text-align: center">
+        <h2>Registro de estudiantecurso</h2>
+        <form [formGroup]="form" (submit)="aceptar()" class="example-form">
+            <!-- id -->
+            <mat-form-field class="example-full-width" *ngIf="edicion">
+                <mat-label>idEstudiantecurso</mat-label>
+                <input matInput placeholder="Id" formControlName="idEstudiantecurso" />
+            </mat-form-field>
+            <br />
+            <!-- Form fields for each attribute -->
+            <!-- NOTE: Only components with foreign key-->
+            <mat-form-field class="example-full-width">
+                <mat-label>estudiante</mat-label>
+                <mat-select formControlName="estudiante">
+                    <mat-option *ngFor="let tipo of listaEstudiante" [value]="tipo.idEstudiante">
+                        {{tipo.idEstudiante}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="obtenerControlCampo('estudiante')?.errors?.['required']">
+                    estudiante es obligatorio.
+                </mat-error>
+            </mat-form-field>
+            <br />
+            <!-- NOTE: Only components with foreign key-->
+            <mat-form-field class="example-full-width">
+                <mat-label>curso</mat-label>
+                <mat-select formControlName="curso">
+                    <mat-option *ngFor="let tipo of listaCurso" [value]="tipo.idCurso">
+                        {{tipo.idCurso}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="obtenerControlCampo('curso')?.errors?.['required']">
+                    curso es obligatorio.
+                </mat-error>
+            </mat-form-field>
+            <br />
+            <!-- Buttons for actions -->
+            <button mat-raised-button color="primary">Aceptar</button>
+            <button mat-raised-button color="warn" routerLink="components/entidades/estudiantecurso">
+                Cancelar
+            </button>
+            <p>{{ mensaje }}</p>
+        </form>
+    </div>
+</body>
+
+</html>
