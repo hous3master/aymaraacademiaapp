@@ -1,4 +1,4 @@
 export const environment = {
-production: false,
-base: "http://localhost:8080" // Ruta a la API
+    production: false,
+    base: "https://aymaraacademia.uc.r.appspot.com/authenticate" 
 }

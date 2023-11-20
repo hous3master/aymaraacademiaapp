@@ -58,6 +58,7 @@ import { EditaestudianteComponent } from './estudiante/editaestudiante/editaestu
 import { PeerreviewRevisionComponent } from './revision/peerreview-revision/peerreview-revision.component';
 import { Estudiantecurso } from '../models/estudiantecurso';
 import { EstudiantecursoComponent } from './estudiantecurso/estudiantecurso.component';
+import { ReporteComponent } from './reporte/reporte.component';
 
 const routes: Routes = [
   // For each entity, you must create a path that will be used to navigate to the related components
@@ -90,6 +91,10 @@ const routes: Routes = [
   {
     path: 'curso/:idCurso',
     component: InformacioncursoComponent,
+  },
+  {
+    path: 'reportes',
+    component: ReporteComponent,
   },
   {
     path: 'entidades',
