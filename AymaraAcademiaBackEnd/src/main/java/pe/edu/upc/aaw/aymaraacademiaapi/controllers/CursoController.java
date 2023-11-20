@@ -3,10 +3,13 @@ package pe.edu.upc.aaw.aymaraacademiaapi.controllers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.aaw.aymaraacademiaapi.dtos.CalificacionmoduloDTO;
 import pe.edu.upc.aaw.aymaraacademiaapi.dtos.CursoDTO;
+import pe.edu.upc.aaw.aymaraacademiaapi.dtos.EdadcursoDTO;
 import pe.edu.upc.aaw.aymaraacademiaapi.entities.Curso;
 import pe.edu.upc.aaw.aymaraacademiaapi.serviceinterfaces.ICursoService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -54,5 +57,18 @@ public class CursoController {
         ModelMapper m = new ModelMapper();
         Curso d = m.map(dto, Curso.class);
         myService.insert(d);
+    }
+
+    @GetMapping("/promedioedades")
+    public List<EdadcursoDTO> calcularEdadPromedio(){
+        List<String[]>lista=myService.obtenerEdadPromedioPorCurso();
+        List<EdadcursoDTO> lista2=new ArrayList<>();
+        for(String[] data: lista){
+            EdadcursoDTO dto=new EdadcursoDTO();
+            dto.setCurso(data[0]);
+            dto.setEdadPromedio(Double.parseDouble(data[1]));
+            lista2.add(dto);
+        }
+        return lista2 ;
     }
 }

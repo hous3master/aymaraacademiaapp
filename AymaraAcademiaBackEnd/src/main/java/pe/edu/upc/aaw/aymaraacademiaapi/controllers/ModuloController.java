@@ -3,10 +3,12 @@ package pe.edu.upc.aaw.aymaraacademiaapi.controllers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.aaw.aymaraacademiaapi.dtos.CalificacionmoduloDTO;
 import pe.edu.upc.aaw.aymaraacademiaapi.dtos.ModuloDTO;
 import pe.edu.upc.aaw.aymaraacademiaapi.entities.Modulo;
 import pe.edu.upc.aaw.aymaraacademiaapi.serviceinterfaces.IModuloService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -54,5 +56,18 @@ public class ModuloController {
         ModelMapper m = new ModelMapper();
         Modulo d = m.map(dto, Modulo.class);
         myService.insert(d);
+    }
+
+    @GetMapping("/promediocalificaciones")
+    public List<CalificacionmoduloDTO> calcular(){
+        List<String[]>lista=myService.obtenerCalificacionPromedioPorModulo();
+        List<CalificacionmoduloDTO> lista2=new ArrayList<>();
+        for(String[] data: lista){
+            CalificacionmoduloDTO dto=new CalificacionmoduloDTO();
+            dto.setNombre(data[0]);
+            dto.setCalificacionPromedio(Double.parseDouble(data[1]));
+            lista2.add(dto);
+        }
+        return lista2 ;
     }
 }

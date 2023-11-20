@@ -2,10 +2,13 @@ package pe.edu.upc.aaw.aymaraacademiaapi.serviceimplements;
 
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
+import pe.edu.upc.aaw.aymaraacademiaapi.dtos.AvanceestudianteDTO;
+import pe.edu.upc.aaw.aymaraacademiaapi.entities.Modulo;
 import pe.edu.upc.aaw.aymaraacademiaapi.entities.Progreso;
 import pe.edu.upc.aaw.aymaraacademiaapi.repositories.IProgresoRepository;
 import pe.edu.upc.aaw.aymaraacademiaapi.serviceinterfaces.IProgresoService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -35,5 +38,10 @@ public class ProgresoServiceImplement implements IProgresoService {
     @Override
     public List<Progreso> list() {
         return myRepository.findAll();
+    }
+
+    @Override
+    public List<String[]> obtenerAvanceEstudiantes() {
+        return myRepository.obtenerAvanceEstudiantes();
     }
 }

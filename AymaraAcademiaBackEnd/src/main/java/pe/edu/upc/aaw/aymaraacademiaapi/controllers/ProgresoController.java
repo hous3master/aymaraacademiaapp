@@ -3,10 +3,12 @@ package pe.edu.upc.aaw.aymaraacademiaapi.controllers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.aaw.aymaraacademiaapi.dtos.AvanceestudianteDTO;
 import pe.edu.upc.aaw.aymaraacademiaapi.dtos.ProgresoDTO;
 import pe.edu.upc.aaw.aymaraacademiaapi.entities.Progreso;
 import pe.edu.upc.aaw.aymaraacademiaapi.serviceinterfaces.IProgresoService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -54,5 +56,20 @@ public class ProgresoController {
         ModelMapper m = new ModelMapper();
         Progreso d = m.map(dto, Progreso.class);
         myService.insert(d);
+    }
+    @GetMapping("/avanceEstudiantes")
+    public List<AvanceestudianteDTO> obtenerAvanceEstudiantes() {
+        List<String[]> lista = myService.obtenerAvanceEstudiantes();
+        List<AvanceestudianteDTO> listaDTO = new ArrayList<>();
+
+        for (String[] data : lista) {
+            AvanceestudianteDTO dto = new AvanceestudianteDTO();
+            dto.setNombreEstudiante(data[0]);
+            dto.setNombreModulo(data[1]);
+            dto.setPorcentajeAvance(Double.parseDouble(data[2]));
+            listaDTO.add(dto);
+        }
+
+        return listaDTO;
     }
 }

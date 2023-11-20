@@ -36,4 +36,9 @@ public class CursoServiceImplement implements ICursoService {
     public List<Curso> list() {
         return myRepository.findAll();
     }
+
+    @Override
+    public List<String[]> obtenerEdadPromedioPorCurso() {
+        return myRepository.obtenerEdadPromedioPorCurso();
+    }
 }
