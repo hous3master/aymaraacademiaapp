@@ -7,7 +7,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Estudiante } from 'src/app/models/estudiante';
 import { Proyecto } from 'src/app/models/proyecto';
 import { Revision } from 'src/app/models/revision';
@@ -37,7 +37,8 @@ export class PeerreviewRevisionComponent implements OnInit {
     private loginService: LoginService,
     private estudianteService: EstudianteService,
     private formBuilder: FormBuilder,
-    private revisionService: RevisionService
+    private revisionService: RevisionService,
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -84,6 +85,14 @@ export class PeerreviewRevisionComponent implements OnInit {
         );
       });
 
+      if (this.proyectosValidos.length == 0) {
+        // Send a popup message in the browser
+        alert('No hay proyectos disponibles para que revises, intenta más tarde');
+
+        // navigate back to [routerLink]="['/components/unidad', idUnidad, 'proyecto', idUnidad]"
+        this.router.navigate(['/components/unidad', this.idUnidad, 'proyecto', this.idUnidad]);
+      }
+
       console.log('los proyectos validos son', this.proyectosValidos);
 
       if (this.proyectosValidos.length > 0) {
@@ -124,6 +133,7 @@ export class PeerreviewRevisionComponent implements OnInit {
           this.proyectoService.setList(data);
         });
       });
+      this.router.navigate(['/components/unidad', this.idUnidad, 'proyecto', this.idUnidad]);
     } else {
       this.mensaje = 'Por favor complete todos los campos obligatorios.';
     }

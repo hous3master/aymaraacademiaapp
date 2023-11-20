@@ -99,22 +99,13 @@ export class InformacionProyectoComponent implements OnInit {
           });
         }else {
           console.log('Se creará un registro nuevo');
-          this.proyecto.idProyecto = data[data.length - 1]?.idProyecto ?? 1
           this.proyecto.calificacion = 0;
           this.proyecto.contador = 0;
           this.proyecto.contenido = '';
-
-          switch (Number(this.idUnidad)) {
-            case 1:
-              this.proyecto.descripcion = 'Enunciado del proyecto de la unidad 1';
-              break;
-            case 2:
-              this.proyecto.descripcion = 'Enunciado del proyecto de la unidad 2';
-              break;
-          }
+          this.proyecto.descripcion = this.unidad.descripcion;
 
           this.proyecto.estudiante = this.estudiante;
-          this.proyecto.titulo = '';
+          this.proyecto.titulo = this.unidad.nombre;
           this.proyecto.unidad = this.unidad;
           this.proyecto.enviado = false;
           console.log(
@@ -150,6 +141,7 @@ export class InformacionProyectoComponent implements OnInit {
         });
       });
       console.log('Editado correctamente');
+      this.router.navigate(['/components/unidad', this.idUnidad, 'proyecto', this.idUnidad]);
     } else {
       this.mensaje = 'Por favor complete todos los campos obligatorios.';
     }
