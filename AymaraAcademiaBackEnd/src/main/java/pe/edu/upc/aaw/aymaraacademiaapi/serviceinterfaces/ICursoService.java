@@ -8,4 +8,5 @@ public interface ICursoService {
     void delete(int id);
     Curso listId(int id);
     List<Curso> list();
+    List<String[]> obtenerEdadPromedioPorCurso();
 }

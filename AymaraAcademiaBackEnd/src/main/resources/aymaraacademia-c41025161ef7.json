@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "aymaraacademia",
+  "private_key_id": "c41025161ef7047eedc8d16d50391cef6d3f34e9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDMCyNxU+QhhwUW\nGbrzvWi0Gh74vxcoehY1Wo4AF7NW4gorAib2R8UntYE06rSZ3fqZr5UkMCK+H1v9\nsLlaSdmIlqbVA5vpP+dDsN3iToAjD4XSIvGrEXwZAkOxH2n1FC0Z8MKrNCFg+cXL\nH7g+msfCesUQimFUVWo40WgNLVZh3d7hfb5JaAddR9cNC4eAZlm+/rvDdd2pFN04\nrTJ/o8a7/HXn/zB5k+CjfQ52vPyjagRES+zIzmvBkMpPn+YOp2rU1b4lRn5dMhTd\n7qfq7K1UJS+S7lND+YM31Xo7Ehn8NoLmQBQME/Um06p/cEf3esN91sfpMan8zAPQ\nRSSchxFjAgMBAAECggEABVDM+D4tP/UFMZGIs0zd623lcf7YcETYoJneqoCeOsc3\naJjCbGwWO3XuYHM03UVRKqvOVjEC1rJ5HQomP1npLDZwhjV1MbBpKp7y84Wur5B5\n9gLUX5aHBcfEp6/1J14Chsh6PyeOhGOSvuXxUNWLcApEFALm4jbkxjIpDx7SlJ4S\nhcTlf2eYkhKM3803EBlGIAJFYAERU/ssYTsiGKQ750kWdH0/OVPSop4rCTFvaRGp\nxYkV4KuE+dV/PN+XPmQHJXzav3QoO+Ts9jjqTIw8Ivm2mUQ5qpUbWBjSh3jM+hrG\ndztOnSy+yF9khslihPIEclhGogzHoWLfFxkvp7CugQKBgQDmRuAN0MqmqdaUR1Cr\n8VMYBOImSEv0uUPtFZ2mPwndBWOj3xb5DwtVEF86AaQyx/CKGx1UOPleSTQl6gzL\nP1+6dqGwuYKAXXugWlWg+HAmmjw2LSoRBuvb8oAg1A9sa3tiaFZIWl18HquFK1wY\n3bfQ5+1MBh0cO8AaX4loxEqu4QKBgQDi1hRz8xpVJ7qXFi9h6Mom2FcnSGrI5Fhu\nU7b7vhpH8tMi93Vngt3q3xD8ozVJbo5Xy2Pc+MgcXIB3qJ/IPqVSYJotXLxXjmIP\nSAoa0etHxO2i4mT0v2LuXMyb1RFnqCiy1WnE0xiKdRaEkHfy+X5dluc89nX2sC2G\n+7zSAStcwwKBgQDOJCx2sa54PBnna2AATGyCV/zLIHU+gosYNf2G0W/W9/gWvqMm\nGh2e7KUSnF2NSAdA2r0KpGY3zXhtaHRDjlv35DMirS7yEr2U8sks7LoZFIFKTmwW\nCggiQZgJy0xzVlSB57010A9YCWyqLgKoD/N5g+Wd5OsyVxrFgTjVHMNugQKBgCS7\n0GIaizghD+lpsVCktx/lRu/YnVpdCCkNq4NG/NCL9T8jXcLegXuIliKjd3ylx61W\nBZ0COL3HCRLXntB5vKIDfNQ9wU5Yg27AFsrTFcvwix8mlHzCBY5ePtA5h/EGXVjg\nkJlMKhw56+SZ1KLnXlxflKDdtKq3Sxgh6ikEAXarAoGBANnvnyl3vTIDFvu0mc6B\ngrMC2oAxSJnIy9hQphTeL8osFIJFNpj1hC+50kqatqv1kW50Ro1Sp29Y1bZ6oxQg\n9qVrPaBAOyQY+AV8e1wCg4Cunebk0pPZ9VXiToaLfNyvl3K8RG0yp8EVYYoWdh7N\njRYeiSv8DjNsg4m/KA24eXpm\n-----END PRIVATE KEY-----\n",
+  "client_email": "aymara-backend-admin@aymaraacademia.iam.gserviceaccount.com",
+  "client_id": "113872992224060532810",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/aymara-backend-admin%40aymaraacademia.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

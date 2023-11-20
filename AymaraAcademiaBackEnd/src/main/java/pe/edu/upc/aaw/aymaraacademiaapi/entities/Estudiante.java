@@ -21,7 +21,7 @@ private String apellido;
 @Column(name = "edad", nullable = false)
 private int edad;
 
-@Column(name = "resena")
+@Column(name = "resena", nullable = false)
 private int resena;
 
 @Column(name = "email", nullable = false)

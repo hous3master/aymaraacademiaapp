@@ -8,4 +8,5 @@ public interface IProgresoService {
     void delete(int id);
     Progreso listId(int id);
     List<Progreso> list();
+    List<String[]> obtenerAvanceEstudiantes();
 }

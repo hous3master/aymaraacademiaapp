@@ -34,7 +34,7 @@ public class RevisionServiceImplement implements IRevisionService {
     }
 
     @Override
-    public List<String[]> insertOrUpdateRevision(int idEstudiante, int idProyecto, double calificacion, boolean revisado) {
-        return myRepository.insertOrUpdateRevision(idEstudiante, idProyecto, calificacion, revisado);
+    public List<String[]> insertOrUpdateRevision(int idEstudiante, int idProyecto, double calificacion) {
+        return myRepository.insertOrUpdateRevision(idEstudiante, idProyecto, calificacion);
     }
 }

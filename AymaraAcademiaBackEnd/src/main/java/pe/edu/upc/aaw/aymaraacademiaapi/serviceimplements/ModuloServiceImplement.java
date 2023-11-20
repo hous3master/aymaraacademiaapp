@@ -36,4 +36,9 @@ public class ModuloServiceImplement implements IModuloService {
     public List<Modulo> list() {
         return myRepository.findAll();
     }
+
+    @Override
+    public List<String[]> obtenerCalificacionPromedioPorModulo() {
+        return myRepository.obtenerCalificacionPromedioPorModulo();
+    }
 }
