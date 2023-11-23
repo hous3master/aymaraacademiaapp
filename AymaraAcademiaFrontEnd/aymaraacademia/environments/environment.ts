@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    base: "https://aymaraacademia.uc.r.appspot.com"
+    base: "http://localhost:8080"
 }
